@@ -26,6 +26,12 @@
                         </div>
                         <div class="row px-3"> 
                             <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Edad</h6>
+                            </label> 
+                            <input id="age" type="number" min="0" pattern="^[0-9]+"name="age" :value="old('age')"  class="mb-4" placeholder="Ingrese su edad" required autofocus>
+                        </div>
+                        <div class="row px-3"> 
+                            <label class="mb-1">
                                 <h6 class="mb-0 text-sm">Correo electrónico</h6>
                             </label> 
                             <input id="email" type="email" name="email" :value="old('email')"  class="mb-4" placeholder="Ingrese un correo electrónico" required autofocus>

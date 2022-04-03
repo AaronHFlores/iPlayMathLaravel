@@ -28,7 +28,7 @@ Estos son los comandos que se realizaron durante el desarrollo del proyecto:
 
 **DATABASE SETUP**
 > mysql -u root -p
-mysql> create database web_eshop;
+mysql> create database web_eshop;   
 
 **LARAVEL .ENV DB**
 DB_CONNECTION=mysql
