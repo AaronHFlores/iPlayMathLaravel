@@ -1,43 +1,125 @@
-<x-guest-layout>
-                    <!-- <div class="row mb-4 px-3">
-                        <h6 class="mb-0 mr-4 mt-2">Inicia sesión con</h6>
-                        <div class="facebook text-center mr-3">
-                            <div class="fa fa-facebook"></div>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>iPlayMath</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/iPlayMath/img/favicons/favicon.ico')}}">
+    <link rel="manifest" href=" {{ asset('img/iPlayMath//img/favicons/manifest.json')}}">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="{{ asset('css/iPlayMath/css/theme.min.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/iPlayMath/css/user.css')}}" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" >
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
+                </ul>                
+                <a  href="{{ route('register') }}"><input type="submit" class="btn btn-light" value="Registrarse"/></a><br>
+            </div>
+        </div>
+    </nav>
+    <br>
+    
+    <div class="container">
+            
+        <div class="w-70 h-100 p-5 services-card-shadow rounded-3">
+
+            <div align="center">
+                <img src="{{ asset('img/iPlayMath/img/logoo.png') }}" height="70" alt="logo" />
+                
+                <h3 class="register-heading text-center">Ingresar</h3>
+                <!-- <h4 class="card-title mt-3 text-center">Crea tu Perfil </h4> -->
+                <!-- <p class="text-center">Get started with your free account</p> -->
+                <p>
+                
+                <form action="{{ route('login') }}" method = "POST">
+                    @csrf
+                    <div class="col-md-6" align="center">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="{{ __('Email') }}" value="{{ old('email') }}" id="email" name="email"/>
+                            @error('email')
+                                <div><label style="color:#DC3545">{{ $message }}</label></div>
+                            @enderror
                         </div>
-                        <div class="twitter text-center mr-3">
-                            <div class="fa fa-twitter"></div>
-                        </div>
-                        <div class="linkedin text-center mr-3">
-                            <div class="fa fa-linkedin"></div>
-                        </div>
+                        <br>
                     </div>
-                    <div class="row px-3 mb-4">
-                        <div class="line"></div> <small class="or text-center">ó</small>
-                        <div class="line"></div>
-                    </div> -->
-                    <x-jet-validation-errors />
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-                        <div class="row px-3"> 
-                            <label class="mb-1">
-                                <h6 class="mb-0 text-sm">Correo electrónico</h6>
-                            </label> 
-                            <input id="email" type="email" name="email" :value="old('email')"  class="mb-4" placeholder="Ingrese un correo electrónico" required autofocus> </div>
-                        <div class="row px-3"> 
-                            <label class="mb-1">
-                                <h6 class="mb-0 text-sm">Contraseña</h6>
-                            </label> 
-                            <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" placeholder="Ingrese una contraseña"> </div>
-                        <div class="row px-3 mb-4">
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                 <input id="chk1" type="checkbox" name="chk" id="remember_me" name="remember" class="custom-control-input"> 
-                                 <label for="chk1" class="custom-control-label text-sm">Recuérdame</label> 
-                            </div> 
-                            @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}" class="ml-auto mb-0 text-sm">¿Contraseña olvidada?</a>
-                            @endif
+
+                    <div class="col-md-6">
+                        
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="{{ __('Password') }}" value="{{ old('password') }}" id="password" name="password" />
+                            @error('password')
+                                <div><label style="color:#DC3545">{{ $message }}</label></div>
+                            @enderror
                         </div>
-                        <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center">Iniciar sesión</button> </div>
-                    </form>
-                    <div class="row mb-4 px-3"> <small class="font-weight-bold">¿No tienes una cuenta? <a href="{{ route('register') }}" class="text-danger ">Regístrate</a></small> </div>
-</x-guest-layout>
+                        <br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="remember_me" class="flex items-center">
+                            <x-jet-checkbox id="remember_me" name="remember" />
+                            <span class="ml-2 text-sm text-gray-600">Recordar usuario</span>
+                        </label>
+                    </div>
+
+                    <div class="col-md-6">
+                        @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                ¿Olvidaste la contraseña?
+                            </a>
+                        @endif
+                        <input type="submit" class="btn btn-primary"  value="Iniciar Sesión"/>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+
+
+    <script src="{{ asset('vendors/iPlayMath/vendors/bootstrap/bootstrap.min.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/anchorjs/anchor.min.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/is/is.min.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/fontawesome/all.min.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/lodash/lodash.min.js')}} "></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/imagesloaded/imagesloaded.pkgd.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/gsap/customEase.js')}} "></script>
+    <script src="{{ asset('vendors/iPlayMath/vendors/gsap/scrollToPlugin.js')}} "></script>
+    <script src="{{ asset('js/iPlayMath//js/theme.js')}}"></script>
+  </body>
+
+</html>
+
+
+
+
+
+
+

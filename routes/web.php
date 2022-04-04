@@ -48,7 +48,11 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 // Route::get('/', Index::class )->name('home');
 
-Route::get('/', Shop::class )->name('all.products');
+// Route::get('/', Shop::class )->name('all.products');
+
+Route::get('/', function () {
+    return view('layouts/iplaymath');
+});
 
 Route::get('/category/{categorySlug?}', Shop::class )->name('category.products');
 

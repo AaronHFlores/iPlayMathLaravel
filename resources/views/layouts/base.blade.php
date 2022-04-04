@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>iGameShop - Tienda en línea</title>
+    <title>iPlayMath</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -49,30 +49,30 @@
             </div> -->
             <div class="header__top__right__auth">
             @if(Route::has('login'))
-                                    @auth
-                                        @if(Auth::user()->role === 'adm')
-                                        <div><a href="{{ route('admin.dashboard') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a></div>
-                                            <span class="arrow_carrot-down"></span>
-                                            <ul>
-                                                <li><a href="{{ route('admin.dashboard') }}">Escritorio</a></li>
-                                                <li><a href="#" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Salir</a></li>
-                                                
-                                            </ul>
-                                        @else
-                                        <div><a href="{{ route('user.dashboard') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a></div>
-                                            <span class="arrow_carrot-down"></span>
-                                            <ul>
-                                            <li><a href="{{ route('user.dashboard') }}">Cuenta</a></li>
-                                                <li><a href="#"  onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Salir</a></li>
-                                            </ul>
-                                        @endif
-                                        <form id="form-logout" method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                        </form>
-                                    @else
-                                        <a href="/login"><i class="fa fa-user"></i> Iniciar sesión</a>
-                                    @endif
-                                @endif
+                @auth
+                    @if(Auth::user()->role === 'adm')
+                    <div><a href="{{ route('admin.dashboard') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a></div>
+                        <span class="arrow_carrot-down"></span>
+                        <ul>
+                            <li><a href="{{ route('admin.dashboard') }}">Escritorio</a></li>
+                            <li><a href="#" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Salir</a></li>
+                            
+                        </ul>
+                    @else
+                    <div><a href="{{ route('user.dashboard') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a></div>
+                        <span class="arrow_carrot-down"></span>
+                        <ul>
+                        <li><a href="{{ route('user.dashboard') }}">Cuenta</a></li>
+                            <li><a href="#"  onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Salir</a></li>
+                        </ul>
+                    @endif
+                    <form id="form-logout" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                    </form>
+                @else
+                    <a href="/login"><i class="fa fa-user"></i> Iniciar sesión</a>
+                @endif
+            @endif
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
