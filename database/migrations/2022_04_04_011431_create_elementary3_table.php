@@ -15,7 +15,7 @@ class CreateElementary3Table extends Migration
     {
         Schema::create('elementaryThird', function (Blueprint $table) {
             $table->id();
-            $table->string('question');
+            $table->text('question');
             $table->integer('type');
             $table->string('firstAnswer');
             $table->string('secondAnswer');

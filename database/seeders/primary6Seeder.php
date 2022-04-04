@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class primarySixthSeeder extends Seeder
+class primary6Seeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -181,21 +181,21 @@ class primarySixthSeeder extends Seeder
         //Ejes de simetria con imagenes Faltan Imagenes
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras tiene un eje de simetría?',
-            'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'type' => '5',            
+            'firstAnswer' => "{{ asset('img/primarySixth/piñata.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/arbol.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/mano.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/asimetrico.png') }}",
             'correctAnswer' => '1',
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras no tiene un eje de simetría?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => "{{ asset('img/primarySixth/piñata.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/hoja.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/mariquita.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/asimetrico.png') }}",
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -208,7 +208,7 @@ class primarySixthSeeder extends Seeder
             'thirdAnswer' => '2 2/4',
             'quarterAnswer' => '3/5',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => "{{ asset('img/primarySixth/2_3.png') }}"
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Qué fracción se representa en la recta?',
@@ -218,7 +218,7 @@ class primarySixthSeeder extends Seeder
             'thirdAnswer' => '3 2/4',
             'quarterAnswer' => '4/5',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => "{{ asset('img/primarySixth/4_6.png') }}"
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Qué fracción se representa en la recta?',
@@ -228,7 +228,7 @@ class primarySixthSeeder extends Seeder
             'thirdAnswer' => '4 2/4',
             'quarterAnswer' => '9/6',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => "{{ asset('img/primarySixth/6_9.png') }}"
         ]);
     }
 }

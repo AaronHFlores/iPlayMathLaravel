@@ -18,6 +18,15 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ProductSeeder::class,
             UserSeeder::class,
+            primary1Seeder::class,
+            primary2Seeder::class,
+            primary3Seeder::class,
+            primary4Seeder::class,
+            primary5Seeder::class,
+            primary6Seeder::class,
+            Elementary1Seeder::class,            
+            Elementary2Seeder::class,
+            Elementary3Seeder::class
         ]);
     }
 }

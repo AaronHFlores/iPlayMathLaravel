@@ -76,6 +76,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/account/orders/{orderId}', UserShowOrder::class)->name('user.showorder');
 });
 
+//Exercise
+Route::get('/fourOption', function () {
+    return view('livewire/exercise/four-option');
+});
+
 // Admin
 Route::middleware(['auth:sanctum', 'adminauth'])->group(function () {
     Route::get('/dashboard', AdminDashboard::class)->name('admin.dashboard');
