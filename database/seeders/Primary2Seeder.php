@@ -223,17 +223,6 @@ class Primary2Seeder extends Seeder
             'correctAnswer' => '24',
             'image' => ''
         ]);
-        //19
-        DB::table('primarySecond')->insert([
-            'question' => '¿Cuánto es 8 x 3?',
-            'type' => '4',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
-            'correctAnswer' => '24',
-            'image' => ''
-        ]);
         //20
         DB::table('primarySecond')->insert([
             'question' => '¿Cuánto es 3 x 8?',
