@@ -85,7 +85,7 @@ class primarySixthSeeder extends Seeder
             'correctAnswer' => '3',
             'image' => ''
         ]);
-        //Falta Imagen
+        //Imagen
         DB::table('primarySixth')->insert([
             'question' => 'Donde vive Juan se instaló una feria, en uno de los puestos se ofrece ganar 2 regalos si se acumulan 10 puntos. En otro dan 3 regalos por cada 12 puntos. ¿Cuál puesto tiene la mejor promoción?',
             'type' => '3',
@@ -94,9 +94,9 @@ class primarySixthSeeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => "{{ asset('img/primarySixth/feria.png') }}"
         ]);
-        //Figuras tridimensionales Faltan Imagenes
+        //Figuras tridimensionale Imagenes
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
             'type' => '2',
@@ -114,8 +114,8 @@ class primarySixthSeeder extends Seeder
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
-            'correctAnswer' => '3',
-            'image' => "{{ asset('img/primarySixth/prismaHexagonal.png') }}"
+            'correctAnswer' => '1',
+            'image' => "{{ asset('img/primarySixth/piramideTriangular.png') }}"
         ]);
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
@@ -124,8 +124,8 @@ class primarySixthSeeder extends Seeder
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
-            'correctAnswer' => '3',
-            'image' => "{{ asset('img/primarySixth/prismaHexagonal.png') }}"
+            'correctAnswer' => '2',
+            'image' => "{{ asset('img/primarySixth/prismaPentagonal.png') }}"
         ]);
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
@@ -134,47 +134,47 @@ class primarySixthSeeder extends Seeder
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
-            'correctAnswer' => '3',
-            'image' => "{{ asset('img/primarySixth/prismaHexagonal.png') }}"
+            'correctAnswer' => '4',
+            'image' => "{{ asset('img/primarySixth/cubo.png') }}"
         ]);
-        //Figuras tridimensionales con seleccion de imagenes Faltan Imagenes
+        //Figuras tridimensionales con seleccion de imagenes 
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una pirámide hexagonal?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
             'correctAnswer' => '4',
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es un cubo?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
-            'correctAnswer' => '4',
+            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'correctAnswer' => '1',
             'image' => '1'
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una esfera?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
-            'correctAnswer' => '4',
+            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'correctAnswer' => '2',
             'image' => '2'
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una prisma triangular?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
+            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
+            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
+            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
             'correctAnswer' => '3',
             'image' => ''
         ]);
