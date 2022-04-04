@@ -43,7 +43,8 @@
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
               <li class="nav-item"><a class="nav-link px-3" href="/">Inicio</a></li>
               <li class="nav-item"><a class="nav-link px-3" href="{{ route('register') }}">Registrarse</a></li>
-            </ul><button class="btn btn-primary" href="{{ route('login') }}" >Iniciar Sesión</button>
+            </ul><a  href="{{ route('login') }}"><input type="submit" class="btn btn-primary" value="Iniciar Sesión"/></a>
+            <!-- <button class="btn btn-primary" href="{{ route('login') }}" >Iniciar Sesión</button> -->
           </div>
         </div>
       </nav>
@@ -139,32 +140,6 @@
       <!-- ============================================-->
 
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section id="pricing"> -->
-        <div class="container">
-          <div class="row flex-center">
-            <div class="col-md-6 text-center text-md-start">
-              <h4 class="fw-normal fs-3" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">Your safety is always <br />a top priority</h4>
-              <p class="fs-0 pe-xl-8" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">We are committed to help drivers and riders get where they want to go with confidence</p>
-              <div class="d-flex justify-content-space-between align-item-center my-3 mt-2">
-                <div>
-                  <h4 class="fw-normal fs-1">Drive</h4>
-                  <p class="my-1 fs-0 pe-xl-8">Drive when you want. Find ooprtunities around you.</p>
-                </div>
-                <div>
-                  <h4 class="fw-normal fs-1">Ride</h4>
-                  <p class="my-1 fs-0 pe-xl-8">Tap your phone. Get where you're headed</p>
-                </div>
-              </div><button class="btn btn-sm btn-primary my-4 me-1" href="#!" role="button">Get started</button><a class="btn btn-sm my-2 btn-default" href="#" role="button">Questions? Talk to our team<i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-            <div class="col-md-6 mb-4"><img class="w-100" src="assets/img/illustration/4.png" alt="..." /></div>
-          </div>
-        </div><!-- end of .container-->
-      <!-- </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
 
 
 
@@ -320,7 +295,6 @@
     <script src="{{ asset('vendors/iPlayMath/vendors/imagesloaded/imagesloaded.pkgd.js')}} "></script>
     <script src="{{ asset('vendors/iPlayMath/vendors/gsap/customEase.js')}} "></script>
     <script src="{{ asset('vendors/iPlayMath/vendors/gsap/scrollToPlugin.js')}} "></script>
-    <!--script(src=`${CWD}vendors/gsap/drawSVGPlugin.js`)-->
     <script src="{{ asset('js/iPlayMath//js/theme.js')}}"></script>
   </body>
 
