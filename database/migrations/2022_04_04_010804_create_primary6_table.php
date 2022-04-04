@@ -16,7 +16,7 @@ class CreatePrimary6Table extends Migration
         Schema::create('primarySixth', function (Blueprint $table) {
             $table->id();
             $table->string('question');
-            $table->string('type');
+            $table->integer('type');
             $table->string('firstAnswer');
             $table->string('secondAnswer');
             $table->string('thirdAnswer');

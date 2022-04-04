@@ -16,7 +16,7 @@ class CreatePrimary1Table extends Migration
         Schema::create('primaryFirst', function (Blueprint $table) {
             $table->id();
             $table->string('question');
-            $table->string('type');
+            $table->integer('type');
             $table->string('firstAnswer');
             $table->string('secondAnswer');
             $table->string('thirdAnswer');
