@@ -200,21 +200,21 @@
           </p>
           
           <div class="row mb-4 mt-4">
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+            <a href="/FirstGradePrimary">
                 <h4 class="mt-3 lh-base">1° Grado</h4>
               </a>
               <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
-              <a href="">
+              <a href="/SecondGradePrimary">
                 <h4 class="mt-3 lh-base">2° Grado</h4>
               </a>
               <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center">
               <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
-              <a href="">
+              <a href="/ThirdGradePrimary">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
               <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->

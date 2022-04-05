@@ -33,14 +33,41 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light" >
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
+        <nav class="navbar navbar-expand-lg navbar-light fixed" >
+            <div class="container"><a class="navbar-brand" href="/play"><img src="{{ asset('img/iPlayMath/img/logoo.png') }}" height="50" alt="logo" /></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
+                <li>
+                    <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">                        
+                        <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
+    
+                        <span>{{ Auth::user()->name }}</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                        <a class="dropdown-item" href="#">Inicio</a></li>
+                        <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                                <!-- 
+                                <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-jet-responsive-nav-link> -->
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                this.closest('form').submit();"> Cerrar Sesión </a>
+                            </form>
+                        </li>
+
                     </ul>
-                    <a  href="{{ route('login') }}"><input type="submit" class="btn btn-light" value="Iniciar Sesión"/></a><br>
-                </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
             </div>
         </nav>
         <br>
@@ -55,52 +82,29 @@
                         @endif
                         </div>
                 </div>
-                <form action="{{ route('register') }}" method = "POST">
+                <form action="#" method = "POST">
                     @csrf
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="{{ __('Name') }}" value="{{ old('name') }}" id="name" name="name" />
-                                @error('name')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Edad" value="{{ old('age') }}" id="age" name="age" />
-                                @error('age')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-                            <br>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control"  placeholder="{{ __('Confirm Password') }}" value="" id="password_confirmation" name="password_confirmation" />
-                                @error('password_confirmation')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-
+                    <div class="row mb-4 mt-3">
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <button class="btn btn-primary">
+                                Opcion 1
+                            </button>
                         </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="{{ __('Email') }}" value="{{ old('email') }}" id="email" name="email"/>
-                                @error('email')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-                            <br>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="{{ __('Password') }}" value="{{ old('password') }}" id="password" name="password" />
-                                @error('password')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-                            <br>
-                            <input type="submit" class="btn btn-primary"  value="Registrarse"/>
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <button class="btn btn-primary">
+                                Opcion 2
+                            </button>
                         </div>
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <button class="btn btn-primary">
+                                Opcion 3
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-lg-3 text-center">
+                            <button class="btn btn-primary">
+                                Opcion 4
+                            </button>
+                        </div>           
                     </div>
                 </form>
             </div>
