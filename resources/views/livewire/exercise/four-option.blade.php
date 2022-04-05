@@ -213,6 +213,13 @@
                             </div>
                         </div>
                         @endif
+                        @if ($primarySixth->type == 1)
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary" onclick="myFunction1()">Aceptar </button>
+                                </div>
+                            </div>
+                        @endif
                     @endif
                 </form>
             </div>
