@@ -41,40 +41,51 @@
         <div class="container"><a class="navbar-brand" href="/"><img src="{{ asset('img/iPlayMath/img/logoo.png') }}" height="50" alt="logo" /></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
-              <li class="nav-item"><a class="nav-link px-3" href="/">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link px-3" href="{{ route('register') }}">Registrarse</a></li>
-            </ul><button class="btn btn-primary" href="{{ route('login') }}" >Iniciar Sesión</button>
-          </div>
-        </div>
-      </nav>
-      <section class="py-7 py-lg-10" id="home">
-        
-      </section>
+              <li>
+                <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
 
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-7 col-xl-5 text-lg-start text-center">
-              <h1 class="fs-3 fw-normal mt-6">Your finances on autopilot</h1>
-              <p class="fs-0">Gohub monitors application stability, so you can make data-driven decision on whether you should be building new features, or fixing bugs.</p>
-            </div>
-          </div>
-          <div class="row align-items-center mt-7">
-            <h4 class="fs-2 fw-normal">Save Time</h4>
-            <ul class="list-unstyled py-3">
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>intuitive process and single interface</li>
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>Online and paperless</li>
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>Real-time notification</li>
+                <div class="dropdown">
+                  <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">                        
+                    <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
+  
+                    <span>{{ Auth::user()->name }}</span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li>
+                      <a class="dropdown-item" href="#">Inicio</a></li>
+                    <li>
+                      <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+<!-- 
+                            <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-jet-responsive-nav-link> -->
+                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                              this.closest('form').submit();"> Cerrar Sesión </a>
+                        </form>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
-      
+      </nav>
+
+      <section >
+        
       </section>
+
+
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <!-- ============================================-->
 
-      <section class="py-0 bg-1000">
+      <!-- <section class="py-0 bg-1000">
         <div class="container">
           <div class="row py-7">
             <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/icons/Logo2.png" height="51" alt="" /></a>
@@ -133,7 +144,7 @@
         </section><!-- <section> close ============================-->
         <!-- ============================================-->
 
-      </section>
+      <!-- </section> -->
     </main><!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
@@ -144,6 +155,10 @@
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <!-- <script src="{{ asset('vendors/iPlayMath/vendors/popper/popper.min.js') }}"></script> -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
+
+    
     <script src="{{ asset('vendors/iPlayMath/vendors/bootstrap/bootstrap.min.js')}} "></script>
     <script src="{{ asset('vendors/iPlayMath/vendors/anchorjs/anchor.min.js')}} "></script>
     <script src="{{ asset('vendors/iPlayMath/vendors/is/is.min.js')}} "></script>
