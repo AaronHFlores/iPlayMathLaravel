@@ -41,9 +41,9 @@
                     <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
 
                     <div class="dropdown">
-                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">                        
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-    
+
                         <span>{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -52,7 +52,7 @@
                         <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                                <!-- 
+                                <!--
                                 <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -82,33 +82,78 @@
                         @endif
                         </div>
                 </div>
-                <form action="#" method = "POST">
+                <form >
                     @csrf
                     <div class="row mb-4 mt-3">
                         <div class="col-md-6 col-lg-3 text-center">
-                            <button class="btn btn-primary">
-                                Opcion 1
+                            <button class="btn btn-primary" onclick="myFunction1()">
+                                {{ $primarySixth->firstAnswer }}
                             </button>
                         </div>
                         <div class="col-md-6 col-lg-3 text-center">
-                            <button class="btn btn-primary">
-                                Opcion 2
+                            <button class="btn btn-primary" onclick="myFunction2()">
+                                {{ $primarySixth->secondAnswer }}
                             </button>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
+                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
                             <button class="btn btn-primary">
-                                Opcion 3
+                                {{ $primarySixth->thirdAnswer }}
                             </button>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
+                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
                             <button class="btn btn-primary">
-                                Opcion 4
+                                {{ $primarySixth->quarterAnswer }}
                             </button>
-                        </div>           
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
+
+        <script>
+            function myFunction1() {
+                if ({{$primarySixth->correctAnswer}}=="1"){
+                    document.getElementById("1").innerHTML = "Perfecto"
+                }
+                if ({{$primarySixth->correctAnswer}}!="1"){
+                    document.getElementById("1").innerHTML = "Mal"
+                }
+            }
+        </script>
+        <script>
+            function myFunction2() {
+                if ({{$primarySixth->correctAnswer}}=="2"){
+                    document.getElementById("2").innerHTML = "Perfecto"
+                }
+                if ({{$primarySixth->correctAnswer}}!="2"){
+                    document.getElementById("2").innerHTML = "Mal"
+                }
+            }
+        </script>
+        <script>
+            function myFunction3() {
+                if ({{$primarySixth->correctAnswer}}=="3"){
+                    document.getElementById("3").innerHTML = "Perfecto"
+                }
+                if ({{$primarySixth->correctAnswer}}!="3"){
+                    document.getElementById("3").innerHTML = "Mal"
+                }
+            }
+        </script>
+        <script>
+            function myFunction4() {
+                if ({{$primarySixth->correctAnswer}}=="4"){
+                    document.getElementById("4").innerHTML = "Perfecto"
+                }
+                if ({{$primarySixth->correctAnswer}}!="4"){
+                    document.getElementById("4").innerHTML = "Mal"
+                }
+            }
+        </script>
 
     <script src="{{ asset('vendors/iPlayMath/vendors/bootstrap/bootstrap.min.js')}} "></script>
     <script src="{{ asset('vendors/iPlayMath/vendors/anchorjs/anchor.min.js')}} "></script>
