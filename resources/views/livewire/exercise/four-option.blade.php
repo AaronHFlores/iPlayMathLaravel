@@ -119,7 +119,6 @@
                             @else
                                 <div class="col-md-6 col-lg-3 text-center">
                             @endif
-                                <button class="btn btn-primary" onclick="myFunction1()">
                                     @if($primarySixth->type == 1) {{-- En caso de ser tipo 1 --}}
                                         <div class="custom-control custom-checkbox image-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="ck1a">
@@ -128,10 +127,13 @@
                                             </label>
                                         </div>
                                     @endif
+                                    
                                     @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
+                                    <button class="btn btn-primary" onclick="myFunction1()">
                                         <img class = "imgButton" src="{{$primarySixth->firstAnswer}}"  alt="logo" />
                                     @endif
                                     @if($primarySixth->type != 1 and $primarySixth->type != 5)
+                                    <button class="btn btn-primary" onclick="myFunction1()">
                                         {{ $primarySixth->firstAnswer }}
                                     @endif
                                 </button>
@@ -142,7 +144,6 @@
                             @else
                             <div class="col-md-6 col-lg-3 text-center">
                             @endif
-                                <button class="btn btn-primary" onclick="myFunction2()">
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="ck1a">
@@ -151,10 +152,13 @@
                                             </label>
                                         </div>
                                     @endif
-                                    @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
+                                    @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}                                    
+                                        <button class="btn btn-primary" onclick="myFunction2()">
                                         <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="logo" />
                                     @endif
                                     @if($primarySixth->type != 1 and $primarySixth->type != 5)
+                                    
+                                        <button class="btn btn-primary" onclick="myFunction2()">
                                         {{ $primarySixth->secondAnswer }}
                                     @endif
                                 </button>
@@ -178,8 +182,7 @@
                         </div> {{-- Final del Div de Fila de Botones de Opcion --}}
                         @if ($primarySixth->type == 5 or $primarySixth->type == 1)       {{-- Div por si contiene Botones con Imagenes Tipo 5 o 1 --}}
                         <div class="row mb-2 mt-3">
-                            <div class="col-md-6 col-lg-6 text-center" onclick="myFunction3()">{{-- Botton 3   --}}
-                                <button class="btn btn-primary">
+                            <div class="col-md-6 col-lg-6 text-center" >{{-- Botton 3   --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="ck1a">
@@ -188,14 +191,13 @@
                                             </label>
                                         </div>
                                     @else
+                                    <button class="btn btn-primary" onclick="myFunction3()">
                                             <img class = "imgButton" src="{{ $primarySixth->thirdAnswer }}"  alt="logo" />
 
                                     @endif
                                 </button>
                             </div>
-                            <div class="col-md-6 col-lg-6 text-center" onclick="myFunction4()"> {{-- Boton 4 --}}
-
-                                <button class="btn btn-primary">
+                            <div class="col-md-6 col-lg-6 text-center" > {{-- Boton 4 --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="ck1a">
@@ -204,6 +206,7 @@
                                             </label>
                                         </div>
                                     @else
+                                        <button class="btn btn-primary" onclick="myFunction4()">
                                         <img class = "imgButton" src="{{ $primarySixth->quarterAnswer }}"  alt="logo" />
                                     @endif
                                 </button>
