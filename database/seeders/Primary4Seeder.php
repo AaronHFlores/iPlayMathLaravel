@@ -33,7 +33,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '5',
             'quarterAnswer' => '7',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary4/seisNinos.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -44,7 +44,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/precios.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -77,7 +77,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '4/10',
             'quarterAnswer' => '6/10',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary4/circuloFraccion.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -88,7 +88,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => 'C',
             'quarterAnswer' => 'D',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary4/carros.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -99,7 +99,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '26594',
             'quarterAnswer' => '4614',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary4/carros.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -110,7 +110,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/signo1.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -121,7 +121,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary4/signo2.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -132,7 +132,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/signo3.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -165,7 +165,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/expresiones1.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -176,7 +176,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary4/expresiones2.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -204,10 +204,10 @@ class Primary4Seeder extends Seeder
         DB::table('primaryFourth')->insert([
             'question' => '¿Cuál imagen corresponde a la siguiente sucesión numérica: 6,0,8,1,10,2,12,3?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary4/sucesion1.png',
+            'secondAnswer' => 'img/primary4/sucesion2.png',
+            'thirdAnswer' => 'img/primary4/sucesion3.png',
+            'quarterAnswer' => 'img/primary4/sucesion4.png',
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -242,7 +242,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '6',
             'quarterAnswer' => '8',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/calificaciones.png'
         ]);
 
         DB::table('primaryFourth')->insert([
@@ -253,7 +253,7 @@ class Primary4Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary4/calificaciones.png'
         ]);
 
     }

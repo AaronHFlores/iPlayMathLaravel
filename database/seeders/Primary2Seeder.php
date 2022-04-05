@@ -56,7 +56,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '43',
             'quarterAnswer' => '34',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary2/Tienda.png'
         ]);
         //5
         DB::table('primarySecond')->insert([
@@ -67,7 +67,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '24',
             'quarterAnswer' => '18',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary2/Tienda.png'
         ]);
         //6
         DB::table('primarySecond')->insert([
@@ -78,7 +78,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '12',
             'quarterAnswer' => '2',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary2/conejo3.png'
         ]);
         //7
         DB::table('primarySecond')->insert([
@@ -89,7 +89,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '7',
             'quarterAnswer' => '12',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary2/conejo2.png'
         ]);
         //8
         DB::table('primarySecond')->insert([
@@ -100,7 +100,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '36',
-            'image' => ''
+            'image' => 'img/primary2/Peras.png'
         ]);
         //9
         DB::table('primarySecond')->insert([
@@ -111,7 +111,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '25',
-            'image' => ''
+            'image' => 'img/primary2/dulces.png'
         ]);
         //10
         DB::table('primarySecond')->insert([
@@ -122,7 +122,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '21',
             'quarterAnswer' => '12',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary2/piso1.png'
         ]);
         //11
         DB::table('primarySecond')->insert([
@@ -133,16 +133,16 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '40',
             'quarterAnswer' => '28',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary2/piso2.png'
         ]);
         //12
         DB::table('primarySecond')->insert([
             'question' => 'Selecciona la figura que sea la respuesta de la adivinanza Tengo tres lados, todos iguales. ¿Quién soy?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary2/Rectangulo.png',
+            'secondAnswer' => 'img/primary2/Hexagono.png',
+            'thirdAnswer' => 'img/primary1/triangulo.png',
+            'quarterAnswer' => 'img/primary1/cuadrado.png',
             'correctAnswer' => '3',
             'image' => ''
         ]);
@@ -150,10 +150,10 @@ class Primary2Seeder extends Seeder
         DB::table('primarySecond')->insert([
             'question' => 'Selecciona la figura que sea la respuesta de la adivinanza. Tengo 4 lados, todos iguales. ¿Quién soy?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary2/Rectangulo.png',
+            'secondAnswer' => 'img/primary2/Hexagono.png',
+            'thirdAnswer' => 'img/primary1/triangulo.png',
+            'quarterAnswer' => 'img/primary1/cuadrado.png',
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -161,10 +161,10 @@ class Primary2Seeder extends Seeder
         DB::table('primarySecond')->insert([
             'question' => 'Selecciona la figura que sea la respuesta de la adivinanza.Tengo 2 lados iguales que son más grandes que mis otros 2 lados los cuales son iguales entre ellos. ¿Quién soy?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary2/Rectangulo.png',
+            'secondAnswer' => 'img/primary2/Hexagono.png',
+            'thirdAnswer' => 'img/primary1/triangulo.png',
+            'quarterAnswer' => 'img/primary1/cuadrado.png',
             'correctAnswer' => '1',
             'image' => ''
         ]);
@@ -172,10 +172,10 @@ class Primary2Seeder extends Seeder
         DB::table('primarySecond')->insert([
             'question' => 'Selecciona la figura que sea la respuesta de la adivinanza. Tengo seis lados, todos iguales. ¿Quién soy?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary2/Rectangulo.png',
+            'secondAnswer' => 'img/primary2/Hexagono.png',
+            'thirdAnswer' => 'img/primary1/triangulo.png',
+            'quarterAnswer' => 'img/primary1/cuadrado.png',
             'correctAnswer' => '2',
             'image' => ''
         ]);
@@ -188,7 +188,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '364',
             'quarterAnswer' => '320',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary2/fichas.png'
         ]);
         //17
         DB::table('primarySecond')->insert([
@@ -204,6 +204,17 @@ class Primary2Seeder extends Seeder
         //18
         DB::table('primarySecond')->insert([
             'question' => 'Van 5 filas de niñas con 7 niñas en cada fila. ¿Cuántas niñas van en total?',
+            'type' => '2',
+            'firstAnswer' => '12',
+            'secondAnswer' => '53',
+            'thirdAnswer' => '35',
+            'quarterAnswer' => '21',
+            'correctAnswer' => '3',
+            'image' => ''
+        ]);
+        //18.1
+        DB::table('primarySecond')->insert([
+            'question' => 'Van 7 filas de niñas con 5 niñas en cada fila. ¿Cuántas niñas van en total?',
             'type' => '2',
             'firstAnswer' => '12',
             'secondAnswer' => '53',
@@ -243,7 +254,7 @@ class Primary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '529',
-            'image' => ''
+            'image' => 'img/primary2/fichas.png'
         ]);
     }
 }

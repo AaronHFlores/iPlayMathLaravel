@@ -22,7 +22,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '1/8',
             'quarterAnswer' => '1/6',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary3/grafica1.png'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -33,7 +33,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '3795',
             'quarterAnswer' => '3895',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary3/secuencia.png'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -77,7 +77,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '64',
             'quarterAnswer' => '56',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary3/rompecabezas.jpg'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -88,7 +88,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '7 1/2 litros',
             'quarterAnswer' => '7 1/4 litros',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary3/agua.png'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -132,7 +132,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '336, 1036 y 1236',
             'quarterAnswer' => '336, 1036 y 1163',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary3/secuencia2.png'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -160,10 +160,10 @@ class Primary3Seeder extends Seeder
         DB::table('primaryThird')->insert([
             'question' => 'Elige el vaso con 1/2 de agua.',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary3/vasoMedio.PNG',
+            'secondAnswer' => 'img/primary3/vaso14.PNG',
+            'thirdAnswer' => 'img/primary3/vasoVacio.PNG',
+            'quarterAnswer' => 'img/primary3/vasoLleno.PNG',
             'correctAnswer' => '1',
             'image' => ''
         ]);
@@ -171,10 +171,10 @@ class Primary3Seeder extends Seeder
         DB::table('primaryThird')->insert([
             'question' => 'Elige el vaso con 1/4 de agua.',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary3/vasoLleno.PNG',
+            'secondAnswer' => 'img/primary3/vasoMedio.PNG',
+            'thirdAnswer' => 'img/primary3/vasoVacio.PNG',
+            'quarterAnswer' => 'img/primary3/vaso14.PNG',
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -198,7 +198,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '40 minutos',
             'quarterAnswer' => '55 minutos',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary3/reloj1.png'
         ]);
 
         DB::table('primaryThird')->insert([
@@ -242,7 +242,7 @@ class Primary3Seeder extends Seeder
             'thirdAnswer' => '2:10',
             'quarterAnswer' => '2:55',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary3/reloj2.png'
         ]);
 
     }

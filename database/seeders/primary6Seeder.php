@@ -94,7 +94,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => "{{ asset('img/primarySixth/feria.png') }}"
+            'image' => "img/primarySixth/feria.png"
         ]);
         //Figuras tridimensionale Imagenes
         DB::table('primarySixth')->insert([
@@ -105,7 +105,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
             'correctAnswer' => '3',
-            'image' => "{{ asset('img/primarySixth/prismaHexagonal.png') }}"
+            'image' => "img/primarySixth/prismaHexagonal.png"
         ]);
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
@@ -115,7 +115,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
             'correctAnswer' => '1',
-            'image' => "{{ asset('img/primarySixth/piramideTriangular.png') }}"
+            'image' => "img/primarySixth/piramideTriangular.png"
         ]);
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
@@ -125,7 +125,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
             'correctAnswer' => '2',
-            'image' => "{{ asset('img/primarySixth/prismaPentagonal.png') }}"
+            'image' => "img/primarySixth/prismaPentagonal.png"
         ]);
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
@@ -135,46 +135,46 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
             'correctAnswer' => '4',
-            'image' => "{{ asset('img/primarySixth/cubo.png') }}"
+            'image' => "img/primarySixth/cubo.png"
         ]);
         //Figuras tridimensionales con seleccion de imagenes 
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una pirámide hexagonal?',
             'type' => '5',
-            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'firstAnswer' => "img/primarySixth/cubo.png",
+            'secondAnswer' => "img/primarySixth/esfera.png",
+            'thirdAnswer' => "img/primarySixth/prismaTriangular.png",
+            'quarterAnswer' => "img/primarySixth/piramideHexagonal.png",
             'correctAnswer' => '4',
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es un cubo?',
             'type' => '5',
-            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'firstAnswer' => "img/primarySixth/cubo.png",
+            'secondAnswer' => "img/primarySixth/esfera.png",
+            'thirdAnswer' => "img/primarySixth/prismaTriangular.png",
+            'quarterAnswer' => "img/primarySixth/piramideHexagonal.png",
             'correctAnswer' => '1',
             'image' => '1'
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una esfera?',
             'type' => '5',
-            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'firstAnswer' => "img/primarySixth/cubo.png",
+            'secondAnswer' => "img/primarySixth/esfera.png",
+            'thirdAnswer' => "img/primarySixth/prismaTriangular.png",
+            'quarterAnswer' => "img/primarySixth/piramideHexagonal.png",
             'correctAnswer' => '2',
             'image' => '2'
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras es una prisma triangular?',
             'type' => '5',
-            'firstAnswer' => "{{ asset('img/primarySixth/cubo.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/esfera.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/prismaTriangular.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/piramideHexagonal.png') }}",
+            'firstAnswer' => "img/primarySixth/cubo.png",
+            'secondAnswer' => "img/primarySixth/esfera.png",
+            'thirdAnswer' => "img/primarySixth/prismaTriangular.png",
+            'quarterAnswer' => "img/primarySixth/piramideHexagonal.png",
             'correctAnswer' => '3',
             'image' => ''
         ]);
@@ -182,20 +182,20 @@ class primary6Seeder extends Seeder
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras tiene un eje de simetría?',
             'type' => '5',            
-            'firstAnswer' => "{{ asset('img/primarySixth/piñata.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/arbol.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/mano.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/asimetrico.png') }}",
+            'firstAnswer' => "img/primarySixth/piñata.png",
+            'secondAnswer' => "img/primarySixth/arbol.png",
+            'thirdAnswer' => "img/primarySixth/mano.png",
+            'quarterAnswer' => "img/primarySixth/asimetrico.png",
             'correctAnswer' => '1',
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Cuál de las siguientes figuras no tiene un eje de simetría?',
             'type' => '5',
-            'firstAnswer' => "{{ asset('img/primarySixth/piñata.png') }}",
-            'secondAnswer' => "{{ asset('img/primarySixth/hoja.png') }}",
-            'thirdAnswer' => "{{ asset('img/primarySixth/mariquita.png') }}",
-            'quarterAnswer' => "{{ asset('img/primarySixth/asimetrico.png') }}",
+            'firstAnswer' => "img/primarySixth/piñata.png",
+            'secondAnswer' => "img/primarySixth/hoja.png",
+            'thirdAnswer' => "img/primarySixth/mariquita.png",
+            'quarterAnswer' => "img/primarySixth/asimetrico.png",
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -208,7 +208,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => '2 2/4',
             'quarterAnswer' => '3/5',
             'correctAnswer' => '1',
-            'image' => "{{ asset('img/primarySixth/2_3.png') }}"
+            'image' => "img/primarySixth/2_3.png"
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Qué fracción se representa en la recta?',
@@ -218,7 +218,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => '3 2/4',
             'quarterAnswer' => '4/5',
             'correctAnswer' => '1',
-            'image' => "{{ asset('img/primarySixth/4_6.png') }}"
+            'image' => "img/primarySixth/4_6.png"
         ]);
         DB::table('primarySixth')->insert([
             'question' => '¿Qué fracción se representa en la recta?',
@@ -228,7 +228,7 @@ class primary6Seeder extends Seeder
             'thirdAnswer' => '4 2/4',
             'quarterAnswer' => '9/6',
             'correctAnswer' => '1',
-            'image' => "{{ asset('img/primarySixth/6_9.png') }}"
+            'image' => "img/primarySixth/6_9.png"
         ]);
     }
 }

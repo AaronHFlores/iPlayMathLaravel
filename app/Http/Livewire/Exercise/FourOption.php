@@ -9,7 +9,7 @@ class FourOption extends Component
 {
     public function render()
     {
-        $exercise = Exercise6::where('type', 2)->first();
+        $exercise = Exercise6::where('id', 9)->first();
         return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
     }
 }

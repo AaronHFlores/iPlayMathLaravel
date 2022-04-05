@@ -18,10 +18,10 @@ class Primary1Seeder extends Seeder
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona las imágenes que contienen 6 elementos.',
             'type' => '1',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/manzanas.png',
+            'secondAnswer' => 'img/primary1/dulces3.png',
+            'thirdAnswer' => 'img/primary1/libros.png',
+            'quarterAnswer' => 'img/primary1/pelotas.png',
             'correctAnswer' => '1,4',
             'image' => ''
         ]);
@@ -34,7 +34,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '8',
             'quarterAnswer' => '7',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary1/dulces8.png'
         ]);
         //3
         DB::table('primaryFirst')->insert([
@@ -45,7 +45,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '12',
             'quarterAnswer' => '5',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary1/cadena1-9.png'
         ]);
         //4
         DB::table('primaryFirst')->insert([
@@ -56,7 +56,18 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '8',
             'quarterAnswer' => '10',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary1/canicasAzules.png'
+        ]);
+        //4.1
+        DB::table('primaryFirst')->insert([
+            'question' => '¿Cuántas bolitas de color verde hay en la imagen?',
+            'type' => '2',
+            'firstAnswer' => '5',
+            'secondAnswer' => '9',
+            'thirdAnswer' => '8',
+            'quarterAnswer' => '10',
+            'correctAnswer' => '3',
+            'image' => 'img/primary1/canicasAzules.png'
         ]);
         //5
         DB::table('primaryFirst')->insert([
@@ -67,7 +78,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '2',
             'quarterAnswer' => '1',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary1/cadena1-3.png'
         ]);
         //6
         DB::table('primaryFirst')->insert([
@@ -78,7 +89,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '4',
             'quarterAnswer' => '3',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary1/tabla7.png'
         ]);
         //7
         DB::table('primaryFirst')->insert([
@@ -144,16 +155,16 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '4',
             'quarterAnswer' => '2',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary1/pelotas5.png'
         ]);
         //13
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona las imágenes que contienen 7 elementos.',
             'type' => '1',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/fresa.png',
+            'secondAnswer' => 'img/primary1/dulces7.png',
+            'thirdAnswer' => 'img/primary1/lapiz7.png',
+            'quarterAnswer' => 'img/primary1/canicas9.png',
             'correctAnswer' => '2,3',
             'image' => ''
         ]);
@@ -177,7 +188,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '3',
             'quarterAnswer' => '4',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary1/cadena9-1.png'
         ]);
         //16
         DB::table('primaryFirst')->insert([
@@ -205,10 +216,10 @@ class Primary1Seeder extends Seeder
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona el Cuadrado',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/cuadrado.png',
+            'secondAnswer' => 'img/primary1/rectangulo.png',
+            'thirdAnswer' => 'img/primary1/circulo.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '1',
             'image' => ''
         ]);
@@ -216,10 +227,10 @@ class Primary1Seeder extends Seeder
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona el Rectángulo',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/cuadrado.png',
+            'secondAnswer' => 'img/primary1/rectangulo.png',
+            'thirdAnswer' => 'img/primary1/circulo.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '2',
             'image' => ''
         ]);
@@ -227,10 +238,10 @@ class Primary1Seeder extends Seeder
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona el Circulo',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/cuadrado.png',
+            'secondAnswer' => 'img/primary1/rectangulo.png',
+            'thirdAnswer' => 'img/primary1/circulo.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '3',
             'image' => ''
         ]);
@@ -238,10 +249,10 @@ class Primary1Seeder extends Seeder
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona el Triángulo',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/primary1/cuadrado.png',
+            'secondAnswer' => 'img/primary1/rectangulo.png',
+            'thirdAnswer' => 'img/primary1/circulo.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '4',
             'image' => ''
         ]);

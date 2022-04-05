@@ -145,7 +145,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/Elementary2/table1.png'
         ]);
         DB::table('elementarySecond')->insert([
             'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
@@ -155,7 +155,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/Elementary2/table2.png'
         ]);
         DB::table('elementarySecond')->insert([
             'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
@@ -165,7 +165,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary2/table3.png'
         ]);
         DB::table('elementarySecond')->insert([
             'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
@@ -175,7 +175,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary2/table4.png'
         ]);
         DB::table('elementarySecond')->insert([
             'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
@@ -185,7 +185,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary2/table5.png'
         ]);
         DB::table('elementarySecond')->insert([
             'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
@@ -195,7 +195,7 @@ class Elementary2Seeder extends Seeder
             'thirdAnswer' => '',
             'quarterAnswer' => '',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/Elementary2/table6.png'
         ]);
     }
 }

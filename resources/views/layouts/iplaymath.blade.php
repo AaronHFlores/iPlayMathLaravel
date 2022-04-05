@@ -134,7 +134,7 @@
               <p class="fs-0">Translate recent activity notification into any language.</p>
             </div>
           </div>
-        </div><!-- end of .container-->
+        </div>--><!-- end of .container-->
       <!-- </section> --> 
       <!-- <section> close ============================-->
       <!-- ============================================-->

@@ -22,7 +22,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '8',
             'quarterAnswer' => '5',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/Elementary3/trianguloRectangulo.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -66,7 +66,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '112 de 2º y 70 de 3º',
             'quarterAnswer' => '28 de 2º y 7 de 3º',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/Elementary3/grafica.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -88,7 +88,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '1, 2 y 4',
             'quarterAnswer' => '2, 3 y 5',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/Elementary3/ecuacionRectangulo.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -121,7 +121,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '140°',
             'quarterAnswer' => '120°',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary3/anguloCirculo.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -132,16 +132,16 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => 'n²/2 + 5n/2',
             'quarterAnswer' => 'n²/2 + n/2 + 2',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/Elementary3/ecuacionCaras.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
             'question' => 'Identifica cuál de las siguientes gráficas corresponde a la función y =x² -x-2',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/Elementary3/g1.PNG',
+            'secondAnswer' => 'img/Elementary3/g2.PNG',
+            'thirdAnswer' => 'img/Elementary3/g3.PNG',
+            'quarterAnswer' => 'img/Elementary3/g4.PNG',
             'correctAnswer' => '4',
             'image' => ''
         ]);
@@ -209,7 +209,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '13',
             'quarterAnswer' => '14',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary3/moda.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -220,16 +220,16 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => '108 cm³',
             'quarterAnswer' => '75 cm³',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary3/volumen.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
             'question' => 'Las gráficas representan la distancia recorrida por una moto en función del tiempo. ¿Qué gráfica representa el hecho de que lleve una velocidad constante en todo momento?',
             'type' => '5',
-            'firstAnswer' => '',
-            'secondAnswer' => '',
-            'thirdAnswer' => '',
-            'quarterAnswer' => '',
+            'firstAnswer' => 'img/Elementary3/gl1.PNG',
+            'secondAnswer' => 'img/Elementary3/gl3.PNG',
+            'thirdAnswer' => 'img/Elementary3/gl2.PNG',
+            'quarterAnswer' => 'img/Elementary3/gl4.PNG',
             'correctAnswer' => '3',
             'image' => ''
         ]);

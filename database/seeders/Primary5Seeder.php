@@ -55,7 +55,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '17:10',
             'quarterAnswer' => '16:20',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/primary5/tablaMaestro.png'
         ]);
 
         DB::table('primaryFifth')->insert([
@@ -66,7 +66,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '2:50',
             'quarterAnswer' => '1:50',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary5/tablaMaestro.png'
         ]);
 
         DB::table('primaryFifth')->insert([
@@ -77,7 +77,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '13:50',
             'quarterAnswer' => '14:50',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary5/tablaMaestro.png'
         ]);
 
         DB::table('primaryFifth')->insert([
@@ -143,7 +143,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '3',
             'quarterAnswer' => '4',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/primary5/triangulos.png'
         ]);
 
         DB::table('primaryFifth')->insert([
@@ -165,7 +165,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '1 y 27',
             'quarterAnswer' => '1 y 47',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary5/division.png'
         ]);
 
         DB::table('primaryFifth')->insert([
@@ -242,7 +242,7 @@ class Primary5Seeder extends Seeder
             'thirdAnswer' => '12',
             'quarterAnswer' => '8',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/primary5/primasHexagonal.PNG'
         ]);
 
     }

@@ -24,7 +24,7 @@ class Elementary1Seeder extends Seeder
             'thirdAnswer' => '117.5°',
             'quarterAnswer' => '180°',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/Elementary1/grafica.png'
         ]);
         DB::table('elementaryFirst')->insert([
             'question' => '¿Cuánto es el valor del ángulo ∡ n?',
@@ -34,7 +34,7 @@ class Elementary1Seeder extends Seeder
             'thirdAnswer' => '117.5°',
             'quarterAnswer' => '180°',
             'correctAnswer' => '1',
-            'image' => ''
+            'image' => 'img/Elementary1/grafica.png'
         ]);
         DB::table('elementaryFirst')->insert([
             'question' => '¿Cuánto es el valor del ángulo ∡ o?',
@@ -44,7 +44,7 @@ class Elementary1Seeder extends Seeder
             'thirdAnswer' => '117.5°',
             'quarterAnswer' => '180°',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/Elementary1/grafica.png'
         ]);
         //Media y Mediana
         DB::table('elementaryFirst')->insert([
@@ -55,7 +55,7 @@ class Elementary1Seeder extends Seeder
             'thirdAnswer' => '9',
             'quarterAnswer' => '10',
             'correctAnswer' => '3',
-            'image' => ''
+            'image' => 'img/Elementary1/tabla.png'
         ]);
         DB::table('elementaryFirst')->insert([
             'question' => 'Mariana obtuvo las siguientes calificaciones, ¿calcule la media de calificaciones?',
@@ -65,7 +65,7 @@ class Elementary1Seeder extends Seeder
             'thirdAnswer' => '7.5',
             'quarterAnswer' => '8',
             'correctAnswer' => '2',
-            'image' => ''
+            'image' => 'img/Elementary1/tabla.png'
         ]);
         //Probabilidad
         DB::table('elementaryFirst')->insert([
