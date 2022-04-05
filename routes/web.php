@@ -21,6 +21,8 @@ use App\Http\Livewire\Adm\AdminShowOrder;
 use App\Http\Livewire\User\UserOrder;
 use App\Http\Livewire\User\UserShowOrder;
 
+use App\Http\Livewire\Exercise\FourOption;
+
 use App\Http\Livewire\ProductDetail;
 
 use App\Http\Livewire\OrderFinished;
@@ -71,15 +73,13 @@ Route::get('/thanks', OrderFinished::class)->name('order.finished');
 // User
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/account', UserDashboard::class)->name('user.dashboard');
-    
+
     Route::get('/account/orders', UserOrder::class)->name('user.orders');
     Route::get('/account/orders/{orderId}', UserShowOrder::class)->name('user.showorder');
 });
 
 //Exercise
-Route::get('/fourOption', function () {
-    return view('livewire/exercise/four-option');
-});
+Route::get('/fourOption', [FourOption::class, 'render']);
 
 // Admin
 Route::middleware(['auth:sanctum', 'adminauth'])->group(function () {
