@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/layouts/iplaymath-exercise';
+    public const HOME = '/play';
 
     /**
      * The controller namespace for the application.
