@@ -36,7 +36,7 @@ Route::get('/play', function () {
 });
 
 //Exercise
-Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render']);
+Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
 Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render']);
 Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render']);
 Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render']);
