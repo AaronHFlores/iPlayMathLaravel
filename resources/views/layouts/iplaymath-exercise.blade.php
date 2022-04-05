@@ -200,20 +200,20 @@
           </p>
           
           <div class="row mb-4 mt-4">
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Dashboard" style="width:95px;" />
             <a href="/FirstGradePrimary">
                 <h4 class="mt-3 lh-base">1° Grado</h4>
               </a>
               <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
             </div>
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Comment" style="width:95px;" />
               <a href="/SecondGradePrimary">
                 <h4 class="mt-3 lh-base">2° Grado</h4>
               </a>
               <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center">
-              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
+              <img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Tailored" style="width:95px;" />
               <a href="/ThirdGradePrimary">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
@@ -221,19 +221,19 @@
             </div>           
           </div>
           <div class="row mb-6">
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Dashboard" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">4° Grado</h4>                
               </a>  
               <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
             </div>
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Dashboard" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">5° Grado</h4>                
               </a>  
               <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
             </div>
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Dashboard" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">6° Grado</h4>                
               </a>  
@@ -247,20 +247,20 @@
           </p>
 
           <div class="row mb-6">
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Dashboard" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">1° Grado</h4>
               </a>
               <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
             </div>
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Comment" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">2° Grado</h4>
               </a>
               <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center">
-              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
+              <img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Tailored" style="width:95px;" />
               <a href="">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
