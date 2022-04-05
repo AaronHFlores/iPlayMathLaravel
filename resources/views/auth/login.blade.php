@@ -57,6 +57,12 @@
                 <!-- <h4 class="card-title mt-3 text-center">Crea tu Perfil </h4> -->
                 <!-- <p class="text-center">Get started with your free account</p> -->
                 <p>
+
+                @if (session('status'))
+                    <div class="mb-4 font-medium text-sm text-green-600">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 
                 <form action="{{ route('login') }}" method = "POST">
                     @csrf

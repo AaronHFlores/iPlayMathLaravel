@@ -56,6 +56,7 @@
                         <p>
                         </div> 
                 </div>
+
                 <form action="{{ route('register') }}" method = "POST">
                     @csrf
                     <div class="row register-form">
@@ -104,6 +105,8 @@
                         </div>
                     </div>
                 </form>
+
+
             </div>
         </div>
 

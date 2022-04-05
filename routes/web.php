@@ -30,6 +30,7 @@ use App\Http\Livewire\OrderFinished;
 use App\Http\Controllers\ProductsAPI;
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+// use Illuminate\Http\Request;
 
 
 /*
@@ -53,8 +54,16 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 // Route::get('/', Shop::class )->name('all.products');
 
 Route::get('/', function () {
-    return view('layouts/iplaymath');
+    return view('iplaymath');
 });
+Route::get('/play', function () {
+    return view('layouts/iplaymath-exercise');
+});
+
+// Route::get('/index', function () {
+//     return view('layouts/iplaymath-index');
+// });
+
 
 Route::get('/category/{categorySlug?}', Shop::class )->name('category.products');
 
@@ -103,9 +112,14 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-
-    return redirect('/');
+    return view('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
 Route::resource('products', ProductsAPI::class);
