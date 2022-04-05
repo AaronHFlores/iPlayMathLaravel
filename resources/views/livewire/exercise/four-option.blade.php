@@ -94,8 +94,6 @@
                         @endif
                         </div>
                 </div>
-                <form >
-                    @csrf
                     @if ($primarySixth->type == 4)
                         <div class="row register-form">
                             <div class="col-md-6">
@@ -127,7 +125,7 @@
                                             </label>
                                         </div>
                                     @endif
-                                    
+
                                     @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
                                     <button class="btn btn-primary" onclick="myFunction1()">
                                         <img class = "imgButton" src="{{$primarySixth->firstAnswer}}"  alt="logo" />
@@ -152,12 +150,12 @@
                                             </label>
                                         </div>
                                     @endif
-                                    @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}                                    
+                                    @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
                                         <button class="btn btn-primary" onclick="myFunction2()">
                                         <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="logo" />
                                     @endif
                                     @if($primarySixth->type != 1 and $primarySixth->type != 5)
-                                    
+
                                         <button class="btn btn-primary" onclick="myFunction2()">
                                         {{ $primarySixth->secondAnswer }}
                                     @endif
@@ -213,19 +211,21 @@
                             </div>
                         </div>
                         @endif
+                        @if ($primarySixth->type == 1)
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary" onclick="myFunction1()">Aceptar </button>
+                                </div>
+                            </div>
+                        @endif
                     @endif
-                </form>
             </div>
         </div>
-        <p id="1"></p>
-        <p id="2"></p>
-        <p id="3"></p>
-        <p id="4"></p>
 
         <script>
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
-                    if ({{$primarySixth->correctAnswer}}=="TextInput") {
+                    if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
                         toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                     }
                     else {
