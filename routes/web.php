@@ -33,18 +33,18 @@ Route::get('/', function () {
 
 Route::get('/play', function () {
     return view('/layouts/iplaymath-exercise');
-});
+})->middleware('auth');
 
 //Exercise
 Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render']);
-Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render']);
-Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render']);
-Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render']);
-Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render']);
-Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render']);
-Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render']);
-Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render']);
+Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware('auth');
+Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware('auth');
+Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware('auth');
+Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render'])->middleware('auth');
+Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middleware('auth');
+Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware('auth');
+Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware('auth');
+Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware('auth');
 
 
 
