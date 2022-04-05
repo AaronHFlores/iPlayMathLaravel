@@ -214,7 +214,7 @@
                         @if ($primarySixth->type == 1) {{-- Boton para Aceptar en caso de ser Multiple Seleccion --}}
                             <div class="row register-form">
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary" onclick="myFunction5()">Aceptar </button>
+                                    <button class="btn btn-primary" onclick="myFunction()"> Aceptar </button>
                                 </div>
                             </div>
                         @endif
@@ -265,7 +265,7 @@
         <script>
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymat.test/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -273,9 +273,28 @@
             }
         </script>
         <script>
-            function myFunction5() {
-                if (({{$primarySixth->correctAnswer}}).charAt(0)=="1"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+            function myFunction() {
+                let isCheck = document.getElementById('ck1a').checked;
+                let check = '';
+                if(isCheck){
+                    check += '1,';
+                }
+                isCheck = document.getElementById('ck2a').checked;
+                if(isCheck){
+                    check += "2,";
+                }
+                isCheck = document.getElementById('ck3a').checked;
+                if(isCheck){
+                    check += "3";
+                }  
+                isCheck = document.getElementById('ck4a').checked;
+                if(isCheck){
+                    check += '4';
+                }
+                console.log(check);
+                console.log({{$primarySixth->correctAnswer}});
+                if ({{$primarySixth->correctAnswer}}==check){
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymat.test/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
