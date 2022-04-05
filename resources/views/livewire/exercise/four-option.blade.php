@@ -226,7 +226,7 @@
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
                     if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                     }
                     else {
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -234,7 +234,7 @@
                 }
                 else{
                     if ({{$primarySixth->correctAnswer}}=="1") {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                     }
                     else {
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -245,7 +245,7 @@
         <script>
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -255,7 +255,7 @@
         <script>
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -265,7 +265,7 @@
         <script>
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -294,7 +294,7 @@
                 console.log(check);
                 console.log({{$primarySixth->correctAnswer}});
                 if ({{$primarySixth->correctAnswer}}==check){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
