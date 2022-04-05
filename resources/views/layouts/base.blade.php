@@ -38,15 +38,6 @@
             <a href="#"><img src="{{ asset('img/logo.png') }}" alt=""></a>
         </div>
         <div class="humberger__menu__widget">
-            <!-- <div class="header__top__right__language">
-                <img src="{{ asset('img/language.png') }}" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div> -->
             <div class="header__top__right__auth">
             @if(Route::has('login'))
                 @auth

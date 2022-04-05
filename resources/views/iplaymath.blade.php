@@ -42,7 +42,10 @@
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
               <li class="nav-item"><a class="nav-link px-3" href="/">Inicio</a></li>
+              @guest
               <li class="nav-item"><a class="nav-link px-3" href="{{ route('register') }}">Registrarse</a></li>
+              @endguest
+
             </ul><a  href="{{ route('login') }}"><input type="submit" class="btn btn-primary" value="Iniciar Sesión"/></a>
             <!-- <button class="btn btn-primary" href="{{ route('login') }}" >Iniciar Sesión</button> -->
           </div>
