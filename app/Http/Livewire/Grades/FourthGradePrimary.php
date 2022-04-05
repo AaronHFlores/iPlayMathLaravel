@@ -10,8 +10,6 @@ class FourthGradePrimary extends Component
     {
         $randomNumber = random_int(1, 22);
         $exercise = Exercise4::where('id', $randomNumber)->first();
-        if($exercise->type==2){
-            return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
-        }
+        return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
     }
 }
