@@ -10,9 +10,7 @@ class FirstGradePrimary extends Component
     public function render()
     {
         $randomNumber = random_int(1, 22);
-        $exercise = Exercise1P::where('id', $randomNumber)->first();
-        if($exercise->type==2){
-            return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
-        }
+        $exercise = Exercise1P::where('id', 17)->first();
+        return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
     }
 }

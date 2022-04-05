@@ -30,6 +30,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
         <link href="{{ asset('css/iPlayMath/css/theme.min.css')}}" rel="stylesheet" />
         <link href="{{ asset('css/iPlayMath/css/user.css')}}" rel="stylesheet" />
+        <style>
+            .imgButton {
+                max–width: 50px;
+                height: auto;
+            }
+        </style>
     </head>
 
     <body>
@@ -78,34 +84,127 @@
                     <div align="center">
                         <h3 class="register-heading text-center"> {{ $primarySixth->question }}</h3>
                         @if (!empty($primarySixth->image))
-                        <img src="{{$primarySixth->image}}"  alt="logo" />
+                            <img class = "imgButton" src="{{$primarySixth->image}}"  alt="logo" />
                         @endif
                         </div>
                 </div>
                 <form >
                     @csrf
-                    <div class="row mb-4 mt-3">
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <button class="btn btn-primary" onclick="myFunction1()">
-                                {{ $primarySixth->firstAnswer }}
-                            </button>
+                    @if ($primarySixth->type == 4)
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Respuesta:"  id="type4" name="type4" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary" onclick="myFunction1()">Aceptar </button>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 text-center">
-                            <button class="btn btn-primary" onclick="myFunction2()">
-                                {{ $primarySixth->secondAnswer }}
-                            </button>
-                        </div>
-                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
-                            <button class="btn btn-primary">
-                                {{ $primarySixth->thirdAnswer }}
-                            </button>
-                        </div>
-                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
-                            <button class="btn btn-primary">
-                                {{ $primarySixth->quarterAnswer }}
-                            </button>
-                        </div>
-                    </div>
+                    @else
+                        @if ($primarySixth->type == 5 or $primarySixth->type == 1 )       {{-- Div por si contiene Botones con Imagenes Tipo 5 --}}                 
+                            <div class="row mb-2 mt-3">
+                        @else                        
+                            <div class="row mb-4 mt-3">
+                        @endif
+                            {{-- Primer Boton --}}
+                            @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1)   {{-- En caso de ser de tipo 1, 3 o 5--}}                     
+                                <div class="col-md-6 col-lg-6 text-center">
+                            @else                            
+                                <div class="col-md-6 col-lg-3 text-center">
+                            @endif 
+                                <button class="btn btn-primary" onclick="myFunction1()">
+                                    @if($primarySixth->type == 1) {{-- En caso de ser tipo 1 --}}
+                                        <div class="custom-control custom-checkbox image-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <label class="custom-control-label" for="ck1a">
+                                                <img class = "imgButton" src="{{ $primarySixth->firstAnswer }}" alt="#" class="img-fluid">
+                                            </label>
+                                        </div>
+                                    @endif
+                                    @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}                              
+                                        <img class = "imgButton" src="{{$primarySixth->firstAnswer}}"  alt="logo" />                                    
+                                    @endif                                    
+                                    @if($primarySixth->type != 1 and $primarySixth->type != 5)                                   
+                                        {{ $primarySixth->firstAnswer }}
+                                    @endif
+                                </button>
+                            </div>
+                            {{-- Segundo Boton --}}
+                            @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1) {{-- En caso de ser de tipo 1 , 3 o 5 --}}                      
+                            <div class="col-md-6 col-lg-6 text-center">
+                            @else                            
+                            <div class="col-md-6 col-lg-3 text-center">
+                            @endif                        
+                                <button class="btn btn-primary" onclick="myFunction2()">
+                                    @if($primarySixth->type == 1)
+                                        <div class="custom-control custom-checkbox image-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <label class="custom-control-label" for="ck1a">
+                                                <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="#" class="img-fluid">
+                                            </label>
+                                        </div>
+                                    @endif
+                                    @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}                              
+                                        <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="logo" />                                    
+                                    @endif                                    
+                                    @if($primarySixth->type != 1 and $primarySixth->type != 5)
+                                        {{ $primarySixth->secondAnswer }}
+                                    @endif
+                                </button>
+                            </div>
+                            {{-- Tercer Boton --}}
+                            @if (!empty($primarySixth->thirdAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
+                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
+                                <button class="btn btn-primary">                              
+                                        {{ $primarySixth->thirdAnswer }}
+                                </button>
+                            </div>
+                            @endif
+                            {{-- Cuarto Boton --}}
+                            @if (!empty($primarySixth->quarterAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
+                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
+                                <button class="btn btn-primary">
+                                    {{ $primarySixth->quarterAnswer }}
+                                </button>
+                            </div>
+                            @endif
+                        </div> {{-- Final del Div de Fila de Botones de Opcion --}}
+                        @if ($primarySixth->type == 5 or $primarySixth->type == 1)       {{-- Div por si contiene Botones con Imagenes Tipo 5 o 1 --}}                 
+                        <div class="row mb-2 mt-3">                                  
+                            <div class="col-md-6 col-lg-6 text-center" onclick="myFunction3()">{{-- Botton 3   --}}                               
+                                <button class="btn btn-primary">
+                                    @if($primarySixth->type == 1)
+                                        <div class="custom-control custom-checkbox image-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <label class="custom-control-label" for="ck1a">
+                                                <img class = "imgButton" src="{{ $primarySixth->thirdAnswer }}" alt="#" class="img-fluid">
+                                            </label>
+                                        </div>
+                                    @else
+                                            <img class = "imgButton" src="{{ $primarySixth->thirdAnswer }}"  alt="logo" />         
+                                        
+                                    @endif
+                                </button>
+                            </div>                       
+                            <div class="col-md-6 col-lg-6 text-center" onclick="myFunction4()"> {{-- Boton 4 --}}
+                                
+                                <button class="btn btn-primary">
+                                    @if($primarySixth->type == 1)
+                                        <div class="custom-control custom-checkbox image-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <label class="custom-control-label" for="ck1a">
+                                                <img class = "imgButton" src="{{ $primarySixth->quarterAnswer }}" alt="#" class="img-fluid">
+                                            </label>
+                                        </div>
+                                    @else
+                                        <img class = "imgButton" src="{{ $primarySixth->quarterAnswer }}"  alt="logo" />                                               
+                                    @endif
+                                </button>
+                            </div>                       
+                        </div>              
+                        @endif
+                    @endif
                 </form>
             </div>
         </div>
