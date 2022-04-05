@@ -14,7 +14,7 @@ class AddScoreColumnToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('score');
+            $table->integer('score')->default(0);
         });
     }
 
