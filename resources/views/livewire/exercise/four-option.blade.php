@@ -38,22 +38,22 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
-                    </ul>                
+                    </ul>
                     <a  href="{{ route('login') }}"><input type="submit" class="btn btn-light" value="Iniciar Sesión"/></a><br>
                 </div>
             </div>
         </nav>
         <br>
-    
-        <div class="container">       
+
+        <div class="container">
             <div class="w-70 h-100 p-5 services-card-shadow rounded-4">
                 <div >
                     <div align="center">
                         <h3 class="register-heading text-center"> {{ $primarySixth->question }}</h3>
                         @if (!empty($primarySixth->image))
-                        <img src="{{$primarySixth->image}}" height="70" alt="logo" />                       
-                        @endif 
-                        </div> 
+                        <img src="{{$primarySixth->image}}"  alt="logo" />
+                        @endif
+                        </div>
                 </div>
                 <form action="{{ route('register') }}" method = "POST">
                     @csrf
@@ -73,14 +73,14 @@
                                 @enderror
                             </div>
                             <br>
-                            
+
                             <div class="form-group">
                                 <input type="password" class="form-control"  placeholder="{{ __('Confirm Password') }}" value="" id="password_confirmation" name="password_confirmation" />
                                 @error('password_confirmation')
                                     <div><label style="color:#DC3545">{{ $message }}</label></div>
                                 @enderror
                             </div>
-                
+
                         </div>
 
                         <div class="col-md-6">
