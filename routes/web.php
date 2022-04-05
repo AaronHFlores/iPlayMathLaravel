@@ -46,11 +46,6 @@ Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->mi
 Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware('auth');
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware('auth');
 
-
-
-
-
-
 //Verificacion
 Route::get('/email/verify', function () {
     return view('auth.verify-email');

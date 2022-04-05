@@ -19,6 +19,12 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/iPlayMath/img/favicons/favicon.ico')}}">
         <link rel="manifest" href=" {{ asset('img/iPlayMath//img/favicons/manifest.json')}}">
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link href="{{ asset('css/toastr.min.css')}}" rel="stylesheet"/>
         <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
         <meta name="theme-color" content="#ffffff">
 
@@ -82,8 +88,6 @@
                         @endif
                         </div>
                 </div>
-                <form >
-                    @csrf
                     <div class="row mb-4 mt-3">
                         <div class="col-md-6 col-lg-3 text-center">
                             <button class="btn btn-primary" onclick="myFunction1()">
@@ -106,51 +110,56 @@
                             </button>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
-        <p id="1"></p>
-        <p id="2"></p>
-        <p id="3"></p>
-        <p id="4"></p>
 
         <script>
             function myFunction1() {
-                if ({{$primarySixth->correctAnswer}}=="1"){
-                    document.getElementById("1").innerHTML = "Perfecto"
+                if({{$primarySixth->type}}=="4"){
+                    if ({{$primarySixth->correctAnswer}}=="TextInput") {
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    }
+                    else {
+                        toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+                    }
                 }
-                if ({{$primarySixth->correctAnswer}}!="1"){
-                    document.getElementById("1").innerHTML = "Mal"
+                else{
+                    if ({{$primarySixth->correctAnswer}}=="1") {
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    }
+                    else {
+                        toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+                    }
                 }
             }
         </script>
         <script>
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
-                    document.getElementById("2").innerHTML = "Perfecto"
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
-                if ({{$primarySixth->correctAnswer}}!="2"){
-                    document.getElementById("2").innerHTML = "Mal"
+                else {
+                    toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    document.getElementById("3").innerHTML = "Perfecto"
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
-                if ({{$primarySixth->correctAnswer}}!="3"){
-                    document.getElementById("3").innerHTML = "Mal"
+                else {
+                    toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    document.getElementById("4").innerHTML = "Perfecto"
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
-                if ({{$primarySixth->correctAnswer}}!="4"){
-                    document.getElementById("4").innerHTML = "Mal"
+                else {
+                    toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
