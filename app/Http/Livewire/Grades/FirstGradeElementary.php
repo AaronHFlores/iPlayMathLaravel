@@ -13,6 +13,7 @@ class FirstGradeElementary extends Component
         $exercise = Exercise1S::where('id', $randomNumber)->first();
         if($exercise->type==2){
             return view('livewire.exercise.four-option',['primarySixth' => $exercise]);
+
         }
     }
 }
