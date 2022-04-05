@@ -56,7 +56,7 @@
             {{ asset('img/iPlayMath//img/illustration/2.png') }}
             );background-position:left top;background-size:contain;"></div>
         <!--/.bg-holder-->
-        <div class="bg-holder d-none d-xxl-block hero-bg" style="background-image:url({{ asset('img/iPlayMath/img/illustration/1.png')}} );background-position:right top;background-size:contain;"></div>
+        <div class="bg-holder d-none d-xxl-block hero-bg" style="background-image:url({{ asset('img/iPlayMath/img/illustration/math.png')}} );background-position:right top;background-size:contain;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row align-items-center h-100 justify-content-center justify-content-lg-start">

@@ -32,7 +32,7 @@ Route::get('/', function () {
 });
 
 Route::get('/play', function () {
-    return view('layouts/iplaymath-exercise');
+    return view('/layouts/iplaymath-exercise');
 });
 
 //Exercise

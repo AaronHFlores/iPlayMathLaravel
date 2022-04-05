@@ -37,7 +37,7 @@
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="light">
+      <nav class="navbar navbar-expand-lg navbar-light fixed" >
         <div class="container"><a class="navbar-brand" href="/play"><img src="{{ asset('img/iPlayMath/img/logoo.png') }}" height="50" alt="logo" /></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
@@ -56,7 +56,7 @@
                     <li>
                       <form method="POST" action="{{ route('logout') }}">
                         @csrf
-<!-- 
+                            <!-- 
                             <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                             this.closest('form').submit();">
@@ -76,79 +76,223 @@
       </nav>
 
       <section >
-        
-        <div >
+        <div class="container" align="center" >
+            <h3 class="mt-3 lh-base">Primaria</h3>
 
-        </div>
-      </section>
+            <div class="row mb-4">  
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                      class="mt-3 lh-base" class="btn btn-light" >1°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>
 
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                      class="mt-3 lh-base" class="btn btn-light" >2°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>
 
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                     class="mt-3 lh-base" class="btn btn-light" >3°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>      
+            </div>
 
-      <!-- ============================================-->
+            <div class="row mb-4">
+              <!-- <div class="col-md-6 h-100 text-center text-md-start p-0 p-md-5 pb-3">
+                <h2 class="mt-3">Improve the stability of your application</h2>
+                <p class="mb-0">Bugsnag monitors application stability, so you can make data-driven decisions on whether you should be building new features, or fixing bugs.</p>
+              </div> -->        
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                      class="mt-3 lh-base" class="btn btn-light" >4°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                      class="mt-3 lh-base" class="btn btn-light" >5°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                  <a href="#">
+                    <h3
+                     class="mt-3 lh-base" class="btn btn-light" >6°
+                    </h3>
+                  </a>
+                  <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                </div>
+              </div>      
+            </div>
+
+            <h3 class="mt-3 lh-base">Secundaria</h3>
+
+            <div class="row mb-4">
+              <div class="col-md-4">
+                  <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="https://i.postimg.cc/0Nd0C9Hs/math.jpg " alt="math" style="width:95px;" />
+                    <a href="#">
+                      <h3
+                        class="mt-3 lh-base" class="btn btn-light" >1°
+                      </h3>
+                    </a>
+                    <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                    <a href="#">
+                      <h3
+                        class="mt-3 lh-base" class="btn btn-light" >2°
+                      </h3>
+                    </a>
+                    <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
+                    <a href="#">
+                      <h3
+                      class="mt-3 lh-base" class="btn btn-light" >3°
+                      </h3>
+                    </a>
+                    <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+          ============================================
       <!-- <section> begin ============================-->
+      <section id="customers">
+        <div class="container">
+          <h1 class="text-center display-5 fw-semi-bold" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll"> Primaria</h1>
+          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado. 
+            <!-- <br class="d-none d-lg-block" />you have the tools to let your customer do the selling for you. -->
+          </p>
+          
+          <div class="row mb-4 mt-4">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">1° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
+            </div>
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">2° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
+            </div>
+            <div class="col-md-6 col-lg-4 text-center">
+              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">3° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->
+            </div>           
+          </div>
+          <div class="row mb-6">
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">4° Grado</h4>                
+              </a>  
+              <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
+            </div>
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">5° Grado</h4>                
+              </a>  
+              <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
+            </div>
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">6° Grado</h4>                
+              </a>  
+              <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
+            </div>
+          </div>
+
+          <h1 class="text-center display-5 fw-semi-bold" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll"> Secundaria</h1>
+          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado. 
+            <!-- <br class="d-none d-lg-block" />you have the tools to let your customer do the selling for you. -->
+          </p>
+
+          <div class="row mb-6">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">1° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
+            </div>
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">2° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
+            </div>
+            <div class="col-md-6 col-lg-4 text-center">
+              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
+              <a href="">
+                <h4 class="mt-3 lh-base">3° Grado</h4>
+              </a>
+              <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->
+            </div>  
+          </div>
+        </div><!-- end of .container-->
+      </section><!-- <section> close ============================-->
       <!-- ============================================-->
 
-      <!-- <section class="py-0 bg-1000">
+    </main>
+
+    <footer>
+      <section class="py-0 bg-1000">
         <div class="container">
-          <div class="row py-7">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/icons/Logo2.png" height="51" alt="" /></a>
-              <p class="text-light mt-4 mb-0">EU: +49 9999 0000</p>
-              <p class="text-light mb-0">US: +00 4444 0000</p>
-              <p class="text-light mt-5">info@gohub.ee</p>
-              <div class="d-flex"><a href="#!"><img class="me-xl-3 me-1" src="assets/img/gallery/linkedin-line1.svg" alt="in" width:'20px'="width:'20px'" height:'20px'="height:'20px'" /></a><a href="#!"><img class="me-xl-3 me-1" src="assets/img/gallery/facebook-line1.svg" alt="fb" width:'20px'="width:'20px'" height:'20px'="height:'20px'" /></a><a href="#!"><img class="me-xl-3 me-1" src="assets/img/gallery/twitter-line1.svg" alt="twitter" width:'20px'="width:'20px'" height:'20px'="height:'20px'" /></a><a href="#!"><img class="me-xl-3 me-1" src="assets/img/gallery/instagram-line1.svg" alt="instragram" width:'20px'="width:'20px'" height:'20px'="height:'20px'" /></a></div>
+          <div class="row justify-content-md-between justify-content-evenly py-3">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+              <p class="fs--1 my-2 fw-bold text-200">&copy; 2022 iPlayMath Inc</p>
             </div>
-            <div class="col-3 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-              <h5 class="lh-lg fw-bold text-light font-sans-serif">About Us</h5>
-              <ul class="list-unstyled text-light mb-md-4">
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Newsroom</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Blog</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gohub API</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gift cards</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Career</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gohub driving jobs</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light font-sans-serif">Offerings</h5>
-              <ul class="list-unstyled text-light mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gohub Eats</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gohub Business</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Guhub Freight</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Gohub Health</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light font-sans-serif"> Support</h5>
-              <ul class="list-unstyled text-light mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Terminal Conditions</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">About Us</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Contact US</a></li>
-                <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Terms of Use</a></li>
-              </ul>
+            <div class="col-12 col-sm-8 col-md-6">
+              <!-- <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16"> -->
+                  <!-- <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path> -->
+                <!-- </svg>&nbsp;by&nbsp;<a class="fw-bold text-info text-200" href="https://themewagon.com/" target="_blank">ThemeWagon </a></p> -->
             </div>
           </div>
         </div>
+        <!-- end of .container-->
+      </section>
 
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="py-0 bg-1000">
-          <div class="container">
-            <div class="row justify-content-md-between justify-content-evenly py-3">
-              <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                <p class="fs--1 my-2 fw-bold text-200">&copy; 2022 Your Company Inc</p>
-              </div>
-              <div class="col-12 col-sm-8 col-md-6">
-                <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-info text-200" href="https://themewagon.com/" target="_blank">ThemeWagon </a></p>
-              </div>
-            </div>
-          </div><!-- end of .container-->
-        </section><!-- <section> close ============================-->
-        <!-- ============================================-->
-
-      <!-- </section> -->
-    </main><!-- ===============================================-->
+    </footer>
+    <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->
 
