@@ -63,7 +63,7 @@
             <div class="col-md-9 col-xxl-5 text-md-start text-center py-6 pt-8">
               <h1 class="fs-4 fs-md-5 fs-xxl-4" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll" >Practicar Matemáticas ya no será tan aburrido</h1>
               <p class="fs-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">iPlayMath es una forma divertita de aprender.  </p>
-              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start mt-5" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"><a class="btn btn-sm btn-primary me-1" href="#!" role="button">Iniciar Ahora</a></div>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start mt-5" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"><a class="btn btn-sm btn-primary me-1" href="{{ route('login') }}" role="button">Iniciar Ahora</a></div>
             </div>
           </div>
         </div>
@@ -171,26 +171,8 @@
       <!-- </section><section> close ============================ -->
       <!-- ============================================ --> 
 <!-- 
-      <section class="p-0" id="docs">
-        <div class="bg-holder d-none d-lg-block" style="background-image:url(assets/img/illustration/6.png);background-position:right top;background-size:contain;"></div>
-        <!--/.bg-holder-->
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-7 col-xl-5 text-lg-start text-center">
-              <h1 class="fs-3 fw-normal mt-6">Your finances on autopilot</h1>
-              <p class="fs-0">Gohub monitors application stability, so you can make data-driven decision on whether you should be building new features, or fixing bugs.</p>
-            </div>
-          </div>
-          <div class="row align-items-center mt-7">
-            <h4 class="fs-2 fw-normal">Save Time</h4>
-            <ul class="list-unstyled py-3">
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>intuitive process and single interface</li>
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>Online and paperless</li>
-              <li class="mb-3 text-900"><span class="far fa-check-circle text-700 me-2"></span>Real-time notification</li>
-            </ul>
-          </div>
-        </div>
-      <!-- </section>
+
+      </section>
       <section class="py-5">
         <div class="container" id="auto">
           <div class="row align-items-center">
@@ -219,7 +201,7 @@
       <!-- ============================================-->
 
       <section class="py-0 bg-1000">
-        <div class="container">
+        <!-- <div class="container">
           <div class="row py-7">
             <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/icons/Logo2.png" height="51" alt="" /></a>
               <p class="text-light mt-4 mb-0">EU: +49 9999 0000</p>
@@ -257,7 +239,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- ============================================-->
         <!-- <section> begin ============================-->
@@ -265,12 +247,12 @@
           <div class="container">
             <div class="row justify-content-md-between justify-content-evenly py-3">
               <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                <p class="fs--1 my-2 fw-bold text-200">&copy; 2022 Your Company Inc</p>
+                <p class="fs--1 my-2 fw-bold text-200">&copy; 2022 iPlayMath Inc</p>
               </div>
               <div class="col-12 col-sm-8 col-md-6">
-                <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
+                <!-- <p class="fs--1 my-2 text-center text-md-end text-200"> Made with&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
                     <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-info text-200" href="https://themewagon.com/" target="_blank">ThemeWagon </a></p>
+                  </svg>&nbsp;by&nbsp;<a class="fw-bold text-info text-200" href="https://themewagon.com/" target="_blank">ThemeWagon </a></p> -->
               </div>
             </div>
           </div><!-- end of .container-->
