@@ -146,7 +146,7 @@
                             @endif
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck2a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -185,7 +185,7 @@
                             <div class="col-md-6 col-lg-6 text-center" >{{-- Botton 3   --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck3a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->thirdAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -200,7 +200,7 @@
                             <div class="col-md-6 col-lg-6 text-center" > {{-- Boton 4 --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck4a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->quarterAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -213,10 +213,10 @@
                             </div>
                         </div>
                         @endif
-                        @if ($primarySixth->type == 1)
+                        @if ($primarySixth->type == 1) {{-- Boton para Aceptar en caso de ser Multiple Seleccion --}}
                             <div class="row register-form">
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary" onclick="myFunction1()">Aceptar </button>
+                                    <button class="btn btn-primary" onclick="myFunction5()">Aceptar </button>
                                 </div>
                             </div>
                         @endif
@@ -272,6 +272,16 @@
         <script>
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                }
+                else {
+                    toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+                }
+            }
+        </script>
+        <script>
+            function myFunction5() {
+                if (({{$primarySixth->correctAnswer}}).charAt(0)=="1"){
                     toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
                 else {

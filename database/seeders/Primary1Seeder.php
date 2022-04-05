@@ -177,7 +177,7 @@ class Primary1Seeder extends Seeder
             'thirdAnswer' => '3',
             'quarterAnswer' => '2',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/primary1/tabla9.png'
         ]);
         //15
         DB::table('primaryFirst')->insert([
