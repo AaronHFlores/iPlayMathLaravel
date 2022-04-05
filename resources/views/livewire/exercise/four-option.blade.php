@@ -265,7 +265,7 @@
         <script>
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymat.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
@@ -294,7 +294,7 @@
                 console.log(check);
                 console.log({{$primarySixth->correctAnswer}});
                 if ({{$primarySixth->correctAnswer}}==check){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymat.test/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
                 }
                 else {
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
