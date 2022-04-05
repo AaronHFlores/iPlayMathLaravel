@@ -1,7 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Exercise\FourOption;
+use App\Http\Livewire\Grades\FirstGradePrimary;
+use App\Http\Livewire\Grades\SecondGradePrimary;
+use App\Http\Livewire\Grades\ThirdGradePrimary;
+use App\Http\Livewire\Grades\FourthGradePrimary;
+use App\Http\Livewire\Grades\FifthGradePrimary;
+use App\Http\Livewire\Grades\SixthGradePrimary;
+use App\Http\Livewire\Grades\FirstGradeElementary;
+use App\Http\Livewire\Grades\SecondGradeElementary;
+use App\Http\Livewire\Grades\ThirdGradeElementary;
+
+
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 // use Illuminate\Http\Request;
 
@@ -26,7 +36,20 @@ Route::get('/play', function () {
 });
 
 //Exercise
-Route::get('/fourOption', [FourOption::class, 'render']);
+Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render']);
+Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render']);
+Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render']);
+Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render']);
+Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render']);
+Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render']);
+Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render']);
+Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render']);
+Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render']);
+
+
+
+
+
 
 //Verificacion
 Route::get('/email/verify', function () {
@@ -35,7 +58,7 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return view('/');
+    return view('/play');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
