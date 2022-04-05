@@ -75,7 +75,7 @@
         </div>
       </nav>
 
-      <section >
+      <!-- <section >
         <div class="container" align="center" >
             <h3 class="mt-3 lh-base">Primaria</h3>
 
@@ -86,9 +86,9 @@
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >1°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -97,9 +97,9 @@
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >2°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -108,26 +108,26 @@
                     <h3
                      class="mt-3 lh-base" class="btn btn-light" >3°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>      
             </div>
 
-            <div class="row mb-4">
+            <div class="row mb-4"> -->
               <!-- <div class="col-md-6 h-100 text-center text-md-start p-0 p-md-5 pb-3">
                 <h2 class="mt-3">Improve the stability of your application</h2>
                 <p class="mb-0">Bugsnag monitors application stability, so you can make data-driven decisions on whether you should be building new features, or fixing bugs.</p>
               </div> -->        
-              <div class="col-md-4">
+              <!-- <div class="col-md-4">
                 <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                   <a href="#">
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >4°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -136,9 +136,9 @@
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >5°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -147,9 +147,9 @@
                     <h3
                      class="mt-3 lh-base" class="btn btn-light" >6°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>      
             </div>
 
@@ -162,36 +162,35 @@
                       <h3
                         class="mt-3 lh-base" class="btn btn-light" >1°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
-                </div>
-
+                  <!-- </div>
+                </div> -->
+<!-- 
                 <div class="col-md-4">
                   <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                     <a href="#">
                       <h3
                         class="mt-3 lh-base" class="btn btn-light" >2°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
-                </div>
+                  <!-- </div>
+                </div> -->
 
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                   <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                     <a href="#">
                       <h3
                       class="mt-3 lh-base" class="btn btn-light" >3°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
+                  <!-- </div>
                 </div>  
               </div>
             </div>
-          </div>
-          ============================================
+          </div> -->
       <!-- <section> begin ============================-->
       <section id="customers">
         <div class="container">
