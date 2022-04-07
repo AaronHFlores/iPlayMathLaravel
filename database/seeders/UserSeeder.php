@@ -18,8 +18,10 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Admin User',
             'email' => 'admin@test.com',
+            'age' => '15',
             'password' => Hash::make('password'),
-            'role' => 'adm'
+            'role' => 'adm',
+            'score' => 1000
         ]);
     }
 }

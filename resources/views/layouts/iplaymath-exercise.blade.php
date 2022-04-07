@@ -45,9 +45,9 @@
                 <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
 
                 <div class="dropdown">
-                  <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">                        
+                  <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                     <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-  
+
                     <span>{{ Auth::user()->name }}</span>
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -56,7 +56,7 @@
                     <li>
                       <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                            <!-- 
+                            <!--
                             <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                             this.closest('form').submit();">
@@ -75,20 +75,20 @@
         </div>
       </nav>
 
-      <section >
+      <!-- <section >
         <div class="container" align="center" >
             <h3 class="mt-3 lh-base">Primaria</h3>
 
-            <div class="row mb-4">  
+            <div class="row mb-4">
               <div class="col-md-4">
                 <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                   <a href="#">
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >1°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -97,9 +97,9 @@
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >2°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -108,26 +108,26 @@
                     <h3
                      class="mt-3 lh-base" class="btn btn-light" >3°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
-              </div>      
+                <!-- </div>
+              </div>
             </div>
 
-            <div class="row mb-4">
+            <div class="row mb-4"> -->
               <!-- <div class="col-md-6 h-100 text-center text-md-start p-0 p-md-5 pb-3">
                 <h2 class="mt-3">Improve the stability of your application</h2>
                 <p class="mb-0">Bugsnag monitors application stability, so you can make data-driven decisions on whether you should be building new features, or fixing bugs.</p>
-              </div> -->        
-              <div class="col-md-4">
+              </div> -->
+              <!-- <div class="col-md-4">
                 <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                   <a href="#">
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >4°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -136,9 +136,9 @@
                     <h3
                       class="mt-3 lh-base" class="btn btn-light" >5°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
+                <!-- </div>
               </div>
 
               <div class="col-md-4">
@@ -147,10 +147,10 @@
                     <h3
                      class="mt-3 lh-base" class="btn btn-light" >6°
                     </h3>
-                  </a>
+                  </a> -->
                   <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                </div>
-              </div>      
+                <!-- </div>
+              </div>
             </div>
 
             <h3 class="mt-3 lh-base">Secundaria</h3>
@@ -162,111 +162,110 @@
                       <h3
                         class="mt-3 lh-base" class="btn btn-light" >1°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
-                </div>
-
+                  <!-- </div>
+                </div> -->
+<!--
                 <div class="col-md-4">
                   <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                     <a href="#">
                       <h3
                         class="mt-3 lh-base" class="btn btn-light" >2°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
-                </div>
+                  <!-- </div>
+                </div> -->
 
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                   <div class="w-100 h-100 p-5 services-card-shadow rounded-4"><img src="assets/img/icons/1.png" alt="Dashboard" style="width:95px;" />
                     <a href="#">
                       <h3
                       class="mt-3 lh-base" class="btn btn-light" >3°
                       </h3>
-                    </a>
+                    </a> -->
                     <!-- <p class="mb-0">Strengthen your digital visibility in a universe where everyone is interested in traveling. We help you build your presence without having to lift a finger!</p> -->
-                  </div>
-                </div>  
+                  <!-- </div>
+                </div>
               </div>
             </div>
-          </div>
-          ============================================
+          </div> -->
       <!-- <section> begin ============================-->
       <section id="customers">
         <div class="container">
           <h1 class="text-center display-5 fw-semi-bold" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll"> Primaria</h1>
-          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado. 
+          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado.
             <!-- <br class="d-none d-lg-block" />you have the tools to let your customer do the selling for you. -->
           </p>
-          
+
           <div class="row mb-4 mt-4">
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Dashboard" style="width:95px;" />
+            <a href="/FirstGradePrimary">
                 <h4 class="mt-3 lh-base">1° Grado</h4>
               </a>
               <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
             </div>
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
-              <a href="">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Comment" style="width:95px;" />
+              <a href="/SecondGradePrimary">
                 <h4 class="mt-3 lh-base">2° Grado</h4>
               </a>
               <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center">
-              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
-              <a href="">
+              <img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Tailored" style="width:95px;" />
+              <a href="/ThirdGradePrimary">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
               <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->
-            </div>           
+            </div>
           </div>
           <div class="row mb-6">
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
-                <h4 class="mt-3 lh-base">4° Grado</h4>                
-              </a>  
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="/FourthGradePrimary">
+                <h4 class="mt-3 lh-base">4° Grado</h4>
+              </a>
               <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
             </div>
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
-                <h4 class="mt-3 lh-base">5° Grado</h4>                
-              </a>  
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math1.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="/FifthGradePrimary">
+                <h4 class="mt-3 lh-base">5° Grado</h4>
+              </a>
               <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
             </div>
-            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
-                <h4 class="mt-3 lh-base">6° Grado</h4>                
-              </a>  
+            <div class="col-md-4 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math3.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="/SixthGradePrimary">
+                <h4 class="mt-3 lh-base">6° Grado</h4>
+              </a>
               <!-- <p class="fs-0">Seeing other visitor taking action creates fear of missing out.</p> -->
             </div>
           </div>
 
           <h1 class="text-center display-5 fw-semi-bold" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll"> Secundaria</h1>
-          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado. 
+          <p class="text-center fs-0 fs-md-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"> Elige tu grado.
             <!-- <br class="d-none d-lg-block" />you have the tools to let your customer do the selling for you. -->
           </p>
 
           <div class="row mb-6">
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Dashboard" style="width:95px;" />
-              <a href="">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Dashboard" style="width:95px;" />
+              <a href="/FirstGradeElementary">
                 <h4 class="mt-3 lh-base">1° Grado</h4>
               </a>
               <!-- <p class="fs-0">Convert more wesite visitors in signups ans purchases.</p> -->
             </div>
-            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/6.png') }}" alt="Comment" style="width:95px;" />
-              <a href="">
+            <div class="col-md-6 col-lg-4 text-center"><img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Comment" style="width:95px;" />
+              <a href="/SecondGradeElementary">
                 <h4 class="mt-3 lh-base">2° Grado</h4>
               </a>
               <!-- <p class="fs-0">Your advertising spend will go further than ever before.</p> -->
             </div>
             <div class="col-md-6 col-lg-4 text-center">
-              <img src="{{ asset('img/iPlayMath/img/icons/11.png') }}" alt="Tailored" style="width:95px;" />
-              <a href="">
+              <img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Tailored" style="width:95px;" />
+              <a href="/ThridGradePrimary">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
               <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->
-            </div>  
+            </div>
           </div>
         </div><!-- end of .container-->
       </section><!-- <section> close ============================-->
