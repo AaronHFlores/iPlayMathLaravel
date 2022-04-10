@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -220,59 +219,75 @@
                         @endif
                     @endif
             </div>
+                                <p>Clicks:<a id="trys">0</a></p>
         </div>
 
         <script>
+            var clicks = 0;
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
                     if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
+                        clicks += 1;
+                        document.getElementById("trys").innerHTML = clicks;
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
                 }
                 else{
                     if ({{$primarySixth->correctAnswer}}=="1") {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
+                        clicks += 1;
+                        document.getElementById("trys").innerHTML = clicks;
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction() {
                 let isCheck = document.getElementById('ck1a').checked;
                 let check = '';
@@ -286,7 +301,7 @@
                 isCheck = document.getElementById('ck3a').checked;
                 if(isCheck){
                     check += "3";
-                }  
+                }
                 isCheck = document.getElementById('ck4a').checked;
                 if(isCheck){
                     check += '4';
@@ -294,9 +309,11 @@
                 console.log(check);
                 console.log({{$primarySixth->correctAnswer}});
                 if ({{$primarySixth->correctAnswer}}==check){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/play";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }

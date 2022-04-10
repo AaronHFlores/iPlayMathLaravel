@@ -10,10 +10,10 @@ use App\Http\Livewire\Grades\SixthGradePrimary;
 use App\Http\Livewire\Grades\FirstGradeElementary;
 use App\Http\Livewire\Grades\SecondGradeElementary;
 use App\Http\Livewire\Grades\ThirdGradeElementary;
+use App\Http\Livewire\UserController;
 
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
-// use Illuminate\Http\Request;
 
 
 /*
@@ -33,7 +33,7 @@ Route::get('/', function () {
 
 Route::get('/play', function () {
     return view('/layouts/iplaymath-exercise');
-})->middleware(['auth']);
+})->middleware(['auth','userdiagnosed'])->name('play');
 
 //Exercise
 Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
@@ -45,6 +45,8 @@ Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middlewa
 Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware('auth');
 Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware('auth');
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware('auth');
+Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
+//Route::get('/UpdateScore/{trys}/{time}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
 
 Route::get('/diagnostic', function (){
     return view('/welcome');
