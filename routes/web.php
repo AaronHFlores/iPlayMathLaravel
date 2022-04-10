@@ -33,7 +33,7 @@ Route::get('/', function () {
 
 Route::get('/play', function () {
     return view('/layouts/iplaymath-exercise');
-})->middleware('auth');
+})->middleware(['auth']);
 
 //Exercise
 Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
@@ -45,6 +45,10 @@ Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middlewa
 Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware('auth');
 Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware('auth');
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware('auth');
+
+Route::get('/diagnostic', function (){
+    return view('/welcome');
+})->name('diagnostic');
 
 //Verificacion
 Route::get('/email/verify', function () {
