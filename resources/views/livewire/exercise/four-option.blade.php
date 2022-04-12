@@ -219,7 +219,7 @@
                         @endif
                     @endif
             </div>
-                                <p>Clicks:<a id="trys">0</a></p>
+                                <p >Clicks:<a id="trys">0</a></p>
         </div>
 
         <script>
@@ -227,6 +227,7 @@
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
                     if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
+                        clicks += 1;
                         toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
@@ -237,6 +238,7 @@
                 }
                 else{
                     if ({{$primarySixth->correctAnswer}}=="1") {
+                        clicks += 1;
                         toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
@@ -251,6 +253,7 @@
             var clicks = 0;
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
+                    clicks += 1;
                     toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
@@ -264,7 +267,8 @@
             var clicks = 0;
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                    clicks += 1;
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/{{clicks}}";}} );
                 }
                 else {
                     clicks += 1;
@@ -277,6 +281,7 @@
             var clicks = 0;
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
+                    clicks += 1;
                     toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
