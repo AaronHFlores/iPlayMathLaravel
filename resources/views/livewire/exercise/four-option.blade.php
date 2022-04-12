@@ -268,7 +268,7 @@
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
                     clicks += 1;
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/{{clicks}}";}} );
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
                     clicks += 1;
