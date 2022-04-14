@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -144,7 +143,7 @@
                             @endif
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck2a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->secondAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -183,7 +182,7 @@
                             <div class="col-md-6 col-lg-6 text-center" >{{-- Botton 3   --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck3a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->thirdAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -198,7 +197,7 @@
                             <div class="col-md-6 col-lg-6 text-center" > {{-- Boton 4 --}}
                                     @if($primarySixth->type == 1)
                                         <div class="custom-control custom-checkbox image-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ck1a">
+                                            <input type="checkbox" class="custom-control-input" id="ck4a">
                                             <label class="custom-control-label" for="ck1a">
                                                 <img class = "imgButton" src="{{ $primarySixth->quarterAnswer }}" alt="#" class="img-fluid">
                                             </label>
@@ -211,63 +210,115 @@
                             </div>
                         </div>
                         @endif
-                        @if ($primarySixth->type == 1)
+                        @if ($primarySixth->type == 1) {{-- Boton para Aceptar en caso de ser Multiple Seleccion --}}
                             <div class="row register-form">
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary" onclick="myFunction1()">Aceptar </button>
+                                    <button class="btn btn-primary" onclick="myFunction()"> Aceptar </button>
                                 </div>
                             </div>
                         @endif
                     @endif
             </div>
+                                <p >Clicks:<a id="trys">0</a></p>
         </div>
 
         <script>
+            var clicks = 0;
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
                     if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                        clicks += 1;
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
+                        clicks += 1;
+                        document.getElementById("trys").innerHTML = clicks;
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
                 }
                 else{
                     if ({{$primarySixth->correctAnswer}}=="1") {
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                        clicks += 1;
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                     }
                     else {
+                        clicks += 1;
+                        document.getElementById("trys").innerHTML = clicks;
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    clicks += 1;
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    clicks += 1;
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
         </script>
         <script>
+            var clicks = 0;
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "http://iplaymathlaravel.test/play";}} );
+                    clicks += 1;
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
                 }
                 else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
+                    toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+                }
+            }
+        </script>
+        <script>
+            var clicks = 0;
+            function myFunction() {
+                let isCheck = document.getElementById('ck1a').checked;
+                let check = '';
+                if(isCheck){
+                    check += '1,';
+                }
+                isCheck = document.getElementById('ck2a').checked;
+                if(isCheck){
+                    check += "2,";
+                }
+                isCheck = document.getElementById('ck3a').checked;
+                if(isCheck){
+                    check += "3";
+                }
+                isCheck = document.getElementById('ck4a').checked;
+                if(isCheck){
+                    check += '4';
+                }
+                console.log(check);
+                console.log({{$primarySixth->correctAnswer}});
+                if ({{$primarySixth->correctAnswer}}==check){
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                }
+                else {
+                    clicks += 1;
+                    document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
             }
