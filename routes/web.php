@@ -27,8 +27,22 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
+// Route::get('/', function () {
+//     return view('iplaymath');
+// });
 Route::get('/', function () {
-    return view('iplaymath');
+    return view('/layouts/main');
+});
+
+Route::get('/main', function () {
+    return view('iPM-login');
+});
+
+Route::get('/main1', function () {
+    return view('iPM-login2');
+});
+Route::get('/main2', function () {
+    return view('iPM-register');
 });
 
 Route::get('/play', function () {
