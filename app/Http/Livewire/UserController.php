@@ -11,7 +11,6 @@ class UserController extends Component
     public function updateScore($trys, $minutes, $seconds, $success)
     {
         $time= (((int)$minutes *60) + (int)$seconds);
-        dd($trys,$time,$success);
         $User = Auth::user();
         $User->score=$User->score+$trys;
         $User->save();
