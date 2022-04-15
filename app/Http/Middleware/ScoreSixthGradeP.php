@@ -17,7 +17,7 @@ class ScoreSixthGradeP
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->score >= 1200){
+        if(Auth::user()->score >= 1000){
             return $next($request);
         }else{
             return redirect()->route('play');

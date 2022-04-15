@@ -8,10 +8,12 @@ use App\Models\User;
 
 class UserController extends Component
 {
-    public function updateScore($points)
+    public function updateScore($trys, $minutes, $seconds, $success)
     {
+        $time= (((int)$minutes *60) + (int)$seconds);
+        dd($trys,$time,$success);
         $User = Auth::user();
-        $User->score=$User->score+$points;
+        $User->score=$User->score+$trys;
         $User->save();
         return redirect()->route('play');
     }

@@ -59,8 +59,8 @@ Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middlewa
 Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware(['auth','score.first.grade.e']);
 Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware(['auth','score.second.grade.e']);
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e']);
-Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
-//Route::get('/UpdateScore/{trys}/{time}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
+//Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
+Route::get('/UpdateScore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
 
 Route::get('/diagnostic', function (){
     return view('/welcome');
