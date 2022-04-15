@@ -219,7 +219,7 @@
                         @endif
                     @endif
             </div>
-                                <p >Clicks:<a id="trys">0</a></p>
+                                <p hidden>Clicks:<a id="trys">0</a></p>
         </div>
 
         <script>
@@ -227,22 +227,32 @@
             function myFunction1() {
                 if({{$primarySixth->type}}=="4"){
                     if ({{$primarySixth->correctAnswer}}==document.getElementById("type4").value) {
-                        clicks += 1;
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                        if(clicks<4){
+                            clicks += 1;
+                        }
+                        var url="/UpdateScore/"+clicks
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );
                     }
                     else {
-                        clicks += 1;
-                        document.getElementById("trys").innerHTML = clicks;
+                        if(clicks<4){
+                            clicks += 1;
+                            document.getElementById("trys").innerHTML = clicks;
+                        }
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
                 }
                 else{
                     if ({{$primarySixth->correctAnswer}}=="1") {
-                        clicks += 1;
-                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                        if(clicks<4){
+                            clicks += 1;
+                        }
+                        var url="/UpdateScore/"+clicks
+                        toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );
                     }
                     else {
-                        clicks += 1;
+                        if(clicks<4){
+                            clicks += 1;
+                        }
                         document.getElementById("trys").innerHTML = clicks;
                         toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                     }
@@ -253,11 +263,16 @@
             var clicks = 0;
             function myFunction2() {
                 if ({{$primarySixth->correctAnswer}}=="2"){
-                    clicks += 1;
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                    if(clicks<4){
+                        clicks += 1;
+                    }
+                    var url="/UpdateScore/"+clicks
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );
                 }
                 else {
-                    clicks += 1;
+                    if(clicks<4){
+                        clicks += 1;
+                    }
                     document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
@@ -267,11 +282,16 @@
             var clicks = 0;
             function myFunction3() {
                 if ({{$primarySixth->correctAnswer}}=="3"){
-                    clicks += 1;
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                    if(clicks<4){
+                        clicks += 1;
+                    }
+                    var url="/UpdateScore/"+clicks
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );
                 }
                 else {
-                    clicks += 1;
+                    if(clicks<4){
+                        clicks += 1;
+                    }
                     document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
@@ -281,11 +301,16 @@
             var clicks = 0;
             function myFunction4() {
                 if ({{$primarySixth->correctAnswer}}=="4"){
-                    clicks += 1;
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
+                    if(clicks<4){
+                        clicks += 1;
+                    }
+                    var url="/UpdateScore/"+clicks
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );
                 }
                 else {
-                    clicks += 1;
+                    if(clicks<4){
+                        clicks += 1;
+                    }
                     document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }
@@ -314,10 +339,15 @@
                 console.log(check);
                 console.log({{$primarySixth->correctAnswer}});
                 if ({{$primarySixth->correctAnswer}}==check){
-                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = "/UpdateScore/10";}} );
-                }
+                    if(clicks<4){
+                        clicks += 1;
+                    }
+                    var url="/UpdateScore/"+clicks
+                    toastr.success('De regreso al menu de actividades', 'Correcto', {progressBar:true, onHidden: function() { window.location.href = url;}} );                }
                 else {
-                    clicks += 1;
+                    if(clicks<4){
+                        clicks += 1;
+                    }
                     document.getElementById("trys").innerHTML = clicks;
                     toastr.error('Intentalo de nuevo', 'Incorrecto :(')
                 }

@@ -51,14 +51,14 @@ Route::get('/play', function () {
 
 //Exercise
 Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware('auth');
-Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware('auth');
-Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware('auth');
+Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p']);
+Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware(['auth','score.third.grade.p']);
+Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware(['auth','score.fourth.grade.p']);
+Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render'])->middleware(['auth','score.fifth.grade.p']);
+Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middleware(['auth','score.sixth.grade.p']);
+Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware(['auth','score.first.grade.e']);
+Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware(['auth','score.second.grade.e']);
+Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e']);
 Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
 //Route::get('/UpdateScore/{trys}/{time}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
 
