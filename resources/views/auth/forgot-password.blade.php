@@ -1,95 +1,83 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>iPlayMath</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicons -->
+  <link href="{{ asset('img/iPM/img/logo_icon.png') }}" rel="icon">
+  <link href="{{ asset('img/iPM/img/logo_icon.png') }}" rel="apple-touch-icon">
 
-        <!-- ===============================================-->
-        <!--    Document Title-->
-        <!-- ===============================================-->
-        <title>iPlayMath</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
-        <!-- ===============================================-->
-        <!--    Favicons-->
-        <!-- ===============================================-->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/iPlayMath/img/favicons/favicon.ico')}}">
-        <link rel="manifest" href=" {{ asset('img/iPlayMath//img/favicons/manifest.json')}}">
-        <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-        <meta name="theme-color" content="#ffffff">
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('css/iPM/css/styles-copy.css') }}" rel="stylesheet">
 
-        <!-- ===============================================-->
-        <!--    Stylesheets-->
-        <!-- ===============================================-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
-        <link href="{{ asset('css/iPlayMath/css/theme.min.css')}}" rel="stylesheet" />
-        <link href="{{ asset('css/iPlayMath/css/user.css')}}" rel="stylesheet" />
-    </head>
+</head>
+<body>
+<!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
+<div class="container" id="container">
+	
+	<div class="form-container sign-in-container">
+    <!-- Form Password -->
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light" >
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
-                    </ul>                
-                    <a  href="{{ route('login') }}"><input type="submit" class="btn btn-light" value="Iniciar Sesión"/></a><br>
-                </div>
-            </div>
-        </nav>
-        <br>
+		<form action="{{ route('password.email') }}" method = "POST">
+            @csrf
+			<h1>Recuperar</h1>
+			<!-- <div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span> -->
+			<!-- <input type="email" placeholder="Email" /> -->
+            <input type="email" class="form-control" placeholder="{{ __('Email') }}" value="{{ old('email') }}" id="email" name="email"/>
+            @error('email')
+                <div><label style="color:#DC3545">{{ $message }}</label></div>
+            @enderror
 
-        <div class="container">
-            
-            <div class="w-70 h-100 p-5 services-card-shadow rounded-3">
-    
-                <div align="center">
-                    <img src="{{ asset('img/iPlayMath/img/logoo.png') }}" height="70" alt="logo" />
-                    
-                    <h3 class="register-heading text-center">Recuperar</h3>
-                    <!-- <h4 class="card-title mt-3 text-center">Crea tu Perfil </h4> -->
-                    <!-- <p class="text-center">Get started with your free account</p> -->
-                    <p>
-                    
-                    <form action="{{ route('password.email') }}" method = "POST">
-                        @csrf
-                        <div class="col-md-6" align="center">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="{{ __('Email') }}" value="{{ old('email') }}" id="email" name="email"/>
-                                @error('email')
-                                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                                @enderror
-                            </div>
-                            <br>
-                        </div>
+            <br>
+			<button id="btn-primary" type="submit">Recuperar Contraseña</button>
 
-                        <div class="col-md-6">
-                            <input type="submit" class="btn btn-primary"  value="Recuperar Contraseña"/>
-                        </div>
-                    </form>
-                </div> 
-            </div>
-        </div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>¡No te preocupes si has llegado a esta página!</h1>
+                <br>
+                <img src="{{ asset('img/iPM/img/logo_white_large.png') }}" style="height: 70px;" alt="" title="iPlayMath">
+                        
+				<p>Para recuperar tu contraseña ingresa tu correo</p>
+				<!-- <button class="ghost" id="signIn">Iniciar Sesión</button> -->
+			</div>
+			<!-- <div class="overlay-panel overlay-right">
+				<h1>¡Hola!</h1>
+        <br> -->
+        <!-- <img src="{{ asset('img/iPM/img/logo_white_large.png') }}" style="height: 70px;" alt="" title="iPlayMath">
+				<p>Ingresa tus datos y comienza a practicar matemáticas</p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div> -->
+	</div>
+</div>
 
+<footer>
+	<p>
+    &copy; Copyright <strong>iPlayMath</strong>. All Rights Reserved
+		<!-- Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+		- Read how I created this and how you can join the challenge
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+	 -->
+  </p>
+</footer>
 
-    <script src="{{ asset('vendors/iPlayMath/vendors/bootstrap/bootstrap.min.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/anchorjs/anchor.min.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/is/is.min.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/fontawesome/all.min.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/lodash/lodash.min.js')}} "></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/imagesloaded/imagesloaded.pkgd.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/gsap/customEase.js')}} "></script>
-    <script src="{{ asset('vendors/iPlayMath/vendors/gsap/scrollToPlugin.js')}} "></script>
-
-    <script src="{{ asset('js/iPlayMath//js/theme.js')}}"></script>
-  </body>
-
+</body>
 </html>

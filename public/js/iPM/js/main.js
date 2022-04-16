@@ -19,6 +19,10 @@
     }
   }
 
+    /**
+ * Form Login - Register
+ * 
+ */
   /**
    * Easy event listener function
    */
@@ -202,6 +206,9 @@
     }
   });
 
+
+
+
   /**
    * Initiate gallery lightbox 
    */
@@ -216,6 +223,8 @@
     select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
   })
 
+
+
   /**
    * Animation on scroll
    */
@@ -229,3 +238,4 @@
   });
 
 })()
+

@@ -300,3 +300,27 @@ footer a {
     text-decoration: none;
 }
 
+@media (max-width: 722px) {
+
+  .container #btn-primary {
+    padding: 12px 30px;
+  }
+  .container h1 {
+    font-size: 20px;
+  }
+  .container input {
+    /* font-size: 20px; */
+    padding: 12px 15px;
+  }
+  .overlay-container img {
+    max-height: 30px;
+  }
+  .overlay-container h1 {
+    font-size: 20px;
+  }
+  .overlay-container .ghost {
+    padding: 12px 30px;
+  }
+
+}
+

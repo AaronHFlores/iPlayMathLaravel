@@ -261,7 +261,7 @@
             </div>
             <div class="col-md-6 col-lg-4 text-center">
               <img src="{{ asset('img/iPlayMath/img/icons/math2.png') }}" alt="Tailored" style="width:95px;" />
-              <a href="/ThridGradePrimary">
+              <a href="/ThirdGradePrimary">
                 <h4 class="mt-3 lh-base">3° Grado</h4>
               </a>
               <!-- <p class="fs-0">People trust companies they see other people buy.</p> -->

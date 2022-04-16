@@ -23,6 +23,8 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/iPM/css/styles.css') }}" rel="stylesheet">
 
@@ -41,76 +43,51 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
+        <a href="/diagnostic" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
-      <a href="{{ route('register') }}" class="login scrollto" >Registrarse</a>
+
+      <nav id="navbar" class="navbar order-last order-lg-3">
+        <div class="dropdown">
+          <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
+            <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
+            <span>{{ Auth::user()->name }}</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-header text-center ">
+              <img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
+              <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->name }}</p>
+              <p class="fw-light text-muted mb-0">{{ Auth::user()->email }}</p>
+            </div>
+
+            <a style="color: blue"class="dropdown-item" href="/">
+                Mi Perfil
+            </a>     
+
+            <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" 
+            onclick="event.preventDefault();this.closest('form').submit();"> 
+              Cerrar Sesión 
+            </a>     
+                              
+        </div>
+      </nav>
     </div>
   </header>
   <!-- End Header -->
 
-  <!-- img math -->
-  <!-- <section id="about">
-  </section> -->
-
-  <main id="main">
-    <!-- ======= Buy Ticket Section ======= -->
-    <!-- <section id="buy-tickets" class="section-with-bg">
-    </section> -->
-    <!-- End Buy Ticket Section -->
-
-    <section id="form-user" style="background-image: url({{asset('img/iPM/img/math2.jpg')}});">
-      <div class="container" data-aos="zoom-in">
-        <div class="section-header">
-          <h2>Ingresar</h2>
-          <p><img class="img-login" src="{{ asset('img/iPM/img/logo_icon.png') }}" alt="logo_iPlayMath"></p>
-
-          <!-- <p>Rerum numquam illum recusandae quia mollitia consequatur.</p> -->
-        </div>
-        <form action="{{ route('login') }}" method="POST">
-          @csrf
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10 d-flex">
-              <input type="email" class="form-control" placeholder="{{ __('Email') }}" value="{{ old('email') }}" id="email" name="email"/>
-              @error('email')
-                  <div><label style="color:#DC3545">{{ $message }}</label></div>
-              @enderror
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10 d-flex">
-              <input type="password" class="form-control" placeholder="{{ __('Password') }}" value="{{ old('password') }}" id="password" name="password" />
-                @error('password')
-                    <div><label style="color:#DC3545">{{ $message }}</label></div>
-                @enderror
-            </div>
-          </div>
-          <br>
-
-          <div class="text-center">
-            <!-- <label for="remember_me">
-              <x-jet-checkbox id="remember_me" name="remember" />
-              <span class="ml-2 text-sm">Recordar usuario</span>
-            </label> -->
-            
-            <h6 class="text-center">
-              @if (Route::has('password.request'))
-                <a class="underline text-sm" href="{{ route('password.request') }}">
-                    ¿Olvidaste la contraseña?
-                </a>
-              @endif
-            </h6>
-            <button type="submit" class="btn" data-bs-toggle="modal" data-ticket-type="premium-access">Iniciar Sesión</button>
-          </div>         
-        </form>
-      </div>
-    </section><!-- End Subscribe Section -->
-
-    <!-- <section id="buy-tickets" class="section-with-bg">
-    </section> -->
-
-  </main>
-  <!-- End #main -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" style="background-image: url({{asset('img/iPM/img/math1.jpg')}});">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" > 
+      <h1 class="mb-4 pb-0">¡ Bienvenido a <span id="span-diagnostic">iPlayMath</span> !</h1>
+      <h3 style="color: #fff">
+      Para ofrecerte una experiencia adecuada segun tus conocimientos<br/>
+      es necesario que realices los ejercicios del <strong>examen diagnóstico</strong>,<br>
+       el cual te servirá como punto de partida.
+      </h3>
+      <a href="/main2" class="play-btn mb-4"></a>
+      <a href="/main2" class="about-btn scrollto">Comenzar</a>
+    </div>
+  </section>
+  <!-- End Hero Section -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -135,6 +112,8 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
   <!-- Vendor JS Files -->
   <script src="{{ asset('vendors/iPM/vendor/aos/aos.js ') }}"></script>
   <script src="{{ asset('vendors/iPM/vendor/bootstrap/js/bootstrap.bundle.min.js ') }}"></script>

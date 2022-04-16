@@ -34,15 +34,19 @@ Route::get('/', function () {
     return view('/layouts/main');
 });
 
-Route::get('/main', function () {
-    return view('iPM-login');
+// Route::get('/main', function () {
+//     return view('iPM-diagnostic');
+// });
+
+Route::get('/main2', function () {
+    return view('iPM-dashboard');
 });
 
-Route::get('/main1', function () {
-    return view('iPM-login2');
+Route::get('/main3', function () {
+    return view('iPM-play');
 });
-Route::get('/main2', function () {
-    return view('iPM-register');
+Route::get('/main4', function () {
+    return view('livewire/exercise/four-option');
 });
 
 Route::get('/play', function () {
@@ -63,7 +67,7 @@ Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->mid
 //Route::get('/UpdateScore/{trys}/{time}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
 
 Route::get('/diagnostic', function (){
-    return view('/welcome');
+    return view('/iPM-diagnostic');
 })->name('diagnostic');
 
 //Verificacion

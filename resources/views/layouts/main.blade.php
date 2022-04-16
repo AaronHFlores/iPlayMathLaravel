@@ -68,7 +68,7 @@
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" > 
       <h1 class="mb-4 pb-0">Practicar Matemáticas <br> ya no será <br> tan <span>ABURRIDO</span></h1> 
           <!-- The Annual<br><span>Marketing</span> Conference -->
-      <a href="{{ route('login') }}" class=" play-btn mb-4"></a>
+      <!-- <a href="{{ route('login') }}" class=" play-btn mb-4"></a> -->
       <a href="#about" class="about-btn scrollto">Comenzar Ahora</a>
     </div>
   </section>

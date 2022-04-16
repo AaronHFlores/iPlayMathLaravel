@@ -26,6 +26,7 @@
 	<div class="form-container sign-up-container">
 		<!-- Form Register -->
     <form action="{{ route('register') }}" method="POST">
+      @csrf
 			<h1>Crea tu Perfil</h1>
       
 			<!-- <div class="social-container">
@@ -63,6 +64,9 @@
       @error('password_confirmation')
         <div><label style="color:#DC3545">{{ $message }}</label></div>
       @enderror
+
+      <input type="hidden" class="form-control" value="0" id="score" name="score" />
+
 
       <br>
 			<button id="btn-primary" type="submit">Registrarse</button>
