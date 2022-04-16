@@ -17,12 +17,12 @@ class Primary1Seeder extends Seeder
         //1
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona las imágenes que contienen 6 elementos.',
-            'type' => '1',
+            'type' => '5',
             'firstAnswer' => 'img/primary1/manzanas.png',
             'secondAnswer' => 'img/primary1/dulces3.png',
             'thirdAnswer' => 'img/primary1/libros.png',
-            'quarterAnswer' => 'img/primary1/pelotas.png',
-            'correctAnswer' => '1,4',
+            'quarterAnswer' => 'img/primary1/pelotas4.png',
+            'correctAnswer' => '1',
             'image' => ''
         ]);
         //2
@@ -160,12 +160,12 @@ class Primary1Seeder extends Seeder
         //13
         DB::table('primaryFirst')->insert([
             'question' => 'Selecciona las imágenes que contienen 7 elementos.',
-            'type' => '1',
+            'type' => '5',
             'firstAnswer' => 'img/primary1/fresa.png',
             'secondAnswer' => 'img/primary1/dulces7.png',
-            'thirdAnswer' => 'img/primary1/lapiz7.png',
+            'thirdAnswer' => 'img/primary1/pelotas.png',
             'quarterAnswer' => 'img/primary1/canicas9.png',
-            'correctAnswer' => '2,3',
+            'correctAnswer' => '2',
             'image' => ''
         ]);
         //14
