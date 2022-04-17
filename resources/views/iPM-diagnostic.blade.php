@@ -61,13 +61,13 @@
 
             <a style="color: blue"class="dropdown-item" href="/">
                 Mi Perfil
-            </a>     
+            </a>
 
-            <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" 
-            onclick="event.preventDefault();this.closest('form').submit();"> 
-              Cerrar Sesión 
-            </a>     
-                              
+            <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();this.closest('form').submit();">
+              Cerrar Sesión
+            </a>
+
         </div>
       </nav>
     </div>
@@ -76,15 +76,15 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" style="background-image: url({{asset('img/iPM/img/math1.jpg')}});">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" > 
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" >
       <h1 class="mb-4 pb-0">¡ Bienvenido a <span id="span-diagnostic">iPlayMath</span> !</h1>
       <h3 style="color: #fff">
       Para ofrecerte una experiencia adecuada segun tus conocimientos<br/>
       es necesario que realices los ejercicios del <strong>examen diagnóstico</strong>,<br>
        el cual te servirá como punto de partida.
       </h3>
-      <a href="/main2" class="play-btn mb-4"></a>
-      <a href="/main2" class="about-btn scrollto">Comenzar</a>
+      <a href="/diagnosticTask" class="play-btn mb-4"></a>
+      <a href="/diagnosticTask" class="about-btn scrollto">Comenzar</a>
     </div>
   </section>
   <!-- End Hero Section -->

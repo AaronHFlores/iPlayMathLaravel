@@ -70,6 +70,13 @@ Route::get('/diagnostic', function (){
     return view('/iPM-diagnostic');
 })->name('diagnostic');
 
+
+Route::get('/diagnosticTask', [UserController::class, 'DiagnosticTask'])->middleware(['auth'])->name('diagnosticTask');
+Route::get('/updatediagnosticscore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'updateDiagnosticScore'])->middleware(['auth'])->name('updateDiagnosticScore');
+
+Route::get('/recap', [UserController::class, 'Recap'])->middleware(['auth'])->name('recap');
+
+
 //Verificacion
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
