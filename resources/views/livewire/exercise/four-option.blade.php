@@ -252,13 +252,14 @@
                                     }
                                     minutes = document.getElementById("minutes").innerHTML;
                                     seconds = document.getElementById("seconds").innerHTML;
-                                    if({{$diagnostic}}){
+                                    if({{$diagnostic}}==1){
                                         var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                     }
                                     else {
                                         var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                     }
+                                    alert(url);
                                     toastr.success('De regreso al menu de actividades', 'Correcto', {
                                         progressBar: true,
                                         onHidden: function () {
@@ -279,13 +280,14 @@
                                     }
                                     minutes = document.getElementById("minutes").innerHTML;
                                     seconds = document.getElementById("seconds").innerHTML;
-                                    if({{$diagnostic}}){
+                                    if({{$diagnostic}}==1){
                                         var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                     }
                                     else {
                                         var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                     }
+                                    alert(url);
                                     toastr.success('De regreso al menu de actividades', 'Correcto', {
                                         progressBar: true,
                                         onHidden: function () {
@@ -315,13 +317,14 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                if({{$diagnostic}}){
+                                if({{$diagnostic}}==1){
                                     var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                 }
                                 else {
                                     var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                 }
+                                alert(url);
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -350,13 +353,14 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                if({{$diagnostic}}){
+                                if({{$diagnostic}}==1){
                                     var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                 }
                                 else {
                                     var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                 }
+                                alert(url);
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -385,13 +389,15 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                if({{$diagnostic}}){
+                                if({{$diagnostic}}==1){
                                     var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                 }
                                 else {
                                     var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                 }
+                                alert(url);
+
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -439,13 +445,15 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                if({{$diagnostic}}){
+                                if({{$diagnostic}}==1){
                                     var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
                                 }
                                 else {
                                     var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
 
                                 }
+                                alert(url);
+
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
