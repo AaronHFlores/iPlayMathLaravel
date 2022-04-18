@@ -37,8 +37,16 @@ class UserController extends Component
     {
         $time= (((int)$minutes *60) + (int)$seconds);
         $User = Auth::user();
-        $User->score=$User->score+$trys;
+        $ch = curl_init();
+        //URL para la api python
+        curl_setopt($ch, CURLOPT_URL, 'http://127.0.0.1:8000/results?finished=' . $success .'&time='. $time .'&attempts='. $trys); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, 0); 
+        $data = json_decode(curl_exec($ch)); 
+        $User->score=$User->score+intval($data[0]);
         $User->save();
+        
+        curl_close($ch);        
         return redirect()->route('play');
     }
 
