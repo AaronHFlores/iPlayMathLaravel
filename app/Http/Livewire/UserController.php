@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use App\Models\User;
@@ -18,6 +19,20 @@ use App\Models\Exercise3S;
 
 class UserController extends Component
 {
+    public function EditUser()
+    {
+        $User = Auth::user();
+        return view('livewire.user.edit-user',['User' => $User]);
+    }
+
+    public function UpdateUser(Request $request,User $User)
+    {
+        $User->name= $request->name;
+        $User->age= $request->age;
+        $User->save();
+        return redirect()->route('play');
+    }
+
     public function updateScore($trys, $minutes, $seconds, $success)
     {
         $time= (((int)$minutes *60) + (int)$seconds);
