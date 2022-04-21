@@ -39,7 +39,7 @@ class UserController extends Component
         $User = Auth::user();
         $ch = curl_init();
         //URL para la api python
-        curl_setopt($ch, CURLOPT_URL, 'http://127.0.0.1:8000/results?finished=' . $success .'&time='. $time .'&attempts='. $trys); 
+        curl_setopt($ch, CURLOPT_URL, 'http://44.204.13.146/results?finished=' . $success .'&time='. $time .'&attempts='. $trys); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
         curl_setopt($ch, CURLOPT_HEADER, 0); 
         $data = json_decode(curl_exec($ch)); 
