@@ -114,129 +114,106 @@
                 </div>
             </div>
         @else
-            @if ($primarySixth->type == 5 or $primarySixth->type == 1 )       {{-- Div por si contiene Botones con Imagenes Tipo 5 --}}
-            <div class="row mb-2 mt-3">
-                @else
-                    <div class="row mb-4 mt-3">
-                        @endif
-                        {{-- Primer Boton --}}
-                        @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1)   {{-- En caso de ser de tipo 1, 3 o 5--}}
+            @if ($primarySixth->type == 5 )       {{-- Div por si contiene Botones con Imagenes Tipo 5 --}}
+                <div class="row mb-2 mt-3">
+            @else
+                <div class="row mb-4 mt-3">
+            @endif
+                    {{-- Primer Boton --}}
+                    @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1)   {{-- En caso de ser de tipo 1, 3 o 5--}}
                         <div class="col-md-6 col-lg-6 text-center">
-                            @else
-                                <div class="col-md-6 col-lg-3 text-center">
-                                    @endif
-                                    @if($primarySixth->type == 1) {{-- En caso de ser tipo 1 --}}
-                                    <div class="custom-control custom-checkbox image-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="ck1a">
-                                        <label class="custom-control-label" for="ck1a">
-                                            <img class="imgButton" src="{{ $primarySixth->firstAnswer }}" alt="#"
-                                                 class="img-fluid">
-                                        </label>
-                                    </div>
-                                    @endif
+                    @else
+                        <div class="col-md-6 col-lg-3 text-center">
+                    @endif
+                            {{-- @if($primarySixth->type == 1)  En caso de ser tipo 1 
+                            <div class="custom-control custom-checkbox image-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="ck1a">
+                                <label class="custom-control-label" for="ck1a">
+                                    <img class="imgButton" src="{{ $primarySixth->firstAnswer }}" alt="#"
+                                            class="img-fluid">
+                                </label>
+                            </div>
+                            @endif --}}
 
-                                    @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
-                                    <button class="btn btn-primary" onclick="myFunction1()">
-                                        <img class="imgButton" src="{{$primarySixth->firstAnswer}}" alt="logo"/>
-                                        @endif
-                                        @if($primarySixth->type != 1 and $primarySixth->type != 5)
-                                            <button class="btn btn-primary" onclick="myFunction1()">
-                                                {{ $primarySixth->firstAnswer }}
-                                                @endif
-                                            </button>
+                            @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
+                                <button class="btn btn-primary" onclick="myFunction1()">
+                                    <img class="imgButton" src="{{$primarySixth->firstAnswer}}" alt="logo"/>
+                            @endif
+                            @if($primarySixth->type != 1 and $primarySixth->type != 5)
+                                <button class="btn btn-primary" onclick="myFunction1()">
+                                    {{ $primarySixth->firstAnswer }}
+                            @endif
+                                </button> {{-- Cierre de Primera Respuesta --}}
+                            </div>
+                    {{-- Segundo Boton --}}
+                    @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1) {{-- En caso de ser de tipo 1 , 3 o 5 --}}
+                        <div class="col-md-6 col-lg-6 text-center">
+                    @else
+                        <div class="col-md-6 col-lg-3 text-center">
+                    @endif
+                            {{-- @if($primarySixth->type == 1)
+                                <div class="custom-control custom-checkbox image-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="ck2a">
+                                    <label class="custom-control-label" for="ck1a">
+                                        <img class="imgButton" src="{{ $primarySixth->secondAnswer }}"
+                                                alt="#" class="img-fluid">
+                                    </label>
                                 </div>
-                                {{-- Segundo Boton --}}
-                                @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1) {{-- En caso de ser de tipo 1 , 3 o 5 --}}
-                                <div class="col-md-6 col-lg-6 text-center">
-                                    @else
-                                        <div class="col-md-6 col-lg-3 text-center">
-                                            @endif
-                                            @if($primarySixth->type == 1)
-                                                <div class="custom-control custom-checkbox image-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="ck2a">
-                                                    <label class="custom-control-label" for="ck1a">
-                                                        <img class="imgButton" src="{{ $primarySixth->secondAnswer }}"
-                                                             alt="#" class="img-fluid">
-                                                    </label>
-                                                </div>
-                                            @endif
-                                            @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
-                                            <button class="btn btn-primary" onclick="myFunction2()">
-                                                <img class="imgButton" src="{{ $primarySixth->secondAnswer }}"
-                                                     alt="logo"/>
-                                                @endif
-                                                @if($primarySixth->type != 1 and $primarySixth->type != 5)
-
-                                                    <button class="btn btn-primary" onclick="myFunction2()">
-                                                        {{ $primarySixth->secondAnswer }}
-                                                        @endif
-                                                    </button>
-                                        </div>
-                                        {{-- Tercer Boton --}}
-                                        @if (!empty($primarySixth->thirdAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
-                                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
-                                                <button class="btn btn-primary">
-                                                    {{ $primarySixth->thirdAnswer }}
-                                                </button>
-                                            </div>
-                                        @endif
-                                        {{-- Cuarto Boton --}}
-                                        @if (!empty($primarySixth->quarterAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
-                                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
-                                                <button class="btn btn-primary">
-                                                    {{ $primarySixth->quarterAnswer }}
-                                                </button>
-                                            </div>
-                                        @endif
-                                </div> {{-- Final del Div de Fila de Botones de Opcion --}}
-                                @if ($primarySixth->type == 5 or $primarySixth->type == 1)       {{-- Div por si contiene Botones con Imagenes Tipo 5 o 1 --}}
-                                <div class="row mb-2 mt-3">
-                                    <div class="col-md-6 col-lg-6 text-center">{{-- Botton 3   --}}
-                                        @if($primarySixth->type == 1)
-                                            <div class="custom-control custom-checkbox image-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="ck3a">
-                                                <label class="custom-control-label" for="ck1a">
-                                                    <img class="imgButton" src="{{ $primarySixth->thirdAnswer }}"
-                                                         alt="#" class="img-fluid">
-                                                </label>
-                                            </div>
-                                        @else
-                                            <button class="btn btn-primary" onclick="myFunction3()">
-                                                <img class="imgButton" src="{{ $primarySixth->thirdAnswer }}"
-                                                     alt="logo"/>
-
-                                                @endif
-                                            </button>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 text-center"> {{-- Boton 4 --}}
-                                        @if($primarySixth->type == 1)
-                                            <div class="custom-control custom-checkbox image-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="ck4a">
-                                                <label class="custom-control-label" for="ck1a">
-                                                    <img class="imgButton" src="{{ $primarySixth->quarterAnswer }}"
-                                                         alt="#" class="img-fluid">
-                                                </label>
-                                            </div>
-                                        @else
-                                            <button class="btn btn-primary" onclick="myFunction4()">
-                                                <img class="imgButton" src="{{ $primarySixth->quarterAnswer }}"
-                                                     alt="logo"/>
-                                                @endif
-                                            </button>
-                                    </div>
-                                </div>
-                                @endif
-                                @if ($primarySixth->type == 1) {{-- Boton para Aceptar en caso de ser Multiple Seleccion --}}
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <button class="btn btn-primary" onclick="myFunction()"> Aceptar</button>
-                                    </div>
-                                </div>
-                                @endif
-                                @endif
+                            @endif --}}
+                            @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
+                                <button class="btn btn-primary" onclick="myFunction2()">
+                                    <img class="imgButton" src="{{ $primarySixth->secondAnswer }}" alt="logo"/>
+                            @endif
+                            @if($primarySixth->type != 1 and $primarySixth->type != 5)
+                                <button class="btn btn-primary" onclick="myFunction2()">
+                                    {{ $primarySixth->secondAnswer }}
+                            @endif
+                                </button>
                         </div>
-                        <p hidden>Clicks:<a id="trys">0</a></p>
+                    {{-- Tercer Boton --}}
+                    @if (!empty($primarySixth->thirdAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
+                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
+                            <button class="btn btn-primary">
+                                {{ $primarySixth->thirdAnswer }}
+                            </button>
+                        </div>
+                    @endif
+                    {{-- Cuarto Boton --}}
+                    @if (!empty($primarySixth->quarterAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
+                        <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
+                            <button class="btn btn-primary">
+                                {{ $primarySixth->quarterAnswer }}
+                            </button>
+                        </div>
+                    @endif
+                </div> {{-- Final del Div de Fila de Botones de Opcion --}}
+            @if ($primarySixth->type == 5 )       {{-- Div por si contiene Botones con Imagenes Tipo 5 o 1 --}}
+                <div class="row mb-2 mt-3">
+                    {{-- Botton 3 Con Imagen  --}}
+                    <div class="col-md-6 col-lg-6 text-center">                        
+                        <button class="btn btn-primary" onclick="myFunction3()">
+                            <img class="imgButton" src="{{ $primarySixth->thirdAnswer }}" alt="logo"/>
+                        </button>
                     </div>
+                    {{-- Boton 4 Con Imagen  --}}
+                    <div class="col-md-6 col-lg-6 text-center"> 
+                        <button class="btn btn-primary" onclick="myFunction4()">
+                            <img class="imgButton" src="{{ $primarySixth->quarterAnswer }}"alt="logo"/>
+                        </button>
+                    </div>
+                </div>
+            @endif
+                            {{-- @if ($primarySixth->type == 1)  Boton para Aceptar en caso de ser Multiple Seleccion 
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary" onclick="myFunction()"> Aceptar</button>
+                                </div>
+                            </div>
+                            @endif --}}
+        @endif
+    </div>
+    <p hidden>Clicks:<a id="trys">0</a></p>
+</div> {{-- Cierre de Container --}}
 
                     <script>
                         var clicks = 0;
@@ -252,7 +229,14 @@
                                     }
                                     minutes = document.getElementById("minutes").innerHTML;
                                     seconds = document.getElementById("seconds").innerHTML;
-                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                    if({{$diagnostic}}==1){
+                                        var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                    }
+                                    else {
+                                        var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                    }
+                                    alert(url);
                                     toastr.success('De regreso al menu de actividades', 'Correcto', {
                                         progressBar: true,
                                         onHidden: function () {
@@ -273,7 +257,14 @@
                                     }
                                     minutes = document.getElementById("minutes").innerHTML;
                                     seconds = document.getElementById("seconds").innerHTML;
-                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                    if({{$diagnostic}}==1){
+                                        var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                    }
+                                    else {
+                                        var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                    }
+                                    alert(url);
                                     toastr.success('De regreso al menu de actividades', 'Correcto', {
                                         progressBar: true,
                                         onHidden: function () {
@@ -303,7 +294,14 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                if({{$diagnostic}}==1){
+                                    var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                }
+                                else {
+                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                }
+                                alert(url);
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -332,7 +330,14 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                if({{$diagnostic}}==1){
+                                    var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                }
+                                else {
+                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                }
+                                alert(url);
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -361,7 +366,15 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                if({{$diagnostic}}==1){
+                                    var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                }
+                                else {
+                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                }
+                                alert(url);
+
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {
@@ -409,7 +422,15 @@
                                 }
                                 minutes = document.getElementById("minutes").innerHTML;
                                 seconds = document.getElementById("seconds").innerHTML;
-                                var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                if({{$diagnostic}}==1){
+                                    var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+                                }
+                                else {
+                                    var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+
+                                }
+                                alert(url);
+
                                 toastr.success('De regreso al menu de actividades', 'Correcto', {
                                     progressBar: true,
                                     onHidden: function () {

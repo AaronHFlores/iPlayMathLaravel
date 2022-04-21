@@ -65,10 +65,20 @@ Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e']);
 //Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
 Route::get('/UpdateScore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
+Route::get('/edit', [UserController::class, 'EditUser'])->middleware('auth');
+Route::put('/edit/{user}', [UserController::class, 'UpdateUser'])->middleware('auth')->name('user.update');
+
 
 Route::get('/diagnostic', function (){
     return view('/iPM-diagnostic');
 })->name('diagnostic');
+
+
+Route::get('/diagnosticTask', [UserController::class, 'DiagnosticTask'])->middleware(['auth'])->name('diagnosticTask');
+Route::get('/updatediagnosticscore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'updateDiagnosticScore'])->middleware(['auth'])->name('updateDiagnosticScore');
+
+Route::get('/recap', [UserController::class, 'Recap'])->middleware(['auth'])->name('recap');
+
 
 //Verificacion
 Route::get('/email/verify', function () {
