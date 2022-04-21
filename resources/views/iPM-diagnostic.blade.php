@@ -61,12 +61,15 @@
 
             <a style="color: blue"class="dropdown-item" href="/">
                 Mi Perfil
-            </a>     
-
-            <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" 
-            onclick="event.preventDefault();this.closest('form').submit();"> 
-              Cerrar Sesión 
-            </a>     
+            </a>    
+            
+            <form method="POST" action="{{ route('logout') }}">
+              @csrf 
+                <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                this.closest('form').submit();"> 
+                            Cerrar Sesión 
+                </a>     
+            </form>
                               
         </div>
       </nav>

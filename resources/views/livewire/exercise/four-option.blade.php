@@ -46,48 +46,48 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light fixed">
-    <div class="container"><a class="navbar-brand" href="/play"><img src="{{ asset('img/iPlayMath/img/logoo.png') }}"
-                                                                     height="50" alt="logo"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
-                <li>
-                <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed">
+        <div class="container"><a class="navbar-brand" href="/play"><img src="{{ asset('img/iPlayMath/img/logoo.png') }}"
+                                                                        height="50" alt="logo"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-center">
+                    <li>
+                    <!-- <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}"> -->
 
-                    <div class="dropdown">
-                        <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}"
-                                                    width="40" alt="{{ Auth::user()->name }}">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                            <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}"
+                                                        width="40" alt="{{ Auth::user()->name }}">
 
-                        <span>{{ Auth::user()->name }}</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#">Inicio</a></li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <!--
-                                <x-jet-responsive-nav-link href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('Log Out') }}
-                                    </x-jet-responsive-nav-link> -->
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                this.closest('form').submit();"> Cerrar Sesión </a>
-                                </form>
-                            </li>
+                            <span>{{ Auth::user()->name }}</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Inicio</a></li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <!--
+                                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                        </x-jet-responsive-nav-link> -->
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    this.closest('form').submit();"> Cerrar Sesión </a>
+                                    </form>
+                                </li>
 
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 <br>
 <label hidden id="minutes">00</label>
 <label hidden id="colon">:</label>

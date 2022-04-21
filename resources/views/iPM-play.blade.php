@@ -25,7 +25,10 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+  <!-- FontAwesome Icons -->
+
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/iPM/css/styles.css') }}" rel="stylesheet">
@@ -40,247 +43,147 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container-fluid container-xxl d-flex align-items-center">
-
-      <div id="logo" class="me-auto">
-        <a href="/diagnostic" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-3">      
-        <div class="dropdown">
+  <main id="main">
+    <section id="about-test">
+      <div class="container" data-aos="fade-up">
+        <!-- <div class="dropdown ">
           <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
             <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
             <span>{{ Auth::user()->name }}</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <div class="dropdown-header text-center ">
-
               <img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-              <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->name }}</p>
+              <p class="mb-1 mt-3 text-muted font-weight-semibold">{{ Auth::user()->name }}</p>
               <p class="fw-light text-muted mb-0">{{ Auth::user()->email }}</p>
             </div>
-
             <a style="color: blue"class="dropdown-item" href="/">
                 Mi Perfil
-            </a>     
-
-            <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-            this.closest('form').submit();"> 
-                        Cerrar Sesión 
-            </a>     
-                              
-        </div>
-        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-      </nav>
-    </div>
-  </header>
-  <!-- End Header -->
-
-  <main id="main">
-    <section id="buy-tickets" class="section-with-bg"> </section>
-    <section id="buy-tickets" class="section-with-bg"> </section>
-
-
-    <section id="buy-tickets" class="section-with-bg">
-        <div class="container" data-aos="fade-up">
-
-          <div class="section-header">
-            <h2>Buy Tickets</h2>
-            <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+            </a>    
+            <form method="POST" action="{{ route('logout') }}">
+              @csrf 
+              <a style="color: darkred" class="dropdown-item" href="{{ route('logout') }}" 
+                onclick="event.preventDefault(); this.closest('form').submit();">Cerrar Sesión 
+              </a>                         
+            </form>
           </div>
-
-          <div class="row">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                  <h6 class="card-price text-center">$150</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                  </ul>
-                  <hr>
-                  <div class="text-center">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                  <h6 class="card-price text-center">$250</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                  </ul>
-                  <hr>
-                  <div class="text-center">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pro Tier -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                  <h6 class="card-price text-center">$350</h6>
-                  <hr>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
-                    <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
-                  </ul>
-                  <hr>
-                  <div class="text-center">
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+        </div> -->
+        <div class="row">
+          <div class="col-md-12">
+            <h2>{{ $primarySixth->question }}</h2>
+            <hr>
           </div>
-
         </div>
-
-        <!-- Modal Order Form -->
-        <div id="buy-ticket-modal" class="modal fade">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Buy Tickets</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form method="POST" action="#">
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="your-email" placeholder="Your Email">
-                  </div>
-                  <div class="form-group mt-3">
-                    <select id="ticket-type" name="ticket-type" class="form-select">
-                      <option value="">-- Select Your Ticket Type --</option>
-                      <option value="standard-access">Standard Access</option>
-                      <option value="pro-access">Pro Access</option>
-                      <option value="premium-access">Premium Access</option>
-                    </select>
-                  </div>
-                  <div class="text-center mt-3">
-                    <button type="submit" class="btn">Buy Now</button>
-                  </div>
-                </form>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-
-      </section><!-- End Buy Ticket Section -->
-
-
-    <!-- ======= Supporters Section ======= -->
-    <!-- <section id="supporters" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Sponsors</h2>
+        
+        <div class="row">
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-secondary">
+              Omitir Pregunta 
+              <span class="fa fa-step-forward"  aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="img-container d-flex justify-content-center">
+            <img id="img-question" src="{{$primarySixth->image}}" alt="">
+          </div>
         </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math1.png') }}" class="img-fluid" alt="">
-            </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <button class="button grow_box" id="btn1">Opcion 1</button>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <button class="button grow_spin" id="btn2">Opcion 2</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <button class="button grow_spin" data-bs-toggle="modal" data-bs-target="#about-test-error-modal" id="btn3">Opcion 3</button>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <!-- <button type="submit" class="button" id="btn4">Opcion 4</button> -->
+            <button class="button grow_box" data-bs-toggle="modal" data-bs-target="#about-test-check-modal"  id="btn4">Opcion 4</button>
             
-            <div class="row" align="center">
-              <div class="col">
-                  <h3><a href="#"> 1 Grado</a></h3>
-                </div>
-              </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math3.png') }}" class="img-fluid" alt="">
-              <h3><a href="#"> 1 Grado</a></h3>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math1.png') }}" class="img-fluid" alt="">
-            </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/4.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/5.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/6.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-      
-
       </div>
+      <!-- Modal Order Form -->
+      <div id="about-test-check-modal" class="modal fade" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h4 class="modal-title">Respuesta Correcta!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <form method="POST" action="#"> -->
+                <div class="row">
+                  <!-- <i></i> -->
+                  <!-- <i class="bi bi-check-all"></i> -->
+                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
+                  <i class="fa fa-check"></i>
 
-    </section> -->
-    <!-- End Sponsors Section -->
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" class="button" id="btn5" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                </div>
+              <!-- </form> -->
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <!-- Modal Order Form -->
+      <div id="about-test-error-modal" class="modal fade" data-animation="slideInOutLeft">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h4 class="modal-title">Respuesta Incorrecta!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <form method="POST" action="#"> -->
+                <div class="row">
+                  <!-- <i></i> -->
+                  <!-- <i class="fa fa-check-circle"></i> -->
+                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
+                  <i class="bi bi-x"></i>
+                  <!-- <i class="fa-solid fa-xmark"></i>
+                  <i class="fa fa-exclamation-triangle"></i> -->
 
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" class="button" id="btn6" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                </div>
+              <!-- </form> -->
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+    
 
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="{{ asset('img/iPM/img/logo_white_large.png') }}" alt="iPlayMath">
-          </div>
+          </div> -->
 
-          <div class="col-lg-6 col-md-6 footer-links">
+          <!-- <div class="col-lg-6 col-md-6 footer-links">
             <div class="copyright">
               &copy; Copyright <strong>iPlayMath</strong>. All Rights Reserved
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

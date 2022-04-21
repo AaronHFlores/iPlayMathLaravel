@@ -219,8 +219,8 @@
   /**
    * Buy tickets select the ticket type on click
    */
-  on('show.bs.modal', '#buy-ticket-modal', function(event) {
-    select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
+  on('show.bs.modal', '#about-test-check-modal', function(event) {
+    select('#test-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
   })
 
 
