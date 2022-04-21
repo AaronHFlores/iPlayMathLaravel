@@ -198,7 +198,7 @@ class Elementary3Seeder extends Seeder
             'thirdAnswer' => 'Cos B = 20/x',
             'quarterAnswer' => 'Sen B = 10/20',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/Elementary3/anguloTriangulo.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
