@@ -16,7 +16,7 @@ class Primary1Seeder extends Seeder
     {
         //1
         DB::table('primaryFirst')->insert([
-            'question' => 'Selecciona las imágenes que contienen 6 elementos.',
+            'question' => 'Selecciona la imagen que contiene 6 elementos.',
             'type' => '5',
             'firstAnswer' => 'img/primary1/manzanas.png',
             'secondAnswer' => 'img/primary1/dulces3.png',
@@ -126,7 +126,7 @@ class Primary1Seeder extends Seeder
         ]);
         //10
         DB::table('primaryFirst')->insert([
-            'question' => 'Javier gasto 7 pesos en el recreo y le sobraron 18 ¿Cuanto tenia antes?',
+            'question' => 'Javier gastó 7 pesos en el recreo y le sobraron 18 ¿Cuanto tenia antes?',
             'type' => '2',
             'firstAnswer' => '22',
             'secondAnswer' => '25',
@@ -137,7 +137,7 @@ class Primary1Seeder extends Seeder
         ]);
         //11
         DB::table('primaryFirst')->insert([
-            'question' => 'Aaron tiene 22 pesos y su mama le da 5 ¿Cuanto tiene ahora?',
+            'question' => 'Aaron tiene 22 pesos y su mamá le da 5 pesos ¿Cuanto tiene ahora?',
             'type' => '2',
             'firstAnswer' => '25',
             'secondAnswer' => '30',
@@ -159,7 +159,7 @@ class Primary1Seeder extends Seeder
         ]);
         //13
         DB::table('primaryFirst')->insert([
-            'question' => 'Selecciona las imágenes que contienen 7 elementos.',
+            'question' => 'Selecciona la imagen que tiene 7 elementos.',
             'type' => '5',
             'firstAnswer' => 'img/primary1/fresa.png',
             'secondAnswer' => 'img/primary1/dulces7.png',
@@ -192,7 +192,7 @@ class Primary1Seeder extends Seeder
         ]);
         //16
         DB::table('primaryFirst')->insert([
-            'question' => '¿Cuánto es 9 +1?',
+            'question' => '¿Cuánto es 9 + 1?',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',

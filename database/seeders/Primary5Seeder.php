@@ -15,7 +15,7 @@ class Primary5Seeder extends Seeder
     public function run()
     {
         DB::table('primaryFifth')->insert([
-            'question' => 'De una cinta de adhesiva de 2 1/3 m, gaste 3/6 ¿Qué cantidad de cinta me quedó?',
+            'question' => 'De una cinta de adhesiva de 2 1/3 m, gasté 3/6 ¿Qué cantidad de cinta me quedó?',
             'type' => '2',
             'firstAnswer' => '1/6',
             'secondAnswer' => '4/5',
@@ -26,7 +26,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'En el grupo de quinto grado, los alumnos practican tres deportes: 1/3 de grupo juego beisbol, 2/6 juegan basquetbol y el resto futbol. ¿Qué parte del grupo practica futbol?',
+            'question' => 'En el grupo de quinto grado, los alumnos practican tres deportes: 1/3 de grupo juega beisbol, 2/6 juegan basquetbol y el resto futbol. ¿Qué parte del grupo practica futbol?',
             'type' => '2',
             'firstAnswer' => '5/10',
             'secondAnswer' => '1/3',
@@ -81,7 +81,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Raúl, Manuel, Andrés y Mario quieren comprar un balo con valor de $150 ¿Cuánto le tocara poner a cada uno si se dividen en partes iguales?',
+            'question' => 'Raúl, Manuel, Andrés y Mario quieren comprar un balón con valor de $150 ¿Cuánto le tocara poner a cada uno si se dividen en partes iguales?',
             'type' => '2',
             'firstAnswer' => '38.2',
             'secondAnswer' => '37.5',
@@ -125,7 +125,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Tienes las siguiente fracciones: 7/9, 17/12 y 5/18. Si las ordenas de menor a mayor ¿cómo quedarian?',
+            'question' => 'Tienes las siguiente fracciones: 7/9, 17/12 y 5/18. Si las ordenas de menor a mayor ¿cómo quedarían?',
             'type' => '2',
             'firstAnswer' => '5/18,  7/9,  17/12',
             'secondAnswer' => '7/9,  17/12, 5/18',

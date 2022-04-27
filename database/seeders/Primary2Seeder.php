@@ -60,7 +60,7 @@ class Primary2Seeder extends Seeder
         ]);
         //5
         DB::table('primarySecond')->insert([
-            'question' => 'Luis compro una torta y un flan, pago con un billete de 50 pesos, ¿Cuánto le regresaron de cambio?',
+            'question' => 'Luis compró una torta y un flan, pagó con un billete de 50 pesos, ¿Cuánto le regresaron de cambio?',
             'type' => '2',
             'firstAnswer' => '15',
             'secondAnswer' => '22',
@@ -104,7 +104,7 @@ class Primary2Seeder extends Seeder
         ]);
         //9
         DB::table('primarySecond')->insert([
-            'question' => '¿Si hay 5 montones de dulces cuantos dulces hay en total?',
+            'question' => '¿Si hay 5 montones de dulces cuántos dulces hay en total?',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',
@@ -115,7 +115,7 @@ class Primary2Seeder extends Seeder
         ]);
         //10
         DB::table('primarySecond')->insert([
-            'question' => '¿Cuántos mosaicos hay en cada piso?, cuenta también los hay debajo de la mancha de pintura',
+            'question' => '¿Cuántos mosaicos hay en cada piso? cuenta también los hay debajo de la mancha de pintura',
             'type' => '2',
             'firstAnswer' => '8',
             'secondAnswer' => '17',
@@ -126,7 +126,7 @@ class Primary2Seeder extends Seeder
         ]);
         //11
         DB::table('primarySecond')->insert([
-            'question' => '¿Cuántos mosaicos hay en cada piso?, cuenta también los hay debajo de la mancha de pintura',
+            'question' => '¿Cuántos mosaicos hay en cada piso? cuenta también los hay debajo de la mancha de pintura',
             'type' => '2',
             'firstAnswer' => '23',
             'secondAnswer' => '32',
@@ -137,7 +137,7 @@ class Primary2Seeder extends Seeder
         ]);
         //12
         DB::table('primarySecond')->insert([
-            'question' => 'Selecciona la figura que sea la respuesta de la adivinanza Tengo tres lados, todos iguales. ¿Quién soy?',
+            'question' => 'Selecciona la figura que sea la respuesta de la adivinanza. Tengo tres lados, todos iguales. ¿Quién soy?',
             'type' => '5',
             'firstAnswer' => 'img/primary2/Rectangulo.png',
             'secondAnswer' => 'img/primary2/Hexagono.png',
@@ -181,7 +181,7 @@ class Primary2Seeder extends Seeder
         ]);
         //16
         DB::table('primarySecond')->insert([
-            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 3 fichas azules ,4 verdes y 6 rojas',
+            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 3 fichas azules, 4 rojas y 6 amarillas',
             'type' => '2',
             'firstAnswer' => '413',
             'secondAnswer' => '346',
@@ -247,7 +247,7 @@ class Primary2Seeder extends Seeder
         ]);
         //21
         DB::table('primarySecond')->insert([
-            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 5 fichas azules, 2 verdes y 9 rojas',
+            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 5 fichas azules, 2 rojas y 9 amarillas',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',

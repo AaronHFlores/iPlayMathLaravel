@@ -48,7 +48,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Luis tiene $490 , ¿Cuánto le falta para tener $1000 ?',
+            'question' => 'Luis tiene $490 pesos, ¿Cuánto le falta para tener $1000 ?',
             'type' => '2',
             'firstAnswer' => '610',
             'secondAnswer' => '410',
@@ -81,7 +81,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Con un litro 1/2 de agua se llenan 5 vasos. ¿Cuántos litros necesitas para llenar 25 vasos?',
+            'question' => 'Con un 1 litro y 1/2 de agua se llenan 5 vasos. ¿Cuántos litros necesitas para llenar 25 vasos?',
             'type' => '2',
             'firstAnswer' => '7 litros',
             'secondAnswer' => '8 1/2 litros',
@@ -213,7 +213,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => '¿Cuál de las siguientes descomposiciones NO corresponde al número noventa y 94?',
+            'question' => '¿Cuál de las siguientes descomposiciones NO corresponde al número 94?',
             'type' => '2',
             'firstAnswer' => '25 + 65 + 2 + 2',
             'secondAnswer' => '100 - 10 + 4',

@@ -76,7 +76,7 @@ class primary6Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
-            'question' => 'Si don juan compro 83 pies de manguera ¿Cuántos metros de longitud tiene la manguera que compro don juan?',
+            'question' => 'Si don juan compró 83 pies de manguera ¿Cuántos metros de longitud tiene la manguera que compro don juan?',
             'type' => '2',
             'firstAnswer' => '15.85',
             'secondAnswer' => '45.62',

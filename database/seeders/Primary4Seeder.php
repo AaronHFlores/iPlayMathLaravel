@@ -37,7 +37,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'Luis compro una torta especial y un jugo, y Alexis compro dos tortas de huevo y un licuado. ¿Quién de los dos pago más?',
+            'question' => 'Luis compró una torta especial y un jugo, y Alexis compró dos tortas de huevo y un licuado. ¿Quién de los dos pagó más?',
             'type' => '3',
             'firstAnswer' => 'Luis',
             'secondAnswer' => 'Alexis',
@@ -81,7 +81,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'El papá de Mariana ahorro para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Para comprar cual coche de los de la imagen le falta menos dinero?',
+            'question' => 'El papá de Mariana ahorró para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Para comprar cual coche de los de la imagen le falta menos dinero?',
             'type' => '2',
             'firstAnswer' => 'A',
             'secondAnswer' => 'B',
@@ -92,7 +92,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'El papa de Mariana ahorro para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Si quisiera comprar el coche más caro de los de la imagen cuánto dinero le faltaría?',
+            'question' => 'El papá de Mariana ahorró para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Si quisiera comprar el coche más caro de los de la imagen cuánto dinero le faltaría?',
             'type' => '2',
             'firstAnswer' => '10549',
             'secondAnswer' => '18851',
