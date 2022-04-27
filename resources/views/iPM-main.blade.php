@@ -35,8 +35,6 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="/" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
 
@@ -59,10 +57,13 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" style="background-image: url({{asset('img/iPM/img/math3.jpg')}});">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="250" > 
-      <h1 class="mb-4 pb-0" style="color: #fff">Practicar Matemáticas <br> ya no será <br> tan 
-        <!-- <span id="span-hero" >ABURRIDO</span> -->
-      </h1> 
+    <div class="hero-container" data-aos="zoom-in-up" data-aos-delay="100"> 
+      <h1 class="mb-4 pb-0"> Practicar Matemáticas <br> ya no será <br> tan  <span id="span-diagnostic">ABURRIDO</span> </h1>
+      <!-- <h3 id="h3-diagnostic">
+      Para ofrecerte una experiencia adecuada segun tus conocimientos<br/>
+      es necesario que realices los ejercicios del <strong>examen diagnóstico</strong>,<br>
+       el cual te servirá como punto de partida.
+      </h3> -->
     </div>
   </section>
   <!-- End Hero Section -->

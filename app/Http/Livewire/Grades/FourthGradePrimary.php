@@ -10,6 +10,6 @@ class FourthGradePrimary extends Component
     {
         $randomNumber = random_int(1, 22);
         $exercise = Exercise4::where('id', $randomNumber)->first();
-        return view('iPM-play-test',['primarySixth' => $exercise]);
+        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0]);
     }
 }

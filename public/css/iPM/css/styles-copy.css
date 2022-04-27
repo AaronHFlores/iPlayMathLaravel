@@ -61,18 +61,18 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	/* transition: transform 80ms ease-in; */
-  transition: all 0.4s ease;
-  cursor: pointer;
+	transition: all 0.4s ease;
+	cursor: pointer;
 
 
 }
 
 #btn-primary{
-  border-radius: 20px;
+	border-radius: 20px;
 	/* border: 1px solid #5463FF;
 	background: #5463FF; */
-  background-size: 300% 100%;
-  border: none;
+  	background-size: 300% 100%;
+  	border: none;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -80,10 +80,10 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	/* transition: transform 80ms ease-in; */
-  transition: all 0.4s ease;
-  cursor: pointer;
-  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+	transition: all 0.4s ease;
+	cursor: pointer;
+	background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+	box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 
 
 }
@@ -210,7 +210,7 @@ input {
 .overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  	background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 	background-repeat: no-repeat;
 	background-size: cover;

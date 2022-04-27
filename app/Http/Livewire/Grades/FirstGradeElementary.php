@@ -11,6 +11,6 @@ class FirstGradeElementary extends Component
     {
         $randomNumber = random_int(1, 27);
         $exercise = Exercise1S::where('id', $randomNumber)->first();
-        return view('livewire.exercise.four-option',['primarySixth' => $exercise, 'diagnostic' => 0]);
+        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0]);
     }
 }

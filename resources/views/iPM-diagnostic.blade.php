@@ -23,6 +23,7 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 
   <!-- Template Main CSS File -->
@@ -81,13 +82,13 @@
   <section id="hero" style="background-image: url({{asset('img/iPM/img/math1.jpg')}});">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" > 
       <h1 class="mb-4 pb-0">¡ Bienvenido a <span id="span-diagnostic">iPlayMath</span> !</h1>
-      <h3 style="color: #fff">
+      <h3 id="h3-diagnostic">
       Para ofrecerte una experiencia adecuada segun tus conocimientos<br/>
       es necesario que realices los ejercicios del <strong>examen diagnóstico</strong>,<br>
        el cual te servirá como punto de partida.
       </h3>
       <a href="/main2" class="play-btn mb-4"></a>
-      <a href="/main2" class="about-btn scrollto">Comenzar</a>
+      <a href="/main2" class="about-btn scrollto">Comenzar Ahora</a>
     </div>
   </section>
   <!-- End Hero Section -->

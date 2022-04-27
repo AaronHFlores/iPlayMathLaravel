@@ -125,7 +125,7 @@
                     @else
                         <div class="col-md-6 col-lg-3 text-center">
                     @endif
-                            {{-- @if($primarySixth->type == 1)  En caso de ser tipo 1 
+                            <!-- {{-- @if($primarySixth->type == 1)  En caso de ser tipo 1 
                             <div class="custom-control custom-checkbox image-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="ck1a">
                                 <label class="custom-control-label" for="ck1a">
@@ -133,7 +133,7 @@
                                             class="img-fluid">
                                 </label>
                             </div>
-                            @endif --}}
+                            @endif --}} -->
 
                             @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
                                 <button class="btn btn-primary" onclick="myFunction1()">
@@ -203,13 +203,13 @@
                     </div>
                 </div>
             @endif
-                            {{-- @if ($primarySixth->type == 1)  Boton para Aceptar en caso de ser Multiple Seleccion 
+                            <!-- {{-- @if ($primarySixth->type == 1)  Boton para Aceptar en caso de ser Multiple Seleccion 
                             <div class="row register-form">
                                 <div class="col-md-6">
                                     <button class="btn btn-primary" onclick="myFunction()"> Aceptar</button>
                                 </div>
                             </div>
-                            @endif --}}
+                            @endif --}} -->
         @endif
     </div>
     <p hidden>Clicks:<a id="trys">0</a></p>

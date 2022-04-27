@@ -27,24 +27,21 @@
 
 
   <!-- FontAwesome Icons -->
-
-  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/iPM/css/styles.css') }}" rel="stylesheet">
+  <script src="/lib/jquery-1.12.2.min.js"></script>
 
-  <!-- =======================================================
-  * Template Name: TheEvent - v4.7.0
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
   <main id="main">
     <section id="about-test">
+    <label hidden id="minutes">00</label>
+    <label hidden id="colon">:</label>
+    <label hidden id="seconds">00</label>
       <div class="container" data-aos="fade-up">
         <!-- <div class="dropdown ">
           <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
@@ -82,258 +79,401 @@
               <span class="fa fa-step-forward"  aria-hidden="true"></span>
             </button>
           </div>
-          <div class="img-container d-flex justify-content-center">
-            <img id="img-question" src="{{$primarySixth->image}}" alt="">
-          </div>
+
+          @if($primarySixth->type != 5)
+            <div class="img-container d-flex justify-content-center">
+              <img id="img-question" src="{{$primarySixth->image}}" alt="">
+            </div>
+          @else
+            <div class="separador">
+            </div>
+          @endif
+          
         </div>
 
-        <div class="row">
-          @if ($primarySixth->type == 4)
-          <div class="col-md-6 col-sm-6">
-                <!-- <div class="form-group"> -->
-            <input type="text" name="name" class="form-control" id="type4" name="type4" placeholder="Respuesta" required="">
+        @if ($primarySixth->type == 4)
+          <div class="row register-form">
+            <div class="col"></div>
+            <div class="col-md-4 col-sm-4">
+              <input type="number" class="form-control" placeholder="Respuesta:" id="type4" name="type4"/>
+            </div>
+            <div class="col-md-4">
+              <button class="button grow_box" onclick="myFunction1()" id="btn1">
+                Aceptar
+              </button> {{-- Cierre del Primer Botón --}}
+            </div>
+            <div class="col"></div>
           </div>
-              <!-- </div> -->
-          <div class="col-md-3">
-            <button class="button grow_box" onclick="myFunction1()" id="btn1">Aceptar</button>
-          </div>
-        </div>
         @else
-          @if ($primarySixth->type == 5 or $primarySixth->type == 1 )       {{-- Div por si contiene Botones con Imagenes Tipo 5 --}}
-          <div class="row">
-            @else
-              <div class="row">
-                @endif
-                {{-- Primer Boton --}}
-                  @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1)   {{-- En caso de ser de tipo 1, 3 o 5--}}
-                    <div class="col-md-6 col-sm-6">
-                        @else
-                          <div class="col-md-6 col-sm-6">
-                            @endif
-                            @if($primarySixth->type == 1) {{-- En caso de ser tipo 1 --}}
-                            <!-- <div class="custom-control custom-checkbox image-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="ck1a">
-                                <label class="custom-control-label" for="ck1a">
-                                    <img class="imgButton" src="{{ $primarySixth->firstAnswer }}" alt="#"
-                                          class="img-fluid">
-                                </label>
-                            </div> -->
-                            @endif
-                            @if ($primarySixth->type == 5 )    {{-- Imagen por si es tipo 5   --}}
-                            <button class="btn btn-primary" onclick="myFunction1()">
-                                <img class="imgButton" src="{{$primarySixth->firstAnswer}}" alt="logo"/>
-                                @endif
-                                @if($primarySixth->type != 1 and $primarySixth->type != 5)
-                                    <button class="btn btn-primary" onclick="myFunction1()">
-                                        {{ $primarySixth->firstAnswer }}
-                                        @endif
-                                    </button>
-                                  <button class="button grow_box" id="btn1" onclick="myFunction1()">
-                                    {{ $primarySixth->firstAnswer }}
-                                        @endif                                  
-                                  </button>
-
-                          </div>
-                                {{-- Segundo Boton --}}
-                                @if($primarySixth->type ==3 or $primarySixth->type ==5 or $primarySixth->type == 1) {{-- En caso de ser de tipo 1 , 3 o 5 --}}
-                                <div class="col-md-6 col-lg-6 text-center">
-                                    @else
-                                        <div class="col-md-6 col-lg-3 text-center">
-                                            @endif
-                                            @if($primarySixth->type == 1)
-                                                <div class="custom-control custom-checkbox image-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="ck2a">
-                                                    <label class="custom-control-label" for="ck1a">
-                                                        <img class="imgButton" src="{{ $primarySixth->secondAnswer }}"
-                                                             alt="#" class="img-fluid">
-                                                    </label>
-                                                </div>
-                                            @endif
-                                            @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
-                                            <button class="btn btn-primary" onclick="myFunction2()">
-                                                <img class="imgButton" src="{{ $primarySixth->secondAnswer }}"
-                                                     alt="logo"/>
-                                                @endif
-                                                @if($primarySixth->type != 1 and $primarySixth->type != 5)
-                                                    <button class="button grow_box" id="btn1" onclick="myFunction2()">
-                                                      {{ $primarySixth->secondAnswer }}
-                                                        @endif
-
-                                                    </button>
-
-
-                                                    <!-- <button class="btn btn-primary" onclick="myFunction2()">
-                                                        {{ $primarySixth->secondAnswer }}
-                                                        @endif
-                                                    </button> -->
-                                        </div>
-                                        {{-- Tercer Boton --}}
-                                        @if (!empty($primarySixth->thirdAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
-                                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction3()">
-                                                <button class="btn btn-primary">
-                                                    {{ $primarySixth->thirdAnswer }}
-                                                </button>
-                                            </div>
-                                        @endif
-                                        {{-- Cuarto Boton --}}
-                                        @if (!empty($primarySixth->quarterAnswer) and ($primarySixth->type != 5 and $primarySixth->type != 1))
-                                            <div class="col-md-6 col-lg-3 text-center" onclick="myFunction4()">
-                                                <button class="btn btn-primary">
-                                                    {{ $primarySixth->quarterAnswer }}
-                                                </button>
-                                            </div>
-                                        @endif
-                                </div> {{-- Final del Div de Fila de Botones de Opcion --}}
-                                @if ($primarySixth->type == 5 or $primarySixth->type == 1)       {{-- Div por si contiene Botones con Imagenes Tipo 5 o 1 --}}
-                                <div class="row mb-2 mt-3">
-                                    <div class="col-md-6 col-lg-6 text-center">{{-- Botton 3   --}}
-                                        @if($primarySixth->type == 1)
-                                            <div class="custom-control custom-checkbox image-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="ck3a">
-                                                <label class="custom-control-label" for="ck1a">
-                                                    <img class="imgButton" src="{{ $primarySixth->thirdAnswer }}"
-                                                         alt="#" class="img-fluid">
-                                                </label>
-                                            </div>
-                                        @else
-                                            <button class="btn btn-primary" onclick="myFunction3()">
-                                                <img class="imgButton" src="{{ $primarySixth->thirdAnswer }}"
-                                                     alt="logo"/>
-
-                                                @endif
-                                            </button>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 text-center"> {{-- Boton 4 --}}
-                                        @if($primarySixth->type == 1)
-                                            <div class="custom-control custom-checkbox image-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="ck4a">
-                                                <label class="custom-control-label" for="ck1a">
-                                                    <img class="imgButton" src="{{ $primarySixth->quarterAnswer }}"
-                                                         alt="#" class="img-fluid">
-                                                </label>
-                                            </div>
-                                        @else
-                                            <button class="btn btn-primary" onclick="myFunction4()">
-                                                <img class="imgButton" src="{{ $primarySixth->quarterAnswer }}"
-                                                     alt="logo"/>
-                                                @endif
-                                            </button>
-                                    </div>
-                                </div>
-                                @endif
-                                @if ($primarySixth->type == 1) {{-- Boton para Aceptar en caso de ser Multiple Seleccion --}}
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <button class="btn btn-primary" onclick="myFunction()"> Aceptar</button>
-                                    </div>
-                                </div>
-                                @endif
-                              @endif
-                        </div>
-                        <p hidden>Clicks:<a id="trys">0</a></p>
-                    </div>
-        
-<!-- 
         <div class="row">
+          
+          {{-- Primer Boton --}}
+            <div class="col-md-6 col-sm-6">
+            @if($primarySixth->type == 5)
+            
+                <button class="button grow_skew_backward" onclick="myFunction1()" id="btn1">
+                  <img id="img-button" src="{{ $primarySixth->firstAnswer }}" alt="Botón_1"/>
+                </button>
+
+            @else
+              <button class="button grow_box" onclick="myFunction1()" id="btn1">
+                {{ $primarySixth->firstAnswer }}
+              </button> 
+            @endif
+            </div> {{-- Cierre col del Primer Botón --}} 
+
+            {{-- Segundo Boton --}}
+            <div class="col-md-6 col-sm-6">
+            @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 1 o 5--}}
+
+                <button class="button grow_box" onclick="myFunction2()" id="btn2">
+                  <img id="img-button" src="{{ $primarySixth->secondAnswer }}" alt="Botón_2"/>
+                </button>
+
+            @else
+              <button class="button grow_spin" onclick="myFunction2()" id="btn2">
+                {{ $primarySixth->secondAnswer }}
+              </button>
+            @endif
+            </div>
+        </div>   {{-- Ciere del row, botones 1 & 2 --}}
+
+        <div class="row">
+
+          {{-- Tercer Boton --}}
           <div class="col-md-6 col-sm-6">
-            <button class="button grow_box" id="btn1">Opcion 1</button>
+          @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 5 --}}
+            <button class="button grow_ellipse" onclick="myFunction3()" id="btn3">
+              <img id="img-button" src="{{ $primarySixth->thirdAnswer }}" alt="Botón_3"/>
+            </button>
+
+          @endif
+          @if (!empty($primarySixth->thirdAnswer) and $primarySixth->type != 5)
+            <button class="button grow_spin" onclick="myFunction3()" id="btn3">
+              {{ $primarySixth->thirdAnswer }}
+            </button>
+          @endif
           </div>
+
+          {{-- Cuarto Boton --}}
           <div class="col-md-6 col-sm-6">
-            <button class="button grow_spin" id="btn2">Opcion 2</button>
+          @if ($primarySixth->type == 5 )       {{-- Imagen por si es tipo 5 --}}
+            <button class="button grow_skew_forward" onclick="myFunction4()" id="btn4">
+              <img id="img-button" src="{{ $primarySixth->quarterAnswer }}" alt="Botón_4"/>
+            </button>
+          @endif
+          @if (!empty($primarySixth->quarterAnswer) and $primarySixth->type != 5 )
+            <button type="button" class="button grow_box" onclick="myFunction4()" id="btn4">
+              {{ $primarySixth->quarterAnswer }}
+            </button>
+          @endif
+          </div>
+        </div> {{-- Final del row, botones 3 & 4 --}}
+        @endif
+        <p hidden>Clicks:<a id="trys">0</a></p>
+      </div> {{-- Final del container --}}
+      
+      <!-- Modal Order Form -->
+      <div id="test-correct-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h4 class="modal-title">Respuesta Correcta 😃</h4>
+              <!-- <button type="button" id="btn5close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                  <i class="fa fa-circle-check"></i>
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" id="btn5" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                </div>
+            </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <button class="button grow_spin" data-bs-toggle="modal" data-bs-target="#about-test-error-modal" id="btn3">Opcion 3</button>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <button class="button grow_box" data-bs-toggle="modal" data-bs-target="#about-test-check-modal"  id="btn4">Opcion 4</button>
-            
-          </div>
-        </div> -->
-      </div>
-      <!-- <button type="submit" class="button" id="btn4">Opcion 4</button> -->
-      <!-- Modal Order Form -->
-      <div id="about-test-check-modal" class="modal fade" >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content ">
-            <div class="modal-header">
-              <h4 class="modal-title">Respuesta Correcta!</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- <form method="POST" action="#"> -->
-                <div class="row">
-                  <!-- <i></i> -->
-                  <!-- <i class="bi bi-check-all"></i> -->
-                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
-                  <i class="fa fa-check"></i>
-
-                </div>
-                <div class="text-center mt-3">
-                  <button type="submit" class="button" id="btn5" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
-                </div>
-              <!-- </form> -->
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      <!-- Modal Order Form -->
-      <div id="about-test-error-modal" class="modal fade" data-animation="slideInOutLeft">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content ">
-            <div class="modal-header">
-              <h4 class="modal-title">Respuesta Incorrecta!</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- <form method="POST" action="#"> -->
-                <div class="row">
-                  <!-- <i></i> -->
-                  <!-- <i class="fa fa-check-circle"></i> -->
-                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
-                  <i class="bi bi-x"></i>
-                  <!-- <i class="fa-solid fa-xmark"></i>
-                  <i class="fa fa-exclamation-triangle"></i> -->
-
-                </div>
-                <div class="text-center mt-3">
-                  <button type="submit" class="button" id="btn6" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
-                </div>
-              <!-- </form> -->
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
 
-
-    
-
+      <!-- Modal Order Form -->
+      <div id="test-error-modal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h4 class="modal-title">Respuesta Incorrecta 😥</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                  <i class="fa fa-xmark"></i>
+                  <span>Intentalo de Nuevo</span>
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" id="btn6" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ======= Footer ======= -->
-  <!-- <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  <script>
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <img src="{{ asset('img/iPM/img/logo_white_large.png') }}" alt="iPlayMath">
-          </div> -->
+    function myFunction1() {
+      if ({{$primarySixth->type}} == "4") {
+        if ({{$primarySixth->correctAnswer}} == document.getElementById("type4").value) {
+          if (clicks < 4) {
+            clicks += 1;
+          }
+          minutes = document.getElementById("minutes").innerHTML;
+          seconds = document.getElementById("seconds").innerHTML;
+          if({{$diagnostic}}==1){
+              var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
+          else {
+            var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
 
-          <!-- <div class="col-lg-6 col-md-6 footer-links">
-            <div class="copyright">
-              &copy; Copyright <strong>iPlayMath</strong>. All Rights Reserved
-            </div>
-          </div> -->
-        <!-- </div>
-      </div>
-    </div>
-  </footer> -->
-  <!-- End  Footer -->
+          $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
+          $('#test-correct-modal').modal('show');
+          let btn = document.getElementById("btn5"); 
+          btn.onclick = returnView;
+
+          function returnView(evento) {
+            window.location.href = url;
+          }
+          
+          
+        } else {
+          if (clicks < 4) {
+              clicks += 1;
+              document.getElementById("trys").innerHTML = clicks;
+          }
+          $('#test-error-modal').modal('show');
+        }
+      } else {
+        if ({{$primarySixth->correctAnswer}} == "1") {
+          if (clicks < 4) {
+            clicks += 1;
+          }
+          minutes = document.getElementById("minutes").innerHTML;
+          seconds = document.getElementById("seconds").innerHTML;
+          if({{$diagnostic}}==1){
+            var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
+          else {
+            var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
+          $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
+          $('#test-correct-modal').modal('show');
+          let btn = document.getElementById("btn5"); 
+          btn.onclick = returnView;
+
+          function returnView(evento) {
+            window.location.href = url;
+          }
+        } else {
+          if (clicks < 4) {
+            clicks += 1;
+          }
+          document.getElementById("trys").innerHTML = clicks;
+          $('#test-error-modal').modal('show');
+        }
+      }
+    }
+  </script>
+  <script>
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
+
+    function myFunction2() {
+      if ({{$primarySixth->correctAnswer}} == "2") {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        minutes = document.getElementById("minutes").innerHTML;
+        seconds = document.getElementById("seconds").innerHTML;
+        if({{$diagnostic}}==1){
+          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        else {
+          var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
+        $('#test-correct-modal').modal("show");
+        let btn = document.getElementById("btn5"); 
+        btn.onclick = returnView;
+
+        function returnView(evento) {
+          window.location.href = url;
+        }
+      } else {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        document.getElementById("trys").innerHTML = clicks;
+        $('#test-error-modal').modal('show');
+      }
+    }
+  </script>
+  <script>
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
+
+    function myFunction3() {
+      if ({{$primarySixth->correctAnswer}} == "3") {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        minutes = document.getElementById("minutes").innerHTML;
+        seconds = document.getElementById("seconds").innerHTML;
+        if({{$diagnostic}}==1){
+          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        else {
+          var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
+        $('#test-correct-modal').modal('show');
+        let btn = document.getElementById("btn5"); 
+        btn.onclick = returnView;
+
+        function returnView(evento) {
+          window.location.href = url;
+        }
+      } else {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        document.getElementById("trys").innerHTML = clicks;
+        $('#test-error-modal').modal('show');
+      }
+    }
+  </script>
+  <script>
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
+
+    function myFunction4() {
+      if ({{$primarySixth->correctAnswer}} == "4") {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        minutes = document.getElementById("minutes").innerHTML;
+        seconds = document.getElementById("seconds").innerHTML;
+        if({{$diagnostic}}==1){
+          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        else {
+          var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
+        $('#test-correct-modal').modal('show');
+        let btn = document.getElementById("btn5"); 
+        btn.onclick = returnView;
+
+        function returnView(evento) {
+          window.location.href = url;
+        }
+      } else {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        document.getElementById("trys").innerHTML = clicks;
+        $('#test-error-modal').modal('show');
+      }
+    }
+  </script>
+  <!-- <script>
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
+
+    function myFunction() {
+      let isCheck = document.getElementById('ck1a').checked;
+      let check = '';
+      if (isCheck) {
+        check += '1,';
+      }
+      isCheck = document.getElementById('ck2a').checked;
+      if (isCheck) {
+        check += "2,";
+      }
+      isCheck = document.getElementById('ck3a').checked;
+      if (isCheck) {
+        check += "3";
+      }
+      isCheck = document.getElementById('ck4a').checked;
+      if (isCheck) {
+        check += '4';
+      }
+      console.log(check);
+      console.log({{$primarySixth->correctAnswer}});
+      if ({{$primarySixth->correctAnswer}} == check) {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        minutes = document.getElementById("minutes").innerHTML;
+        seconds = document.getElementById("seconds").innerHTML;
+        if({{$diagnostic}}==1){
+          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        else {
+          var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+        }
+        alert(url);
+
+        toastr.success('De regreso al menu de actividades', 'Correcto', {
+          progressBar: true,
+          onHidden: function () {
+              window.location.href = url;
+          }
+        });
+      } else {
+        if (clicks < 4) {
+          clicks += 1;
+        }
+        document.getElementById("trys").innerHTML = clicks;
+        toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+      }
+    }
+  </script> -->
+
+  <script type="text/javascript">
+    var minutesLabel = document.getElementById("minutes");
+    var secondsLabel = document.getElementById("seconds");
+    var totalSeconds = 0;
+    setInterval(setTime, 1000);
+
+    function setTime() {
+      ++totalSeconds;
+      secondsLabel.innerHTML = pad(totalSeconds % 60);
+      minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    }
+
+    function pad(val) {
+      var valString = val + "";
+      if (valString.length < 2) {
+        return "0" + valString;
+      } else {
+        return valString;
+      }
+    }
+  </script>
+  <script>
+    
+  </script>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

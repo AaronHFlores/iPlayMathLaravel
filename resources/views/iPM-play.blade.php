@@ -25,8 +25,10 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+  <script src="/lib/jquery-1.12.2.min.js"></script>
 
   <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
   <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
@@ -88,81 +90,77 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <button class="button grow_box" id="btn1">Opcion 1</button>
+            <button type="button" class="button grow_box" id="btn1">
+              <img class="img-button" src="{{$primarySixth->firstAnswer}}" alt="Boton_1"/>
+            </button>
           </div>
           <div class="col-md-6 col-sm-6">
-            <button class="button grow_spin" id="btn2">Opcion 2</button>
+            <button class="button grow_spin" id="btn2">
+              <img class="img-button" src="{{$primarySixth->secondAnswer}}" alt="Boton_2"/>
+            </button>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <button class="button grow_spin" data-bs-toggle="modal" data-bs-target="#about-test-error-modal" id="btn3">Opcion 3</button>
+            <!-- <button class="button grow_spin" id="btn3">
+              <img class="img-button" src="{{$primarySixth->thirdAnswer}}" alt="Boton_3"/>
+            </button> -->
+
+            <button class="button grow_spin" data-bs-toggle="modal" data-bs-target="#test-error-modal" id="btn3">Opcion 3</button>
           </div>
           <div class="col-md-6 col-sm-6">
+            <!-- <button class="button grow_box" id="btn4">
+              <img class="img-button" src="{{$primarySixth->quarterAnswer}}" alt="Boton_4"/>
+            </button> -->
             <!-- <button type="submit" class="button" id="btn4">Opcion 4</button> -->
-            <button class="button grow_box" data-bs-toggle="modal" data-bs-target="#about-test-check-modal"  id="btn4">Opcion 4</button>
+            <button class="button grow_box" data-bs-toggle="modal" data-bs-target="#test-correct-modal"  id="btn4">Opcion 4</button>
             
           </div>
         </div>
       </div>
       <!-- Modal Order Form -->
-      <div id="about-test-check-modal" class="modal fade" >
-        <div class="modal-dialog modal-dialog-centered" role="document">
+      <div id="test-correct-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered " role="document">
           <div class="modal-content ">
             <div class="modal-header">
-              <h4 class="modal-title">Respuesta Correcta!</h4>
+              <h4 class="modal-title">Respuesta Correcta 😃</h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <!-- <form method="POST" action="#"> -->
                 <div class="row">
-                  <!-- <i></i> -->
-                  <!-- <i class="bi bi-check-all"></i> -->
-                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
-                  <i class="fa fa-check"></i>
-
+                  <i class="fa fa-circle-check"></i>
                 </div>
                 <div class="text-center mt-3">
-                  <button type="submit" class="button" id="btn5" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                  <button type="submit" id="btn5" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
                 </div>
-              <!-- </form> -->
             </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
+          </div>
+        </div>
       </div>
       <!-- /.modal -->
+
       <!-- Modal Order Form -->
-      <div id="about-test-error-modal" class="modal fade" data-animation="slideInOutLeft">
+      <div id="test-error-modal" class="modal fade"a>
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content ">
             <div class="modal-header">
-              <h4 class="modal-title">Respuesta Incorrecta!</h4>
+              <h4 class="modal-title">Respuesta Incorrecta 😥</h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <!-- <form method="POST" action="#"> -->
                 <div class="row">
-                  <!-- <i></i> -->
-                  <!-- <i class="fa fa-check-circle"></i> -->
-                  <!-- <i class="fa fa-solid fa-check-double"></i> -->
-                  <i class="bi bi-x"></i>
-                  <!-- <i class="fa-solid fa-xmark"></i>
-                  <i class="fa fa-exclamation-triangle"></i> -->
-
+                  <i class="fa fa-xmark"></i>
+                  <span>Intentalo de Nuevo</span>
                 </div>
                 <div class="text-center mt-3">
-                  <button type="submit" class="button" id="btn6" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                  <button type="submit" id="btn6" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
                 </div>
-              <!-- </form> -->
             </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
+          </div>
+        </div>
       </div>
       <!-- /.modal -->
-
-
-    
-
+    </section>
   </main>
 
   <!-- ======= Footer ======= -->
@@ -185,6 +183,15 @@
     </div>
   </footer> -->
   <!-- End  Footer -->
+  <!-- <script>
+    // $(document).ready(function(){
+    //   $("#btn1").click(function(){
+    //       $("test-error-modal").modal();
+    //   });
+    // });
+    $('#test-error-modal').modal();
+
+  </script> -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
