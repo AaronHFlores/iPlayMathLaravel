@@ -31,7 +31,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 //     return view('iplaymath');
 // });
 Route::get('/', function () {
-    return view('/layouts/main');
+    // return view('/layouts/main');
+    return view('iPM-main');
 });
 
 // Route::get('/main', function () {
@@ -39,7 +40,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/main2', function () {
-    return view('iPM-dashboard');
+    return view('iPM-gradeboard');
 });
 
 Route::get('/main3', function () {
@@ -50,7 +51,7 @@ Route::get('/main4', function () {
 });
 
 Route::get('/play', function () {
-    return view('/layouts/iplaymath-exercise');
+    return view('iPM-gradeboard');
 })->middleware(['auth','userdiagnosed'])->name('play');
 
 //Exercise
