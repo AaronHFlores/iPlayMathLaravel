@@ -39,14 +39,14 @@ class UserController extends Component
         $User = Auth::user();
         $ch = curl_init();
         //URL para la api python
-        curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys); 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-        curl_setopt($ch, CURLOPT_HEADER, 0); 
-        $data = json_decode(curl_exec($ch)); 
+        curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $data = json_decode(curl_exec($ch));
         $User->score=$User->score+intval($data[0]);
         $User->save();
-        
-        curl_close($ch);        
+
+        curl_close($ch);
         return redirect()->route('play');
     }
 
@@ -172,16 +172,32 @@ class UserController extends Component
         $time= (((int)$minutes *60) + (int)$seconds);
         $User = Auth::user();
         if($User->dtask<=17){
-            $User->score=$User->score+($trys*10);
+            $ch = curl_init();
+            //URL para la api python
+            curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            $data = json_decode(curl_exec($ch));
+            $User->score=$User->score+intval($data[0]*10);
             $User->dtask=$User->dtask+1;
             $User->save();
+            curl_close($ch);
+
             return redirect()->route('diagnosticTask');
 
         }
         else{
-            $User->score=$User->score+($trys*10);
+            $ch = curl_init();
+            //URL para la api python
+            curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            $data = json_decode(curl_exec($ch));
+            $User->score=$User->score+intval($data[0]*10);
             $User->diagnosed=true;
             $User->save();
+            curl_close($ch);
+
             return redirect()->route('recap');
         }
 
