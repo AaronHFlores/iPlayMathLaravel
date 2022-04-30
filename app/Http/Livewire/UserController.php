@@ -44,6 +44,9 @@ class UserController extends Component
         curl_setopt($ch, CURLOPT_HEADER, 0);
         $data = json_decode(curl_exec($ch));
         $User->score=$User->score+intval($data[0]);
+        if($User->score<0){
+            $User->score=0;
+        }
         $User->save();
 
         curl_close($ch);
@@ -179,6 +182,9 @@ class UserController extends Component
             curl_setopt($ch, CURLOPT_HEADER, 0);
             $data = json_decode(curl_exec($ch));
             $User->score=$User->score+intval($data[0]*10);
+            if($User->score<0){
+                $User->score=0;
+            }
             $User->dtask=$User->dtask+1;
             $User->save();
             curl_close($ch);
@@ -194,6 +200,9 @@ class UserController extends Component
             curl_setopt($ch, CURLOPT_HEADER, 0);
             $data = json_decode(curl_exec($ch));
             $User->score=$User->score+intval($data[0]*10);
+            if($User->score<0){
+                $User->score=0;
+            }
             $User->diagnosed=true;
             $User->save();
             curl_close($ch);
