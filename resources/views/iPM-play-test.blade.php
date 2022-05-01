@@ -60,7 +60,8 @@
                 <span class="fa fa-step-forward"  aria-hidden="true"></span>
               </button>
             </div>
-        @endif
+          </div>
+          @endif
 
           @if($primarySixth->type != 5)
             <div class="img-container d-flex justify-content-center">
@@ -71,7 +72,6 @@
             </div>
           @endif
 
-        </div>
 
         @if ($primarySixth->type == 4)
           <div class="row register-form">
@@ -212,7 +212,7 @@
                   <span>Saltar la pregunta no afectará tus puntos</span>
 
                 </div>
-            
+
                 <!-- <div class="text-center mt-3">
                   <button type="submit" id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
                 </div> -->
@@ -419,7 +419,7 @@
       function returnView(evento) {
         var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/0";
         window.location.href = url;
-      }           
+      }
     }
   </script>
 
