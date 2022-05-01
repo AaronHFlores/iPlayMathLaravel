@@ -64,7 +64,7 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li class="dropdown-header">
                   <h6>{{ Auth::user()->name }}</h6>
-                  <span>Estudiante</span>
+                  <span>Score: <strong>{{ $User->score }}</strong></span>
               </li>
               <li>
                   <hr class="dropdown-divider">
@@ -124,7 +124,7 @@
 
               <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle">
               <h2>{{ Auth::user()->name }}</h2>
-              <h3>Estudiante</h3>
+              <h3>Score: <strong>{{ $User->score }}</strong> </h3>
 
               <div>
                 <img src="{{ asset('img/iPM/img/logo_white_large.png') }}" alt="" style="width: 250px;">

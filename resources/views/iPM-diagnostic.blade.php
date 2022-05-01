@@ -90,7 +90,7 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li class="dropdown-header">
                   <h6>{{ Auth::user()->name }}</h6>
-                  <span>Estudiante</span>
+                  <span>Score: <strong>{{ Auth::user()->score }}</strong></span>
               </li>
               <li>
                   <hr class="dropdown-divider">

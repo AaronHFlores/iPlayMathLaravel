@@ -92,7 +92,7 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li class="dropdown-header">
                   <h6>{{ Auth::user()->name }}</h6>
-                  <span>Estudiante</span>
+                  <span>Score: <strong>{{ Auth::user()->score }}</strong></span>
               </li>
               <li>
                   <hr class="dropdown-divider">
@@ -129,20 +129,6 @@
   </header>
   <!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <!-- <section id="hero" style="background-image: url({{asset('img/iPM/img/math1.jpg')}});">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100" > 
-      <h1 class="mb-4 pb-0">¡ Bienvenido a <span id="span-diagnostic">iPlayMath</span> !</h1>
-      <h3 style="color: #fff">
-      Para ofrecerte una experiencia adecuada segun tus conocimientos<br/>
-      es necesario que realices los ejercicios del <strong>examen diagnóstico</strong>,<br>
-       el cual te servirá como punto de partida.
-      </h3>
-      <a href="/play" class="play-btn mb-4"></a>
-      <a href="/main2" class="about-btn scrollto">Comenzar</a>
-    </div>
-  </section> -->
-  <!-- End Hero Section -->
   <main id="main">
 
      <!-- ======= Grade Section ======= -->
@@ -172,7 +158,14 @@
                 <a href="/SecondGradePrimary">
                   <img src="{{ asset('img/iPM/img/grades/2.png') }}" alt="grade 2" class="img-fluid">
                 </a>
+                <!-- <h5>
+                  <span>Score Necesario: <strong>200</strong></span>
+                </h5> -->
+                <!-- <h3> -->
+                <!-- </h3> -->
                 <h3><a href="/SecondGradePrimary"> 2do Grado</a></h3>
+                <h5>Score Necesario: <strong>200</strong></h5>
+                
               </div>
             </div>
           </div>
@@ -186,6 +179,8 @@
 
                 <br>
                 <h3><a href="/ThirdGradePrimary"> 3er Grado</a></h3>
+                <h5>Score Necesario: <strong>400</strong></h5>
+
               </div>
             </div>
           </div>
@@ -201,6 +196,8 @@
                 </a>
                 <br>
                 <h3><a href="/FourthGradePrimary"> 4to Grado</a></h3>
+                <h5>Score Necesario: <strong>600</strong></h5>
+
               </div>
             </div>
           </div>
@@ -212,6 +209,8 @@
                   <img src="{{ asset('img/iPM/img/grades/5.png') }}" alt="grade 5" class="img-fluid">
                 </a>
                 <h3><a href="/FifthGradePrimary"> 5to Grado</a></h3>
+                <h5>Score Necesario: <strong>800</strong></h5>
+
               </div>
             </div>
           </div>
@@ -224,6 +223,8 @@
                 </a>
 
                 <h3><a href="/SixthGradePrimary"> 6to Grado</a></h3>
+                <h5>Score Necesario: <strong>1000</strong></h5>
+
               </div>
             </div>
           </div>
@@ -248,6 +249,7 @@
                   <img src="{{ asset('img/iPM/img/grades/math.png') }}" alt="grade 1 elementary" class="img-fluid">
                 </a>
                 <h3><a href="/FirstGradeElementary"> 1er Grado</a></h3>
+                <h5>Score Necesario: <strong>1200</strong></h5>
               </div>
             </div>
           </div>
@@ -259,6 +261,8 @@
                   <img src="{{ asset('img/iPM/img/grades/math.png') }}" alt="grade 2 elementary" class="img-fluid">
                 </a>
                 <h3><a href="/SecondGradePrimary"> 2do Grado</a></h3>
+                <h5>Score Necesario: <strong>1400</strong></h5>
+
               </div>
             </div>
           </div>
@@ -272,6 +276,8 @@
 
                 <br>
                 <h3><a href="/ThirdGradeElementary"> 3er Grado</a></h3>
+                <h5>Score Necesario: <strong>1600</strong></h5>
+
               </div>
             </div>
           </div>
