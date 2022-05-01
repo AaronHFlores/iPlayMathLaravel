@@ -48,32 +48,7 @@
         <a href="/diagnostic" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
 
-      <nav id="navbar" class="navbar order-last order-lg-3">
-
-          <!-- <div class="dropdown">
-            <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
-              <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-              <span>{{ Auth::user()->name }}</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li>
-              </li>
-
-              <li>
-                <a class="dropdown-item" href="#">Mi Perfil</a></li>
-              <li>
-                <form method="POST" action="{{ route('logout') }}">
-                  @csrf
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                        this.closest('form').submit();">
-                        Cerrar Sesión </a>
-                  </form>
-              </li>
-
-            </ul>
-          </div> -->
-        <!-- </li> -->
-      
+      <!-- <nav id="navbar" class="navbar order-last order-lg-3">
         <div class="dropdown">
           <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
             <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
@@ -100,14 +75,56 @@
             </form>     
                               
         </div>
-        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-      </nav>
-      <!-- .navbar -->
-      <!-- <a href="/diagnostic" class="scrollto"> -->
-        <!-- <img src="{{ asset('img/iPM/img/logo_small_icon.png') }}" width="45" alt="" title="iPlayMath"> -->
-      <!-- </a> -->
+      </nav> -->
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="" data-bs-toggle="dropdown">
+            <!-- <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            @if (Auth::user()->profile_photo_path)
+              <img  src="/storage/{{Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
+            @else
+              <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/> 
+            @endif
+              <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
+            </a><!-- End Profile Iamge Icon -->
 
-      <!-- <a href=""" ></a> -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                  <h6>{{ Auth::user()->name }}</h6>
+                  <span>Estudiante</span>
+              </li>
+              <li>
+                  <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                  <a class="dropdown-item d-flex justify-content-center" href="/profile">
+                  <i class="bi bi-person"></i>
+                  <span>Mi Perfil</span>
+                  </a>
+              </li>
+              <li>
+                  <hr class="dropdown-divider">
+              </li>
+
+    
+              <li>
+                <form method="POST" action="{{ route('logout') }}">
+                @csrf  
+                  <a class="dropdown-item d-flex justify-content-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                  this.closest('form').submit();">
+                  <i class="bi bi-box-arrow-right" style="color: #D82148"></i>
+                  <span style="color: #D82148"><strong>Cerrar Sesión</strong></span>
+                  </a>
+                </form>     
+              </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+        </ul>
+      </nav>
+      
     </div>
   </header>
   <!-- End Header -->

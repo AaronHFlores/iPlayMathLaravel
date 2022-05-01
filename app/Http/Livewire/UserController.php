@@ -4,6 +4,10 @@ namespace App\Http\Livewire;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 use Livewire\Component;
 use App\Models\User;
 use App\Models\Exercise1P;
@@ -22,16 +26,21 @@ class UserController extends Component
     public function EditUser()
     {
         $User = Auth::user();
-        return view('livewire.user.edit-user',['User' => $User]);
+        // return view('livewire.user.edit-user',['User' => $User]);
+        return view('iPM-profile',['User' => $User]);
     }
 
-    public function UpdateUser(Request $request,User $User)
+    public function UpdateUser(Request $request, User $User)
     {
+            
         $User->name= $request->name;
         $User->age= $request->age;
-        $User->save();
+        $User->email= $request->email;
+
+        $User->save();   
         return redirect()->route('play');
     }
+
 
     public function updateScore($trys, $minutes, $seconds, $success)
     {
@@ -205,5 +214,10 @@ class UserController extends Component
     public function Recap()
     {
         return view('test');
+    }
+
+    public function Profile()
+    {
+        return view('iPM-profile');
     }
 }

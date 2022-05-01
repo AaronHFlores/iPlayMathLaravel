@@ -50,6 +50,17 @@ Route::get('/main4', function () {
     return view('livewire/exercise/four-option');
 });
 
+Route::get('/main5', function () {
+    return view('/profile/update-profile-information-form');
+});
+Route::get('/profile', function () {
+    return view('iPM-profile');
+});
+
+Route::get('/profile2', function () {
+    return view('profile/update-profile-information-form');
+});
+
 Route::get('/play', function () {
     return view('iPM-gradeboard');
 })->middleware(['auth','userdiagnosed'])->name('play');
@@ -66,9 +77,10 @@ Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->
 Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e']);
 //Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
 Route::get('/UpdateScore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
-Route::get('/edit', [UserController::class, 'EditUser'])->middleware('auth');
-Route::put('/edit/{user}', [UserController::class, 'UpdateUser'])->middleware('auth')->name('user.update');
 
+// Route::get('/edit', [UserController::class, 'EditUser'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'EditUser'])->middleware('auth');
+Route::put('/profile/{user}', [UserController::class, 'UpdateUser'])->middleware('auth')->name('user.update');
 
 Route::get('/diagnostic', function (){
     return view('/iPM-diagnostic');
