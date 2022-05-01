@@ -43,28 +43,7 @@
     <label hidden id="colon">:</label>
     <label hidden id="seconds">00</label>
       <div class="container" data-aos="fade-up">
-        <!-- <div class="dropdown ">
-          <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
-            <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-            <span>{{ Auth::user()->name }}</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <div class="dropdown-header text-center ">
-              <img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-              <p class="mb-1 mt-3 text-muted font-weight-semibold">{{ Auth::user()->name }}</p>
-              <p class="fw-light text-muted mb-0">{{ Auth::user()->email }}</p>
-            </div>
-            <a style="color: blue"class="dropdown-item" href="/">
-                Mi Perfil
-            </a>    
-            <form method="POST" action="{{ route('logout') }}">
-              @csrf 
-              <a style="color: darkred" class="dropdown-item" href="{{ route('logout') }}" 
-                onclick="event.preventDefault(); this.closest('form').submit();">Cerrar Sesión 
-              </a>                         
-            </form>
-          </div>
-        </div> -->
+
         <div class="row">
           <div class="col-md-12">
             <h2>{{ $primarySixth->question }}</h2>
@@ -72,13 +51,15 @@
           </div>
         </div>
         
-        <div class="row">
-          <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-secondary">
-              Omitir Pregunta 
-              <span class="fa fa-step-forward"  aria-hidden="true"></span>
-            </button>
-          </div>
+        @if($diagnostic == 1)
+          <div class="row">
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-secondary">
+                Omitir Pregunta 
+                <span class="fa fa-step-forward"  aria-hidden="true"></span>
+              </button>
+            </div>
+        @endif
 
           @if($primarySixth->type != 5)
             <div class="img-container d-flex justify-content-center">
