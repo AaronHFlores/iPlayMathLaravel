@@ -15,8 +15,9 @@ class primary6Seeder extends Seeder
     public function run()
     {
         //Fracciones
+        //1
         DB::table('primarySixth')->insert([
-            'question' => 'En un grupo de 36 alumnos, 1/3 del total son menores a 10 años. ¿Cuántos tienen 10 o mas años?',
+            'question' => 'En un grupo de 36 alumnos, 1/3 del total son menores de 10 años. ¿Cuántos tienen 10 años o mas?',
             'type' => '2',
             'firstAnswer' => '30',
             'secondAnswer' => '10',
@@ -25,8 +26,9 @@ class primary6Seeder extends Seeder
             'correctAnswer' => '3',
             'image' => ''
         ]);
+        //2
         DB::table('primarySixth')->insert([
-            'question' => 'En un grupo de 36 alumnos, 1/3 del total son menores a 10 años. ¿Qué fracción representa los alumnos con 10 o mas años?',
+            'question' => 'En un grupo de 36 alumnos, 1/3 del total son menores a 10 años. ¿Qué fracción representa los alumnos con 10 años o mas?',
             'type' => '2',
             'firstAnswer' => '5/6',
             'secondAnswer' => '2/3',
@@ -36,7 +38,7 @@ class primary6Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
-            'question' => 'En toda la escuela hay 230 estudiantes en total, de los cuales 3/5 son mujeres. ¿Cuántos son hombres?',
+            'question' => 'En una escuela hay 230 estudiantes en total, de los cuales 3/5 son mujeres. ¿Cuántos son hombres?',
             'type' => '2',
             'firstAnswer' => '54',
             'secondAnswer' => '92',
@@ -46,7 +48,7 @@ class primary6Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
-            'question' => 'En toda la escuela hay 230 estudiantes en total, de los cuales 2/5 son hombres. ¿Cuántas son mujeres?',
+            'question' => 'En una escuela hay 230 estudiantes en total, de los cuales 2/5 son hombres. ¿Cuántas son mujeres?',
             'type' => '2',
             'firstAnswer' => '54',
             'secondAnswer' => '92',
@@ -76,7 +78,7 @@ class primary6Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('primarySixth')->insert([
-            'question' => 'Si don juan compró 83 pies de manguera ¿Cuántos metros de longitud tiene la manguera que compro don juan?',
+            'question' => 'Si Don Juan compró 83 pies de manguera ¿Cuántos metros de longitud tiene la manguera que compró Don Juan?',
             'type' => '2',
             'firstAnswer' => '15.85',
             'secondAnswer' => '45.62',
@@ -169,7 +171,7 @@ class primary6Seeder extends Seeder
             'image' => '2'
         ]);
         DB::table('primarySixth')->insert([
-            'question' => '¿Cuál de las siguientes figuras es una prisma triangular?',
+            'question' => '¿Cuál de las siguientes figuras es un prisma triangular?',
             'type' => '5',
             'firstAnswer' => "img/primarySixth/cubo.png",
             'secondAnswer' => "img/primarySixth/esfera.png",

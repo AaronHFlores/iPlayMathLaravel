@@ -16,7 +16,7 @@ class Elementary2Seeder extends Seeder
     {
         //Raiz Cuadrada
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 4cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 4cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -26,7 +26,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 16cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 16cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -36,7 +36,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 36cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 36cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -46,7 +46,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 64cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 64cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -56,7 +56,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 9cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 9cm²',
             'type' => '2',
             'firstAnswer' => '3',
             'secondAnswer' => '4',
@@ -66,7 +66,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 25cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 25cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '5',
@@ -76,7 +76,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 49cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 49cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -86,7 +86,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Determine la longitud del lado de un cuadrado si su área es 81cm².',
+            'question' => 'Determine la longitud del lado de un cuadrado si su área es 81cm²',
             'type' => '2',
             'firstAnswer' => '2',
             'secondAnswer' => '4',
@@ -97,7 +97,7 @@ class Elementary2Seeder extends Seeder
         ]);
         //Equivalencia de Ecuacion
         DB::table('elementarySecond')->insert([
-            'question' => 'Teniendo la expresión 4x+5 escoja la opción que no sea equivalente.',
+            'question' => 'Teniendo la expresión 4x + 5 escoja la opción que no sea equivalente',
             'type' => '2',
             'firstAnswer' => '3x + 3 + x + 2',
             'secondAnswer' => '2x - 6 + 1 + 2x',
@@ -107,9 +107,9 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Teniendo la expresión 2a + 3b escoja la opción que no sea equivalente.',
+            'question' => 'Teniendo la expresión 2a + 3b escoja la opción que no sea equivalente',
             'type' => '2',
-            'firstAnswer' => '3a +3b - a',
+            'firstAnswer' => '3a + 3b - a',
             'secondAnswer' => 'a + b + 2a + 2b',
             'thirdAnswer' => '4a - 2a + 5b - 2b',
             'quarterAnswer' => '2a + a - a +b - b + 3b',
@@ -117,7 +117,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Seleccione la ecuacion correspondiente para el siguiente acertijo: El primer número es igual al segundo más 5 y la suma del primero más el doble del segundo es igual a 11.',
+            'question' => 'Seleccione la ecuación correspondiente para el siguiente acertijo: El primer número es igual al segundo más 5 y la suma del primero más el doble del segundo es igual a 11',
             'type' => '2',
             'firstAnswer' => 'x = y + 5; x + 2y = 11',
             'secondAnswer' => 'x = 2 - y; y = 5 - 11',
@@ -127,7 +127,7 @@ class Elementary2Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Seleccione el despeje correcto de x correspondiente para el siguiente acertijo: El primer número es igual al segundo más 5 y la suma del primero más el doble del segundo es igual a 11.',
+            'question' => 'Seleccione el despeje correcto de x correspondiente para el siguiente acertijo: El primer número es igual al segundo más 5 y la suma del primero más el doble del segundo es igual a 11',
             'type' => '2',
             'firstAnswer' => 'x = y + 5; x = 11 - 2y',
             'secondAnswer' => 'x = 2 - y; x = y - 12',
@@ -138,7 +138,7 @@ class Elementary2Seeder extends Seeder
         ]);
         //Proporcionalidad
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',
@@ -148,7 +148,7 @@ class Elementary2Seeder extends Seeder
             'image' => 'img/Elementary2/table1.png'
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',
@@ -158,7 +158,7 @@ class Elementary2Seeder extends Seeder
             'image' => 'img/Elementary2/table2.png'
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',
@@ -168,7 +168,7 @@ class Elementary2Seeder extends Seeder
             'image' => 'img/Elementary2/table3.png'
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',
@@ -178,7 +178,7 @@ class Elementary2Seeder extends Seeder
             'image' => 'img/Elementary2/table4.png'
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',
@@ -188,7 +188,7 @@ class Elementary2Seeder extends Seeder
             'image' => 'img/Elementary2/table5.png'
         ]);
         DB::table('elementarySecond')->insert([
-            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad. ',
+            'question' => 'Observe la relación entre las magnitudes y seleccione el tipo de proporcionalidad',
             'type' => '3',
             'firstAnswer' => 'Directa',
             'secondAnswer' => 'Inversa',

@@ -115,7 +115,7 @@ class Primary1Seeder extends Seeder
         ]);
         //9
         DB::table('primaryFirst')->insert([
-            'question' => 'Si Aldo compra unas papas que cuestan 12 pesos con un billete 20 pesos ¿Cuanto recibe de cambio?',
+            'question' => 'Si Aldo compra unas papas que cuestan 12 pesos con un billete de 20 pesos ¿Cuánto recibe de cambio?',
             'type' => '2',
             'firstAnswer' => '9',
             'secondAnswer' => '3',
@@ -126,7 +126,7 @@ class Primary1Seeder extends Seeder
         ]);
         //10
         DB::table('primaryFirst')->insert([
-            'question' => 'Javier gastó 7 pesos en el recreo y le sobraron 18 ¿Cuanto tenia antes?',
+            'question' => 'Javier gastó 7 pesos en el recreo y le sobraron 18 ¿Cuánto tenía antes?',
             'type' => '2',
             'firstAnswer' => '22',
             'secondAnswer' => '25',
@@ -137,7 +137,7 @@ class Primary1Seeder extends Seeder
         ]);
         //11
         DB::table('primaryFirst')->insert([
-            'question' => 'Aaron tiene 22 pesos y su mamá le da 5 pesos ¿Cuanto tiene ahora?',
+            'question' => 'Aaron tiene 22 pesos y su mamá le da 5 pesos ¿Cuánto tiene ahora?',
             'type' => '2',
             'firstAnswer' => '25',
             'secondAnswer' => '30',
@@ -159,7 +159,7 @@ class Primary1Seeder extends Seeder
         ]);
         //13
         DB::table('primaryFirst')->insert([
-            'question' => 'Selecciona la imagen que tiene 7 elementos.',
+            'question' => 'Selecciona la imagen que tiene 7 elementos',
             'type' => '5',
             'firstAnswer' => 'img/primary1/fresa.png',
             'secondAnswer' => 'img/primary1/dulces7.png',
