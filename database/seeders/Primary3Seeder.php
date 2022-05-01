@@ -48,7 +48,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Luis tiene $490 pesos, ¿Cuánto le falta para tener $1000 ?',
+            'question' => 'Luis tiene $490 pesos. ¿Cuánto le falta para tener $1000 pesos?',
             'type' => '2',
             'firstAnswer' => '610',
             'secondAnswer' => '410',
@@ -84,15 +84,15 @@ class Primary3Seeder extends Seeder
             'question' => 'Con un 1 litro y 1/2 de agua se llenan 5 vasos. ¿Cuántos litros necesitas para llenar 25 vasos?',
             'type' => '2',
             'firstAnswer' => '7 litros',
-            'secondAnswer' => '8 1/2 litros',
-            'thirdAnswer' => '7 1/2 litros',
-            'quarterAnswer' => '7 1/4 litros',
+            'secondAnswer' => '8 litros y 1/2',
+            'thirdAnswer' => '7 litros y 1/2',
+            'quarterAnswer' => '7 litros y 1/4',
             'correctAnswer' => '3',
             'image' => 'img/primary3/agua.png'
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'César y Maritza son hermanos. Él tiene 12 años. Si Maritza es 14 años mayor que él, ¿Cuántos años tiene ella?',
+            'question' => 'César y Maritza son hermanos. Él tiene 12 años. Si Maritza es 14 años mayor que él. ¿Cuántos años tiene ella?',
             'type' => '2',
             'firstAnswer' => '26',
             'secondAnswer' => '24',
@@ -103,7 +103,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Elije la opción que use los signos < (menor que), > (mayor que) o = (igual) correctamente.',
+            'question' => 'Elije la opción que use los signos < (menor que), > (mayor que) o = (igual) correctamente',
             'type' => '2',
             'firstAnswer' => '49 < 39',
             'secondAnswer' => '5 + 8 = 11 + 2',
@@ -136,7 +136,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Jazmín compró 112 paletas y quiere guardarlas en bolsas de 5 paletas cada una. ¿Cuántas bolsas juntará y cuantas paletas le sobran?',
+            'question' => 'Jazmín compró 112 paletas y quiere guardarlas en bolsas de 5 paletas cada una. ¿Cuántas bolsas juntará y cuántas paletas le sobran?',
             'type' => '2',
             'firstAnswer' => '20 bolsas y le sobran 2',
             'secondAnswer' => '25 bolsas y le sobran 3',
@@ -158,7 +158,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Elige el vaso con 1/2 de agua.',
+            'question' => 'Elige el vaso con 1/2 de agua',
             'type' => '5',
             'firstAnswer' => 'img/primary3/vasoMedio.PNG',
             'secondAnswer' => 'img/primary3/vaso14.PNG',
@@ -169,7 +169,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Elige el vaso con 1/4 de agua.',
+            'question' => 'Elige el vaso con 1/4 de agua',
             'type' => '5',
             'firstAnswer' => 'img/primary3/vasoLleno.PNG',
             'secondAnswer' => 'img/primary3/vasoMedio.PNG',
@@ -180,7 +180,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Elige la respuesta correcta.',
+            'question' => 'Elige la respuesta correcta',
             'type' => '2',
             'firstAnswer' => 'Todos los lados de los rectángulos son de la misma medida.',
             'secondAnswer' => 'Los rectángulos tienen tres vértices.',
@@ -202,7 +202,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Una pista de atletismo mide 45 m. Moni ya ha dado 9 vueltas. ¿Cuantos metros ya ha corrido Moni?',
+            'question' => 'Una pista de atletismo mide 45 m. Moni ya ha dado 9 vueltas. ¿Cuántos metros ya ha corrido Moni?',
             'type' => '2',
             'firstAnswer' => '415 m',
             'secondAnswer' => '360 m',
@@ -224,7 +224,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Juan tiene 168 chocolates para repartirlas entre sus 6 amigos y él. ¿Cuántos chocolates les toca a cada uno?',
+            'question' => 'Juan tiene 168 chocolates para repartirlas entre sus 6 amigos y él. ¿Cuántos chocolates les tocaría a cada uno?',
             'type' => '2',
             'firstAnswer' => '26 chocolates',
             'secondAnswer' => '35 chocolates',

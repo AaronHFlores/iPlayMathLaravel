@@ -93,7 +93,7 @@ class Primary2Seeder extends Seeder
         ]);
         //8
         DB::table('primarySecond')->insert([
-            'question' => '¿Si hay 9 montones de peras cuantos peras hay en total?',
+            'question' => 'Si hay 9 montones de peras. ¿Cuántas peras hay en total?',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',
@@ -104,7 +104,7 @@ class Primary2Seeder extends Seeder
         ]);
         //9
         DB::table('primarySecond')->insert([
-            'question' => '¿Si hay 5 montones de dulces cuántos dulces hay en total?',
+            'question' => 'Si hay 5 montones de dulces. ¿Cuántos dulces hay en total?',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',
@@ -115,7 +115,7 @@ class Primary2Seeder extends Seeder
         ]);
         //10
         DB::table('primarySecond')->insert([
-            'question' => '¿Cuántos mosaicos hay en cada piso? cuenta también los hay debajo de la mancha de pintura',
+            'question' => '¿Cuántos mosaicos hay en cada piso? Cuenta también los hay debajo de la mancha de pintura',
             'type' => '2',
             'firstAnswer' => '8',
             'secondAnswer' => '17',
@@ -126,7 +126,7 @@ class Primary2Seeder extends Seeder
         ]);
         //11
         DB::table('primarySecond')->insert([
-            'question' => '¿Cuántos mosaicos hay en cada piso? cuenta también los hay debajo de la mancha de pintura',
+            'question' => '¿Cuántos mosaicos hay en cada piso? Cuenta también los hay debajo de la mancha de pintura',
             'type' => '2',
             'firstAnswer' => '23',
             'secondAnswer' => '32',
@@ -141,9 +141,9 @@ class Primary2Seeder extends Seeder
             'type' => '5',
             'firstAnswer' => 'img/primary2/Rectangulo.png',
             'secondAnswer' => 'img/primary2/Hexagono.png',
-            'thirdAnswer' => 'img/primary1/triangulo.png',
-            'quarterAnswer' => 'img/primary1/cuadrado.png',
-            'correctAnswer' => '3',
+            'thirdAnswer' => 'img/primary1/cuadrado.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
+            'correctAnswer' => '4',
             'image' => ''
         ]);
         //13
@@ -152,9 +152,9 @@ class Primary2Seeder extends Seeder
             'type' => '5',
             'firstAnswer' => 'img/primary2/Rectangulo.png',
             'secondAnswer' => 'img/primary2/Hexagono.png',
-            'thirdAnswer' => 'img/primary1/triangulo.png',
-            'quarterAnswer' => 'img/primary1/cuadrado.png',
-            'correctAnswer' => '4',
+            'thirdAnswer' => 'img/primary1/cuadrado.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
+            'correctAnswer' => '3',
             'image' => ''
         ]);
         //14
@@ -163,8 +163,8 @@ class Primary2Seeder extends Seeder
             'type' => '5',
             'firstAnswer' => 'img/primary2/Rectangulo.png',
             'secondAnswer' => 'img/primary2/Hexagono.png',
-            'thirdAnswer' => 'img/primary1/triangulo.png',
-            'quarterAnswer' => 'img/primary1/cuadrado.png',
+            'thirdAnswer' => 'img/primary1/cuadrado.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '1',
             'image' => ''
         ]);
@@ -174,14 +174,14 @@ class Primary2Seeder extends Seeder
             'type' => '5',
             'firstAnswer' => 'img/primary2/Rectangulo.png',
             'secondAnswer' => 'img/primary2/Hexagono.png',
-            'thirdAnswer' => 'img/primary1/triangulo.png',
-            'quarterAnswer' => 'img/primary1/cuadrado.png',
+            'thirdAnswer' => 'img/primary1/cuadrado.png',
+            'quarterAnswer' => 'img/primary1/triangulo.png',
             'correctAnswer' => '2',
             'image' => ''
         ]);
         //16
         DB::table('primarySecond')->insert([
-            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 3 fichas azules, 4 rojas y 6 amarillas',
+            'question' => 'Teniendo en cuenta la imagen, que número se forma con 3 fichas azules, 4 rojas y 6 amarillas',
             'type' => '2',
             'firstAnswer' => '413',
             'secondAnswer' => '346',
@@ -247,7 +247,7 @@ class Primary2Seeder extends Seeder
         ]);
         //21
         DB::table('primarySecond')->insert([
-            'question' => 'Teniendo en cuenta la imagen, que numero se forma con 5 fichas azules, 2 rojas y 9 amarillas',
+            'question' => 'Teniendo en cuenta la imagen. ¿Qué numero se forma con 5 fichas azules, 2 rojas y 9 amarillas?',
             'type' => '4',
             'firstAnswer' => '',
             'secondAnswer' => '',
