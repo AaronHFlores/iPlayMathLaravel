@@ -54,6 +54,7 @@
         @if($diagnostic == 1)
           <div class="row">
             <div class="d-flex justify-content-end">
+              <!-- <button type="submit" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info-skip-modal"> -->
               <button type="submit" onclick="myFunctionSkip()" class="btn btn-secondary">
                 Omitir Pregunta
                 <span class="fa fa-step-forward"  aria-hidden="true"></span>
@@ -193,6 +194,33 @@
                 </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Modal Order Form -->
+      <div id="info-skip-modal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content ">
+            <div class="modal-header " >
+              <h4 class="modal-title ">Omitir Pregunta 📝 </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                  <i class="fa fa-info"></i>
+                  <!-- <span>No te Preocupes</span> -->
+                  <span>Saltar la pregunta no afectará tus puntos</span>
+
+                </div>
+            
+                <!-- <div class="text-center mt-3">
+                  <button type="submit" id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close">Aceptar</button>
+                </div> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button"  id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close" >Aceptar</button>
+              <button type="button"  id="btn6" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            </div>
         </div>
       </div>
     </section>
@@ -376,18 +404,23 @@
     }
   </script>
   <script>
-      var clicks = 0;
-      var minutes = 0;
-      var seconds = 0;
-      var time = 0;
+    var clicks = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var time = 0;
 
-      function myFunctionSkip() {
-                  var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/0";
+    function myFunctionSkip() {
 
-                  window.location.href = url;
-      }
+      $('#info-skip-modal').modal({ backdrop: 'static',keyboard: false})
+      $('#info-skip-modal').modal('show');
+      let btn = document.getElementById("btn-skip-modal");
+      btn.onclick = returnView;
 
-
+      function returnView(evento) {
+        var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/0";
+        window.location.href = url;
+      }           
+    }
   </script>
 
 

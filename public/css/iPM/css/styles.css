@@ -928,28 +928,18 @@ h1, h2, h3, h4, h5, h6 {
 
 #about-test #test-correct-modal .modal-content{
   border-radius: 10px;
-  /* box-shadow: 0 10px 25px 0 rgba(100, 102, 112, 0.61); */
   padding: 0px;
-
 }
 
 #about-test #test-correct-modal .modal-header {
-
   background: #5cb85c;
   text-align: center;
-
 }
 
 #about-test #test-correct-modal .modal-title {
-  /* color: #019267; */
-  /* background: #4E944F; */
   text-align: center;
   color: #fff;
-
 }
-/* #about-test .btn-close{
-  background: #fff;
-} */
 
 #about-test #btn5 {
   font-size: 20px;
@@ -966,12 +956,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-test #test-correct-modal i{
-
   font-size: 90px;
-  /* margin-bottom: 0px; */
-  /* color: #6BCB77; */
   color: #4E944F;
-
   text-align: center;
   transition: all 0.3s;
 }
@@ -1041,6 +1027,67 @@ h1, h2, h3, h4, h5, h6 {
 #about-test #test-error-modal i:hover{
   color: #FF3547;
 
+}
+
+/* 
+    Modal Info Skip Window
+*/
+
+#about-test #info-skip-modal .modal-content{
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(100, 102, 112, 0.61);
+  padding: 0px;
+
+}
+
+#about-test #info-skip-modal .modal-header {
+  /* color: #019267; */
+  background: #2155CD;
+  text-align: center;
+
+}
+
+#about-test #info-skip-modal .modal-title {
+  /* color: #019267; */
+  text-align: center;
+  color: #fff;
+
+}
+
+#about-test #btn-skip-modal {
+  /* width: 50%; */
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  /* margin-left: 15px; */
+  border: 0;
+  color: #fff;
+  background-color: #2155CD;
+}
+#about-test #btn-skip-modal:hover {
+  color: #FFF;
+  /* color: #0AA1DD; */
+  background-color: #0AA1DD;
+
+}
+
+#about-test #info-skip-modal i{
+  font-size: 80px;
+  /* margin-bottom: 10px; */
+  padding: 0px;
+  color: #7FB5FF;
+  text-align: center;
+  transition: all 0.3s;
+  /* border: 1px solid black; */
+
+
+}
+#about-test #info-skip-modal span{
+  font-size: 25px;
+  color: #040919;
+  text-align: center;
+  padding-top: 10px;
 }
 
 
