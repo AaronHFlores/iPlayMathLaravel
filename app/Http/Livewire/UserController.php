@@ -32,12 +32,12 @@ class UserController extends Component
 
     public function UpdateUser(Request $request, User $User)
     {
-            
+
         $User->name= $request->name;
         $User->age= $request->age;
         $User->email= $request->email;
 
-        $User->save();   
+        $User->save();
         return redirect()->route('play');
     }
 
@@ -179,44 +179,60 @@ class UserController extends Component
         }
     }
 
-    public function updateDiagnosticScore($trys, $minutes, $seconds, $success)
+    public function updateDiagnosticScore($trys, $minutes, $seconds, $success,$skip)
     {
         $time= (((int)$minutes *60) + (int)$seconds);
         $User = Auth::user();
         if($User->dtask<=17){
-            $ch = curl_init();
-            //URL para la api python
-            curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            $data = json_decode(curl_exec($ch));
-            $User->score=$User->score+intval($data[0]*10);
-            if($User->score<0){
-                $User->score=0;
-            }
-            $User->dtask=$User->dtask+1;
-            $User->save();
-            curl_close($ch);
+            if($skip){
+                $ch = curl_init();
+                //URL para la api python
+                curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_HEADER, 0);
+                $data = json_decode(curl_exec($ch));
+                $User->score=$User->score+intval($data[0]*10);
+                if($User->score<0){
+                    $User->score=0;
+                }
+                $User->dtask=$User->dtask+1;
+                $User->save();
+                curl_close($ch);
 
-            return redirect()->route('diagnosticTask');
+                return redirect()->route('diagnosticTask');
+            }
+            else{
+                $User->dtask=$User->dtask+1;
+                $User->save();
+                return redirect()->route('diagnosticTask');
+            }
+
 
         }
         else{
-            $ch = curl_init();
-            //URL para la api python
-            curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            $data = json_decode(curl_exec($ch));
-            $User->score=$User->score+intval($data[0]*10);
-            if($User->score<0){
-                $User->score=0;
-            }
-            $User->diagnosed=true;
-            $User->save();
-            curl_close($ch);
+            if ($skip){
+                $ch = curl_init();
+                //URL para la api python
+                curl_setopt($ch, CURLOPT_URL, 'http://44.197.27.137/results?finished=' . $success .'&time='. $time .'&attempts='. $trys);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_HEADER, 0);
+                $data = json_decode(curl_exec($ch));
+                $User->score=$User->score+intval($data[0]*10);
+                if($User->score<0){
+                    $User->score=0;
+                }
+                $User->diagnosed=true;
+                $User->save();
+                curl_close($ch);
 
-            return redirect()->route('recap');
+                return redirect()->route('recap');
+            }
+            else{
+                $User->diagnosed=true;
+                $User->save();
+                return redirect()->route('recap');
+            }
+
         }
 
     }

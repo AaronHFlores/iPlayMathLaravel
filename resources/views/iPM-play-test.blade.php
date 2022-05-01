@@ -50,12 +50,12 @@
             <hr>
           </div>
         </div>
-        
+
         @if($diagnostic == 1)
           <div class="row">
             <div class="d-flex justify-content-end">
-              <button type="submit" class="btn btn-secondary">
-                Omitir Pregunta 
+              <button type="submit" onclick="myFunctionSkip()" class="btn btn-secondary">
+                Omitir Pregunta
                 <span class="fa fa-step-forward"  aria-hidden="true"></span>
               </button>
             </div>
@@ -69,7 +69,7 @@
             <div class="separador">
             </div>
           @endif
-          
+
         </div>
 
         @if ($primarySixth->type == 4)
@@ -87,11 +87,11 @@
           </div>
         @else
         <div class="row">
-          
+
           {{-- Primer Boton --}}
             <div class="col-md-6 col-sm-6">
             @if($primarySixth->type == 5)
-            
+
                 <button class="button grow_skew_backward" onclick="myFunction1()" id="btn1">
                   <img id="img-button" src="{{ $primarySixth->firstAnswer }}" alt="Botón_1"/>
                 </button>
@@ -99,9 +99,9 @@
             @else
               <button class="button grow_box" onclick="myFunction1()" id="btn1">
                 {{ $primarySixth->firstAnswer }}
-              </button> 
+              </button>
             @endif
-            </div> {{-- Cierre col del Primer Botón --}} 
+            </div> {{-- Cierre col del Primer Botón --}}
 
             {{-- Segundo Boton --}}
             <div class="col-md-6 col-sm-6">
@@ -153,7 +153,7 @@
         @endif
         <p hidden>Clicks:<a id="trys">0</a></p>
       </div> {{-- Final del container --}}
-      
+
       <!-- Modal Order Form -->
       <div id="test-correct-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-dialog-centered " role="document">
@@ -213,7 +213,7 @@
           minutes = document.getElementById("minutes").innerHTML;
           seconds = document.getElementById("seconds").innerHTML;
           if({{$diagnostic}}==1){
-              var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+              var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
           }
           else {
             var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
@@ -221,14 +221,14 @@
 
           $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
           $('#test-correct-modal').modal('show');
-          let btn = document.getElementById("btn5"); 
+          let btn = document.getElementById("btn5");
           btn.onclick = returnView;
 
           function returnView(evento) {
             window.location.href = url;
           }
-          
-          
+
+
         } else {
           if (clicks < 4) {
               clicks += 1;
@@ -244,14 +244,14 @@
           minutes = document.getElementById("minutes").innerHTML;
           seconds = document.getElementById("seconds").innerHTML;
           if({{$diagnostic}}==1){
-            var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+              var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
           }
           else {
             var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
           }
           $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
           $('#test-correct-modal').modal('show');
-          let btn = document.getElementById("btn5"); 
+          let btn = document.getElementById("btn5");
           btn.onclick = returnView;
 
           function returnView(evento) {
@@ -281,14 +281,14 @@
         minutes = document.getElementById("minutes").innerHTML;
         seconds = document.getElementById("seconds").innerHTML;
         if({{$diagnostic}}==1){
-          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+            var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
         $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
         $('#test-correct-modal').modal("show");
-        let btn = document.getElementById("btn5"); 
+        let btn = document.getElementById("btn5");
         btn.onclick = returnView;
 
         function returnView(evento) {
@@ -317,14 +317,14 @@
         minutes = document.getElementById("minutes").innerHTML;
         seconds = document.getElementById("seconds").innerHTML;
         if({{$diagnostic}}==1){
-          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+            var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
         $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
         $('#test-correct-modal').modal('show');
-        let btn = document.getElementById("btn5"); 
+        let btn = document.getElementById("btn5");
         btn.onclick = returnView;
 
         function returnView(evento) {
@@ -353,14 +353,14 @@
         minutes = document.getElementById("minutes").innerHTML;
         seconds = document.getElementById("seconds").innerHTML;
         if({{$diagnostic}}==1){
-          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
         $('#test-correct-modal').modal({ backdrop: 'static',keyboard: false})
         $('#test-correct-modal').modal('show');
-        let btn = document.getElementById("btn5"); 
+        let btn = document.getElementById("btn5");
         btn.onclick = returnView;
 
         function returnView(evento) {
@@ -375,61 +375,21 @@
       }
     }
   </script>
-  <!-- <script>
-    var clicks = 0;
-    var minutes = 0;
-    var seconds = 0;
-    var time = 0;
+  <script>
+      var clicks = 0;
+      var minutes = 0;
+      var seconds = 0;
+      var time = 0;
 
-    function myFunction() {
-      let isCheck = document.getElementById('ck1a').checked;
-      let check = '';
-      if (isCheck) {
-        check += '1,';
-      }
-      isCheck = document.getElementById('ck2a').checked;
-      if (isCheck) {
-        check += "2,";
-      }
-      isCheck = document.getElementById('ck3a').checked;
-      if (isCheck) {
-        check += "3";
-      }
-      isCheck = document.getElementById('ck4a').checked;
-      if (isCheck) {
-        check += '4';
-      }
-      console.log(check);
-      console.log({{$primarySixth->correctAnswer}});
-      if ({{$primarySixth->correctAnswer}} == check) {
-        if (clicks < 4) {
-          clicks += 1;
-        }
-        minutes = document.getElementById("minutes").innerHTML;
-        seconds = document.getElementById("seconds").innerHTML;
-        if({{$diagnostic}}==1){
-          var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1";
-        }
-        else {
-          var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
-        }
-        alert(url);
+      function myFunctionSkip() {
+                  var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/0";
 
-        toastr.success('De regreso al menu de actividades', 'Correcto', {
-          progressBar: true,
-          onHidden: function () {
-              window.location.href = url;
-          }
-        });
-      } else {
-        if (clicks < 4) {
-          clicks += 1;
-        }
-        document.getElementById("trys").innerHTML = clicks;
-        toastr.error('Intentalo de nuevo', 'Incorrecto :(')
+                  window.location.href = url;
       }
-    }
-  </script> -->
+
+
+  </script>
+
 
   <script type="text/javascript">
     var minutesLabel = document.getElementById("minutes");
@@ -453,7 +413,7 @@
     }
   </script>
   <script>
-    
+
   </script>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

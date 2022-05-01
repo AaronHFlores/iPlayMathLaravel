@@ -45,7 +45,7 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="/diagnostic" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
+        <a href="/play" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
 
       <nav class="header-nav ms-auto">
@@ -56,7 +56,7 @@
             @if (Auth::user()->profile_photo_path)
               <img  src="/storage/{{Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
             @else
-              <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/> 
+              <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
             @endif
               <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
             </a><!-- End Profile Iamge Icon -->
@@ -82,13 +82,13 @@
 
               <li>
                 <form method="POST" action="{{ route('logout') }}">
-                @csrf  
+                @csrf
                   <a class="dropdown-item d-flex justify-content-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                   this.closest('form').submit();">
                   <i class="bi bi-box-arrow-right" style="color: #D82148"></i>
                   <span style="color: #D82148"><strong>Cerrar Sesión</strong></span>
                   </a>
-                </form>     
+                </form>
               </li>
 
             </ul><!-- End Profile Dropdown Items -->
@@ -189,7 +189,7 @@
 
                   <!-- Profile Edit Form -->
                   <form action="{{ route('user.update', $User) }}" method="POST">
-                    
+
                     @csrf
                     @method('put')
                     <!-- <div class="row mb-3">
@@ -216,7 +216,7 @@
                                 @if (Auth::user()->profile_photo_path)
                                     <img  src="/storage/{{Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
                                 @else
-                                    <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/> 
+                                    <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
                                 @endif
                             </div> -->
 
@@ -226,7 +226,7 @@
                                       x-bind:style="'background-image: url(\'' + photoPreview + '\');'">
                                 </span>
                             </div> -->
-<!-- 
+<!--
                             <x-jet-secondary-button class="mt-2 mr-2" type="file" x-on:click.prevent="$refs.photo.click()">
                                 {{ __('Select A New Photo') }}
                             </x-jet-secondary-button> -->
@@ -282,7 +282,7 @@
                     <!-- <div class="text-center">
                       <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                     </div> -->
-    
+
                   </form><!-- End Profile Edit Form -->
 
                   <div id="change-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
@@ -308,7 +308,7 @@
 
                 <!-- <div class="tab-pane fade pt-3" id="profile-change-password">
                   <form action="{{ route('password.update', $User) }}" method="POST">
-        
+
                     <div class="row mb-3">
                       <label for="current_password" class="col-md-4 col-lg-3 col-form-label">Contraseña Actual</label>
                       <div class="col-md-8 col-lg-9">
@@ -344,7 +344,7 @@
         </div>
       </div>
 
-      
+
 
     </section>
 

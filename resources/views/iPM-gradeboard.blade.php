@@ -45,7 +45,7 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="/diagnostic" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
+        <a href="/play" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
 
       <!-- <nav id="navbar" class="navbar order-last order-lg-3">
@@ -64,16 +64,16 @@
 
             <a style="color: blue"class="dropdown-item" href="/">
                 Mi Perfil
-            </a>     
+            </a>
 
             <form method="POST" action="{{ route('logout') }}">
-              @csrf 
+              @csrf
                 <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                this.closest('form').submit();"> 
-                            Cerrar Sesión 
-                </a>     
-            </form>     
-                              
+                this.closest('form').submit();">
+                            Cerrar Sesión
+                </a>
+            </form>
+
         </div>
       </nav> -->
       <nav class="header-nav ms-auto">
@@ -84,7 +84,7 @@
             @if (Auth::user()->profile_photo_path)
               <img  src="/storage/{{Auth::user()->profile_photo_path }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
             @else
-              <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/> 
+              <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
             @endif
               <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
             </a><!-- End Profile Iamge Icon -->
@@ -108,23 +108,23 @@
                   <hr class="dropdown-divider">
               </li>
 
-    
+
               <li>
                 <form method="POST" action="{{ route('logout') }}">
-                @csrf  
+                @csrf
                   <a class="dropdown-item d-flex justify-content-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                   this.closest('form').submit();">
                   <i class="bi bi-box-arrow-right" style="color: #D82148"></i>
                   <span style="color: #D82148"><strong>Cerrar Sesión</strong></span>
                   </a>
-                </form>     
+                </form>
               </li>
 
             </ul><!-- End Profile Dropdown Items -->
           </li><!-- End Profile Nav -->
         </ul>
       </nav>
-      
+
     </div>
   </header>
   <!-- End Header -->
@@ -165,11 +165,11 @@
                 <!-- </h3> -->
                 <h3><a href="/SecondGradePrimary"> 2do Grado</a></h3>
                 <h5>Score Necesario: <strong>200</strong></h5>
-                
+
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-4 col-sm-4" align="center">
             <div class="grade">
               <div class="grade-img " >
@@ -266,7 +266,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-4 col-sm-4" align="center">
             <div class="grade">
               <div class="grade-img " >
@@ -298,7 +298,7 @@
             <div class="supporter-logo">
               <img src="{{ asset('img/iPM/img/speakers/math1.png') }}" class="img-fluid" alt="">
             </div>
-            
+
             <div class="row" align="center">
               <div class="col">
                   <h3><a href="#"> 1 Grado</a></h3>
@@ -340,7 +340,7 @@
           </div>
         </div>
 
-      
+
 
       </div>
 
