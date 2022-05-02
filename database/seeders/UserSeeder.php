@@ -21,7 +21,8 @@ class UserSeeder extends Seeder
             'age' => '15',
             'password' => Hash::make('password'),
             'role' => 'adm',
-            'score' => 1000
+            'score' => 1800,
+            'diagnosed' => 1
         ]);
     }
 }

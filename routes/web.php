@@ -41,15 +41,15 @@ Route::get('/play', function () {
 })->middleware(['auth','userdiagnosed'])->name('play');
 
 //Exercise
-Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware('auth');
-Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p']);
-Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware(['auth','score.third.grade.p']);
-Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware(['auth','score.fourth.grade.p']);
-Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render'])->middleware(['auth','score.fifth.grade.p']);
-Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middleware(['auth','score.sixth.grade.p']);
-Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware(['auth','score.first.grade.e']);
-Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware(['auth','score.second.grade.e']);
-Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e']);
+Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p','userdiagnosed']);
+Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p','userdiagnosed']);
+Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware(['auth','score.third.grade.p','userdiagnosed']);
+Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware(['auth','score.fourth.grade.p','userdiagnosed']);
+Route::get('/FifthGradePrimary', [FifthGradePrimary::class, 'render'])->middleware(['auth','score.fifth.grade.p','userdiagnosed']);
+Route::get('/SixthGradePrimary', [SixthGradePrimary::class, 'render'])->middleware(['auth','score.sixth.grade.p','userdiagnosed']);
+Route::get('/FirstGradeElementary', [FirstGradeElementary::class, 'render'])->middleware(['auth','score.first.grade.e','userdiagnosed']);
+Route::get('/SecondGradeElementary', [SecondGradeElementary::class, 'render'])->middleware(['auth','score.second.grade.e','userdiagnosed']);
+Route::get('/ThirdGradeElementary', [ThirdGradeElementary::class, 'render'])->middleware(['auth','score.third.grade.e','userdiagnosed']);
 //Route::get('/UpdateScore/{points}', [UserController::class, 'UpdateScore'])->middleware('auth');
 Route::get('/UpdateScore/{trys}/{minutes}/{seconds}/{success}', [UserController::class, 'UpdateScore'])->middleware('auth');
 
@@ -59,10 +59,10 @@ Route::put('/profile/{user}', [UserController::class, 'UpdateUser'])->middleware
 
 Route::get('/diagnostic', function (){
     return view('/iPM-diagnostic');
-})->name('diagnostic');
+})->middleware(['auth','user.not.diagnosed'])->name('diagnostic');
 
 
-Route::get('/diagnosticTask', [UserController::class, 'DiagnosticTask'])->middleware(['auth'])->name('diagnosticTask');
+Route::get('/diagnosticTask', [UserController::class, 'DiagnosticTask'])->middleware(['auth','user.not.diagnosed'])->name('diagnosticTask');
 Route::get('/updatediagnosticscore/{trys}/{minutes}/{seconds}/{success}/{skip}', [UserController::class, 'updateDiagnosticScore'])->middleware(['auth'])->name('updateDiagnosticScore');
 
 Route::get('/recap', [UserController::class, 'Recap'])->middleware(['auth'])->name('recap');
