@@ -468,7 +468,7 @@
                             }
                         }
                     </script>
-
+                    
                     <script src="{{ asset('vendors/iPlayMath/vendors/bootstrap/bootstrap.min.js')}} "></script>
                     <script src="{{ asset('vendors/iPlayMath/vendors/anchorjs/anchor.min.js')}} "></script>
                     <script src="{{ asset('vendors/iPlayMath/vendors/is/is.min.js')}} "></script>

@@ -43,7 +43,7 @@ class UserController extends Component
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
         curl_setopt($ch, CURLOPT_HEADER, 0); 
         $data = json_decode(curl_exec($ch)); 
-        $User->score=$User->score+intval($data[0]);
+        $User->score=$User->score+intval($data[0]); 
         $User->save();
         
         curl_close($ch);        
