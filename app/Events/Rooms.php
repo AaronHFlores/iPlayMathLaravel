@@ -16,18 +16,20 @@ class Rooms implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $cont;
+    public $user;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
+        $this->user = $user;
     }
 
     public function broadcastAs()
     {
-        return 'Mensaje-User';
+        return 'Hello-User';
     }
     /**
      * Get the channels the event should broadcast on.

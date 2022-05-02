@@ -9,11 +9,11 @@
 <body>
     <script src="{{ mix('js/app.js') }}"></script>
     <script>
-        Echo.channel('.Mensaje-User')
-          .listen('.Mensaje-User',(data)=>{
-            console.log(data)
-          });
-        
+          Echo.channel('Mensaje-User')
+            .listen('.Hello-User',(data)=>{
+              alert("HAJSHAS");
+              console.log(data.user)
+            });
       </script>
 </body>
 </html>

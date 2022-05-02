@@ -24,8 +24,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
      broadcaster: 'pusher',
      key: process.env.MIX_PUSHER_APP_KEY,
      wsHost: window.location.hostname,
+     encrypted: true,
      wsPort: 6001,
      disableStats: true,
      forceTLS: false,
-     enabledTransports: ['ws', 'wss']
+     enabledTransports: ['ws']
  });

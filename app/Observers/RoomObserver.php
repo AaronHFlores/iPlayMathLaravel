@@ -10,7 +10,7 @@ class RoomObserver
     public $cont = 0;
 
     public function updated(User $user){
-        $this ->cont +=1;
-        event(new Rooms($this->cont));
+        $this->cont +=1;
+        event(new Rooms($user));
     }
 }
