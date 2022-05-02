@@ -19,5 +19,10 @@
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.2.2"
+    },
+    "dependencies": {
+        "laravel-echo": "^1.11.7",
+        "pusher": "^5.0.1",
+        "pusher-js": "^4.3.1"
     }
 }
