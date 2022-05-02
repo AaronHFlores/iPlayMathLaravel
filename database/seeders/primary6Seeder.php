@@ -102,7 +102,7 @@ class primary6Seeder extends Seeder
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
             'type' => '2',
-            'firstAnswer' => 'Piramide Triangular',
+            'firstAnswer' => 'Pirámide Triangular',
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
@@ -112,7 +112,7 @@ class primary6Seeder extends Seeder
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
             'type' => '2',
-            'firstAnswer' => 'Piramide Triangular',
+            'firstAnswer' => 'Pirámide Triangular',
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
@@ -122,7 +122,7 @@ class primary6Seeder extends Seeder
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
             'type' => '2',
-            'firstAnswer' => 'Piramide Triangular',
+            'firstAnswer' => 'Pirámide Triangular',
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',
@@ -132,7 +132,7 @@ class primary6Seeder extends Seeder
         DB::table('primarySixth')->insert([
             'question' => 'Seleccione el nombre de la siguiente figura',
             'type' => '2',
-            'firstAnswer' => 'Piramide Triangular',
+            'firstAnswer' => 'Pirámide Triangular',
             'secondAnswer' => 'Prisma Pentagonal',
             'thirdAnswer' => 'Prisma Hexagonal',
             'quarterAnswer' => 'Cubo',

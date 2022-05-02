@@ -137,7 +137,7 @@ class Primary1Seeder extends Seeder
         ]);
         //11
         DB::table('primaryFirst')->insert([
-            'question' => 'Aaron tiene 22 pesos y su mamá le da 5 pesos ¿Cuánto tiene ahora?',
+            'question' => 'Aaron tiene 22 pesos y su mamá le da 5 pesos. ¿Cuánto tiene ahora?',
             'type' => '2',
             'firstAnswer' => '25',
             'secondAnswer' => '30',

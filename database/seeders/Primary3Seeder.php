@@ -37,7 +37,7 @@ class Primary3Seeder extends Seeder
         ]);
 
         DB::table('primaryThird')->insert([
-            'question' => 'Elije el signo que representa correctamente la siguiente expresión: 20 + 15 - 3 |   | 18 + 9 -3',
+            'question' => 'Elije el signo que representa correctamente la siguiente expresión: 20 + 15 - 3 |ㅤ| 18 + 9 -3',
             'type' => '2',
             'firstAnswer' => '>',
             'secondAnswer' => '<',
