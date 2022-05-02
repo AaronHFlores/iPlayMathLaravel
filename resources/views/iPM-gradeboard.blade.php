@@ -283,8 +283,9 @@
           </div>
         </div>
       </div>
+      
     </section>
-
+    
     <!-- ======= Supporters Section ======= -->
     <!-- <section id="supporters" class="section-with-bg">
 
@@ -384,6 +385,8 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/iPM/js/main.js') }}"></script>
+
+  
 
 </body>
 
