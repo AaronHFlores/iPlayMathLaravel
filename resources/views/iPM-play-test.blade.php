@@ -42,7 +42,7 @@
     <label hidden id="minutes">00</label>
     <label hidden id="colon">:</label>
     <label hidden id="seconds">00</label>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="zoom-in-up">
 
         <div class="row">
           <div class="col-md-12">
@@ -54,12 +54,13 @@
         @if($diagnostic == 1)
           <div class="row">
             <div class="d-flex justify-content-end">
-              <!-- <button type="submit" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info-skip-modal"> -->
               <button type="submit" onclick="myFunctionSkip()" class="btn btn-secondary">
                 Omitir Pregunta
                 <span class="fa fa-step-forward"  aria-hidden="true"></span>
               </button>
             </div>
+          </div>
+
         @endif
 
           @if($primarySixth->type != 5)
@@ -71,7 +72,6 @@
             </div>
           @endif
 
-        </div>
 
         @if ($primarySixth->type == 4)
           <div class="row register-form">
