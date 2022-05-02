@@ -7,10 +7,10 @@ use App\Models\User;
 
 class RoomObserver
 {
-    
+    public $cont = 0;
 
     public function updated(User $user){
-        
-        event(new Rooms($user));
+        $this ->cont +=1;
+        event(new Rooms($this->cont));
     }
 }
