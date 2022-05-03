@@ -1156,50 +1156,52 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
-#speakers {
+#ocuppiedRoom {
   padding: 60px 0 30px 0;
 }
-#speakers .speaker {
+#ocuppiedRoom .speaker {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
 }
-#speakers .speaker .details {
-  background: rgba(6, 12, 34, 0.76);
+#ocuppiedRoom .speaker .details {
+  background: rgba(44, 46, 65, 0.76);
   position: absolute;
   left: 0;
   bottom: -40px;
   right: 0;
   text-align: center;
-  padding-top: 10px;
+  padding: 5px;
   transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-#speakers .speaker .details h3 {
+#ocuppiedRoom .speaker .details h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 600;
+  padding: 10px;
   margin-bottom: 5px;
 }
-#speakers .speaker .details p {
+#ocuppiedRoom .speaker .details p {
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
+  /* padding-top: 5px; */
   margin-bottom: 10px;
-  font-style: italic;
+  /* font-style: italic; */
 }
-#speakers .speaker .details .social {
+#ocuppiedRoom .speaker .details .social {
   height: 40px;
 }
-#speakers .speaker .details .social i {
+#ocuppiedRoom .speaker .details .social i {
   line-height: 0;
   margin: 0 2px;
 }
-#speakers .speaker .details a {
+#ocuppiedRoom .speaker .details a {
   color: #fff;
 }
-#speakers .speaker .details a:hover {
-  color: #5463FF;
-}
-#speakers .speaker:hover .details {
+/* #ocuppiedRoom .speaker .details a:hover {
+  color: #99C4C8;
+} */
+#ocuppiedRoom .speaker:hover .details {
   bottom: 0;
 }
 
@@ -1214,6 +1216,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #speakers-details .details .social {
   margin-bottom: 15px;
+  padding: 20px;
 }
 #speakers-details .details .social a {
   background: #e9edfb;
