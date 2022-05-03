@@ -109,16 +109,16 @@
         <!-- data-aos="zoom-in" data-aos-delay="100" -->
 
         <div class="row d-flex justify-content-center">
-          <div class="col-lg-4" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1200"
-     >
+          <div class="col-md-6" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200"
+            >
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <div id="img-container">
                   <img src="{{ asset('img/iPM/img/medal2.png') }}" alt="medal">
                 </div>
-                <h5 class="card-title text-center">¡¡Felicidades {{ Auth::user()->name}} !!</h5>
+                <h5 class="card-title text-center">¡¡Felicidades {{ Auth::user()->name}}!!</h5>
                 <hr>
                 
                 <h6 class="card-subtitle text-center">Has completado el examen diagnóstico </h6>
@@ -137,11 +137,6 @@
 
     </section>
     <!-- End grade Section -->
-
-    
-    
-    
-
 
   </main>
 

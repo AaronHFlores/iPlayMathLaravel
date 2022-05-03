@@ -25,7 +25,9 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+  <!-- <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"> -->
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/iPM/css/styles.css') }}" rel="stylesheet">
@@ -48,34 +50,17 @@
         <a href="/play" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
 
-      <!-- <nav id="navbar" class="navbar order-last order-lg-3">
-        <div class="dropdown">
-          <a class="dropdown-toggle nav-link user-link" id="UserDropdown" href="#" data-bs-toggle="dropdown">
-            <span class="user-img"><img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-            <span>{{ Auth::user()->name }}</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <div class="dropdown-header text-center ">
+      <div class="container-btn">    
+        <a href="#" class="playMjCreate scrollto">
+          <i class="fa fa-gamepad"></i>
+          Crear Partida
+        </a>
+        <a href="#" class="playMjJoin scrollto">
+          <i class="fa fa-gamepad"></i>
+          Unirse a Partida
+        </a>
+      </div>
 
-              <img class="rounded-circle" src="{{ Auth::user()->profile_photo_url }}" width="40" alt="{{ Auth::user()->name }}">
-              <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->name }}</p>
-              <p class="fw-light text-muted mb-0">{{ Auth::user()->email }}</p>
-            </div>
-
-            <a style="color: blue"class="dropdown-item" href="/">
-                Mi Perfil
-            </a>
-
-            <form method="POST" action="{{ route('logout') }}">
-              @csrf
-                <a style="color: blue" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                this.closest('form').submit();">
-                            Cerrar Sesión
-                </a>
-            </form>
-
-        </div>
-      </nav> -->
       <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
           <li class="nav-item dropdown pe-3">
@@ -107,7 +92,6 @@
               <li>
                   <hr class="dropdown-divider">
               </li>
-
 
               <li>
                 <form method="POST" action="{{ route('logout') }}">

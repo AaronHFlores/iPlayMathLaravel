@@ -211,6 +211,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# PLay Button Mj
+--------------------------------------------------------------*/
+
+.container-btn {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
+
+.container-btn .playMjCreate {
+  color: #fff;
+  background: #2A2550;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;  
+  border-radius: 50px;
+  border: 2px solid #2A2550;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.playMjCreate:hover {
+  background: none;
+  color: #2A2550;
+}
+.playMj:focus {
+  color: #fff;
+}
+
+.container-btn .playMjJoin {
+  color: #fff;
+  background: #E04D01;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;  
+  border-radius: 50px;
+  border: 2px solid #E04D01;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.playMjJoin:hover {
+  background: none;
+  color: #E04D01;
+}
+.playMj:focus {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+ 
+}
+
+
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
@@ -1687,6 +1745,14 @@ h1, h2, h3, h4, h5, h6 {
 #recap .card #img-question {
   max-height: 250px;
   width:auto;
+}
+
+@media screen and (max-width: 994px) {
+  #recap .card #img-container>img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+  } 
 }
 
 /*

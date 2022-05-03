@@ -39,14 +39,6 @@
         <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="/" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
       </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <!-- <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#">Registrarse</a></li> -->
-        </ul>
-        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-      </nav>
       @guest
       <a href="{{ route('register') }}" class="login scrollto">Registrarse</a>
       @endguest
