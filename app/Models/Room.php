@@ -13,5 +13,8 @@ class Room extends Model
         'room',
         'user1',
         'user2',
+        'score1',
+        'score2',
+        'finish'
     ];
 }

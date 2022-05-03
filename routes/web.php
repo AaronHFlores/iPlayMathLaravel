@@ -84,6 +84,9 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-Route::get('/socket', function(){
-    return view('test-socket');
+Route::get('/wait', function(){
+    return view('wait-room');
+});
+Route::get('/ocupped', function(){
+    return view('ocupped');
 });

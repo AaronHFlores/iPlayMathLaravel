@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Room extends Migration
+class UpdateUserRoom extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class Room extends Migration
      */
     public function up()
     {
-        Schema::create('room', function (Blueprint $table) {
-            $table->id();
-            $table->text('room');
-            $table->integer('user1')->nullable();
-            $table->integer('user2')->nullable();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('room')->nullable();
         });
     }
 
@@ -29,6 +25,8 @@ class Room extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('room');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('room');
+        });
     }
 }

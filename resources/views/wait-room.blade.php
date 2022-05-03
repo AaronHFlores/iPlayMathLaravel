@@ -9,8 +9,8 @@
 <body>
     <script src="{{ mix('js/app.js') }}"></script>
     <script>
-          Echo.channel('Mensaje-User')
-            .listen('.Hello-User',(data)=>{
+          Echo.channel({{$Room->name}})
+            .listen('.New-Game',(data)=>{
               alert("HAJSHAS");
               console.log(data.user)
             });

@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\User;
+use App\Models\Room;
 use App\Observers\RoomObserver;
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        User::observe(RoomObserver::class);
+        Room::observe(RoomObserver::class);
     }
 }

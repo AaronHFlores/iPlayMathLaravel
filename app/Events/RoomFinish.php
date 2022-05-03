@@ -11,10 +11,9 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Room;
 
-class Rooms implements ShouldBroadcast
+class RoomFinish implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
     public $room;
     /**
      * Create a new event instance.
@@ -28,8 +27,9 @@ class Rooms implements ShouldBroadcast
 
     public function broadcastAs()
     {
-        return 'New-Game';
+        return 'Finish-Game';
     }
+
     /**
      * Get the channels the event should broadcast on.
      *
