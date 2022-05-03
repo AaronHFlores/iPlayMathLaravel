@@ -243,6 +243,9 @@
           if({{$diagnostic}}==1){
               var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
           }
+          else if({{$multiplayer}} == 1){
+            
+          }
           else {
             var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
           }

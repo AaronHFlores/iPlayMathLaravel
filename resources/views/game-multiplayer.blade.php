@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a>Sala no disponible</a>
+    <p>Juego</p>
 </body>
 </html>

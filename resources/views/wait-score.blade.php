@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-  <a >{{$Room->room}}</a>
+    <a >{{$Room->room}}</a>
   <a href="/game">Empezar juego</a>
     <script src="{{ mix('js/app.js') }}"></script>
     <script>

@@ -12,7 +12,7 @@ class ThirdGradeElementary extends Component
         $exercise = Exercise3S::where('id', $randomNumber)->first();
         
         // return view('livewire.exercise.four-option',['primarySixth' => $exercise, 'diagnostic' => 0]);
-        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0]);
+        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => 0]);
 
     }
 }
