@@ -128,6 +128,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f6f7fd;
 }
 
+.section-with-bg2 {
+  background-color: #FFD763;
+}
+
 .section-with-bg-img {
   /* background-image: url("../../../img/iPM/img/math.jpg");
   background-size: cover; */
@@ -1286,7 +1290,11 @@ h1, h2, h3, h4, h5, h6 {
 # Venue Section
 --------------------------------------------------------------*/
 #venue {
-  padding: 60px 0;
+  /* padding: 60px 0; */
+  background: #3da1d1;
+	color: #fff;
+	overflow: hidden;
+
 }
 #venue .container-fluid {
   margin-bottom: 3px;
@@ -1594,9 +1602,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Test Section
+# Recap Section
 --------------------------------------------------------------*/
-#test {
+#recap {
   padding: 20px 0;
   /* background-image: url('../../../img/iPM/img/math.jpg');
   background-size: cover;
@@ -1606,93 +1614,77 @@ h1, h2, h3, h4, h5, h6 {
   
   /* position: relative; */
 }
-
-#test:before {
-  content: "";
-  /* background: rgba(13, 20, 41, 0.8); */
-  position: absolute;
-  color: darkred;
- 
-  opacity: 0.6;
-  background: url("../../../img/iPM/img/math.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0; */
-}
-#test .card {
+#recap .card {
   border: none;
-  border-radius: 8px;
+  border-radius: 15px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
-  max-height: 450px;
+  max-height: 480px;
   color: #0E185F;
 }
-#test .card:hover {
+#recap .card:hover {
   box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
 }
-#test .card hr {
-  margin: 25px 0;
+#recap .card hr {
+  margin: 1px 0;
 }
-#test .card .card-title {
-  margin: 20px 0;
-  font-size: 20px;
+#recap .card #img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#recap .card #img-container>img {
+  max-width: 220px;
+  height: auto;
+	object-fit: contain;
+}
+
+#recap .card .card-title {
+  /* margin: 5px 0; */
+  font-size: 25px;
   letter-spacing: 1px;
   font-weight: bold;
+  color: black;
 }
-#test .card .card-price { /*h6*/
-  margin: 20px 0;
+#recap .card .card-subtitle { /*h6*/
+  margin: 10px 0;
   font-size: 20px;
-  letter-spacing: 1px;
-  font-weight: bold;
+  /* letter-spacing: 1px; */
+  color: #3a7bd5;
 }
-#test .card ul li {
+
+#recap .card .card-subtitle>span { /*h6*/
+  background: linear-gradient(to right, #8CA6DB, #B993D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: #B993D6;  
+  font-weight: bold;
+
+  font-size: 20px;
+}
+
+#recap .card ul li {
   margin-bottom: 20px;
 }
-#test .card .text-muted {
+#recap .card .text-muted {
   opacity: 0.7;
 }
-#test .card .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  /* padding: 10px 40px; */
-  transition: all 0.2s;
-  background-color: #5463FF;
-  border: 0;
-  color: #fff;
-}
-#test .card .btn:hover {
-  background-color: #8479E1;
-}
 
-
-#test #test-modal input, #test #test-modal select {
-  border-radius: 0;
-  
-}
-
-#test #test-modal #modal-body{
-  background-color: #8479E1;
-  color: #8479E1;
-
-}
-
-#test #test-modal .btn {
+#recap .card .btn {
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #5463FF;
+  background-color: #5346CF;
   border: 0;
   color: #fff;
 }
-#test #test-modal .btn:hover {
-  background-color: #e0072f;
+#recap .card .btn:hover {
+  background-color: #8479E1;
 }
-#test .card #img-question {
+
+#recap .card #img-question {
   max-height: 250px;
   width:auto;
 }
@@ -2177,7 +2169,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .profile .profile-card img {
   /* width: 150px; */
-  /* max-width: 160px; */
+  max-width: 160px;
 }
 .profile .profile-card h2 {
   font-size: 24px;
@@ -2271,4 +2263,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*Re cap */
+
+.congrats {
+	position: absolute;
+	top: 140px;
+	width: 550px;
+	height: 100px;
+	padding: 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+.congrats h1 {
+	transform-origin: 50% 50%;
+	font-size: 50px;
+	font-family: "Baloo Bhaijaan 2", cursive;
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.blob {
+	height: 50px;
+	width: 50px;
+	color: #ffcc00;
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	z-index: 1;
+	font-size: 30px;
+	display: none;	
 }

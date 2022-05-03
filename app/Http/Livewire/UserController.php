@@ -238,11 +238,8 @@ class UserController extends Component
     }
     public function Recap()
     {
-        return view('test');
-    }
+        // return view('test');
+        return view('iPM-recap');
 
-    public function Profile()
-    {
-        return view('iPM-profile');
     }
 }
