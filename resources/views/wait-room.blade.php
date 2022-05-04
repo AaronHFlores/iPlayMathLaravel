@@ -16,6 +16,12 @@
               window.location.href = "/game";
             });
       </script>
+      <script>
+        Echo.channel('{{$Room->room}}')
+          .listen('.Finish-Game',(data)=>{
+            window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
+          });
+      </script>
 </body>
 </html> -->
 

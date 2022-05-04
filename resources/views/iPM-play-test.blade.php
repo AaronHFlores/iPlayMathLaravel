@@ -314,6 +314,9 @@
         if({{$diagnostic}}==1){
             var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
+        else if({{$multiplayer}} == 1){
+            var url = "/UpdateScoreMultiplayer/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
@@ -350,6 +353,9 @@
         if({{$diagnostic}}==1){
             var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
+        else if({{$multiplayer}} == 1){
+            var url = "/UpdateScoreMultiplayer/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
@@ -386,6 +392,9 @@
         if({{$diagnostic}}==1){
           var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
         }
+        else if({{$multiplayer}} == 1){
+            var url = "/UpdateScoreMultiplayer/" + clicks + "/" + minutes + "/" + seconds + "/1";
+          }
         else {
           var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
         }
@@ -448,11 +457,21 @@
       }
     }
   </script>
+  <script src="{{ mix('js/app.js') }}"></script>
   <script>
-
+        Echo.channel('{{$Room->room}}')
+          .listen('.User-End',(data)=>{
+            
+          });
+    </script>
+  <script>
+    Echo.channel('{{$Room->room}}')
+      .listen('.Finish-Game',(data)=>{
+        window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
+      });
   </script>
-  <script>
     
+
   </script>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

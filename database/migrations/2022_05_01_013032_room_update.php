@@ -14,8 +14,8 @@ class RoomUpdate extends Migration
     public function up()
     {
         Schema::table('room', function (Blueprint $table) {
-            $table->integer('score1')->default(0);
-            $table->integer('score2')->default(0);
+            $table->integer('score1')->default(0)->nullable();
+            $table->integer('score2')->default(0)->nullable();
         });
     }
 

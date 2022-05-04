@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <a>Winning {{$Room->user1}}</a>
 </body>
 </html>

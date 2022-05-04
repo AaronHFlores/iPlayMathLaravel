@@ -82,11 +82,38 @@ class RoomController extends Component
         if ($User->score < 0) {
             $User->score = 0;
         }
+
+        if($room->finish == 0){
+            $room->finish = 2;
+        }
+        else if($room->finish == 2){
+            $room->finish = 3;
+        }
+
+        $end = $room->finish;
         $room->save();
         $User->save();
 
         curl_close($ch);
-        return view('wait-score', ['Room' => $room]);
+        $User = Auth::user();
+        $room = Room::where('id', $User->room)->first();
+        if($end == 2){
+            return view('wait-score', ['Room' => $room]);
+        }
+        else if($end == 3 or $end == 1){
+            return redirect()->route('podium');
+        }
+        
+    }
+
+    public function endGame(){
+        $user = Auth::user();
+        $room = Room::where('id', $user->room)->first();
+        /* $room->user1 = $user->id;
+        $user->room = $room->id;
+        $room->save();
+        $user->save(); */
+        return view('score-multiplayer', ['Room' => $room]);
     }
 
     public function setupTask()
@@ -105,60 +132,60 @@ class RoomController extends Component
             case (0):
                 $randomNumber = random_int(1, 22);
                 $exercise = Exercise1P::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
             case (1):
                 $randomNumber = random_int(1, 22);
                 $exercise = Exercise2P::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (2):
                 $randomNumber = random_int(1, 21);
                 $exercise = Exercise3P::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (3):
                 $randomNumber = random_int(1, 22);
                 $exercise = Exercise4::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (4):
                 $randomNumber = random_int(1, 21);
                 $exercise = Exercise5::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (5):
                 $randomNumber = random_int(1, 21);
                 $exercise = Exercise6::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (6):
                 $randomNumber = random_int(1, 27);
                 $exercise = Exercise1S::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (7):
                 $randomNumber = random_int(1, 18);
                 $exercise = Exercise2S::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             case (8):
                 $randomNumber = random_int(1, 21);
                 $exercise = Exercise3S::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
                 break;
 
             default:
                 $randomNumber = random_int(1, 21);
                 $exercise = Exercise3S::where('id', $randomNumber)->first();
-                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true]);
+                return view('iPM-play-test', ['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => true, 'Room' => $room]);
         }
     }
     
