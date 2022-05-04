@@ -25,19 +25,11 @@
   <link href="{{ asset('vendors/iPM/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('vendors/iPM/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-  <!-- <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"> -->
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/iPM/css/styles.css') }}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: TheEvent - v4.7.0
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -48,17 +40,6 @@
 
       <div id="logo" class="me-auto">
         <a href="/play" class="scrollto"><img src="{{ asset('img/iPM/img/logo_large_.png') }}" alt="" title="iPlayMath"></a>
-      </div>
-
-      <div class="container-btn">    
-        <a href="/wait" class="playMjCreate scrollto">
-          <i class="fa fa-gamepad"></i>
-          Crear Partida
-        </a>
-        <a  class="playMjJoin scrollto" href="" data-bs-toggle="modal" data-bs-target="#join-room-modal">
-          <i class="fa fa-gamepad"></i>
-          Unirse a Partida
-        </a>
       </div>
 
       <nav class="header-nav ms-auto">
@@ -72,7 +53,7 @@
               <img src="{{Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-circle"/>
             @endif
               <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
-            </a><!-- End Profile Iamge Icon -->
+            </a>
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li class="dropdown-header">
@@ -92,6 +73,7 @@
               <li>
                   <hr class="dropdown-divider">
               </li>
+
 
               <li>
                 <form method="POST" action="{{ route('logout') }}">
@@ -115,57 +97,62 @@
 
   <main id="main">
 
-    <section id="ocuppiedRoom">
-      <div class="container" >
-        <div class="section-header">
-          <h2>Acceso Denegado</h2>
-          <p>Arbol de Decisiones no Disponible</p>
-        </div>
+     <!-- ======= Grade Section ======= -->
+    <section id="recap" class="section-with-bg2">
 
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-          <div class="col-lg-6 col-md-6 ">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="{{ asset('img/iPM/img/error.png') }}" alt="ocuppied" class="img-fluid">
-              <div class="details">
-                <h3><a href="">Espere al Administrador</a></h3>
-                <p>Pulsa el Boton para continuar</p>
+      <div class="container" data-aos="zoom-in-down">
+        <div class="section-header">
+          <!-- <h2>Primaria</h2>
+          <p>Elige tu grado</p> -->
+        </div>
+        <?php
+        use App\Models\User;
+          if($Room->score1 > $Room->score2){
+              $userwin = User::where('id', $Room->user1)->first();
+
+              $winner =  $userwin->name;
+          }  
+          else if($Room->score1 < $Room->score2){
+              $userwin = User::where('id', $Room->user2)->first();
+              $winner =  $userwin->name;
+
+              // echo $userwin->name;
+          }
+          else {
+              echo "empate";
+          }
+        ?>
+
+        <!-- data-aos="zoom-in" data-aos-delay="100" -->
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200"
+            >
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <div id="img-container">
+                  <img src="{{ asset('img/iPM/img/medal2.png') }}" alt="medal">
+                </div>
+                <h5 class="card-title text-center">¡¡Felicidades <?php echo $winner; ?>!!</h5>
+                <hr>
+                
+                <h6 class="card-subtitle text-center">Has Ganado </h6>
+                
+                <div class="text-center">
+                  <a href="/play" type="button" class="btn">Continuar</a>
+                  <!-- <button  data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="standard-access">Continuar</button> -->
+                </div>
               </div>
-            </div>
-            <!-- <button><a href="{{$url}}" >Continuar</a></button> -->
-            <div class="text-center">
-              <a href="{{$url}}" type="button" class="btn">Continuar</a>
-              <!-- <button  data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="standard-access">Continuar</button> -->
             </div>
           </div>
           
         </div>
       </div>
 
-    </section><!-- End Speakers Section -->
-    
-    <div id="join-room-modal" class="modal fade">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content ">
-          <div class="modal-header " >
-            <h4 class="modal-title ">Uniéndose a Partida 🎮 </h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body " >
-              <div class="row">
-                <i class="fa fa-gamepad"></i>
-                <span for="room" >Ingrese el nombre de la sala:</span>
-                <div class="col">
-                  <input type="text" id="room" name="room" class="form-control">
-                </div>
-
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button"  id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close" onclick="search()" >Aceptar</button>
-            <button type="button"  id="btn6" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-          </div>
-      </div>
-    </div>
+    </section>
+    <!-- End grade Section -->
 
   </main>
 
@@ -192,14 +179,6 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script>
-    function search(){
-      let room = document.getElementById('room');
-      var url = "/search/" + room.value ;
-      window.location.href = url;   
-
-    }
-  </script>
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
   <!-- Vendor JS Files -->
@@ -211,8 +190,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/iPM/js/main.js') }}"></script>
-
-  
 
 </body>
 
