@@ -244,7 +244,7 @@
               var url = "/updatediagnosticscore/" + clicks + "/" + minutes + "/" + seconds + "/1/1";
           }
           else if({{$multiplayer}} == 1){
-            
+            var url = "/UpdateScoreMultiplayer/" + clicks + "/" + minutes + "/" + seconds + "/1";
           }
           else {
             var url = "/UpdateScore/" + clicks + "/" + minutes + "/" + seconds + "/1";
@@ -451,7 +451,9 @@
   <script>
 
   </script>
-
+  <script>
+    
+  </script>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>

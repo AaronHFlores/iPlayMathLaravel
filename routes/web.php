@@ -93,3 +93,4 @@ Route::get('/ocupped', function(){
 
 Route::get('/game', [RoomController::class, 'startGame']);
 Route::get('/setup', [RoomController::class, 'setupTask'])->name('setup');
+Route::get('/UpdateScoreMultiplayer/{trys}/{minutes}/{seconds}/{success}', [RoomController::class, 'UpdateScoreMult'])->middleware('auth');

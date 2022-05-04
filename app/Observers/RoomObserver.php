@@ -10,7 +10,10 @@ class RoomObserver
 {
 
     public function updated(Room $room){
-        if($room->finish == 0){            
+        if($room->score1 != 0 and $room->score1 != 0){
+            event(new Rooms($room));
+        }
+        else if($room->finish == 0){            
             event(new Rooms($room));
         }
         else if($room->finish == 1){            
