@@ -72,6 +72,10 @@ class RoomController extends Component
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         $data = json_decode(curl_exec($ch));
+        if($data == null){
+            $url = '/UpdateScoreMultiplayer/'.$trys.'/'.$minutes.'/'.$seconds.'/1';
+            return view('error',['url' => $url]);
+        }
         if ($room->user1 == $User->id){
             $room->score1 = intval($data[0]);
         }

@@ -121,4 +121,7 @@ Route::get('/ocupped', function(){
 Route::get('/game', [RoomController::class, 'startGame']);
 Route::get('/podium', [RoomController::class, 'endGame'])->name('podium');
 Route::get('/setup', [RoomController::class, 'setupTask'])->name('setup');
+Route::get('/error', function(){
+    return view('error');
+});
 Route::get('/UpdateScoreMultiplayer/{trys}/{minutes}/{seconds}/{success}', [RoomController::class, 'UpdateScoreMult'])->middleware('auth');
