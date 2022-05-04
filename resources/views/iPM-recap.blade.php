@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -174,8 +174,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('js/iPM/js/main.js') }}"></script>
-
-  
 
 </body>
 

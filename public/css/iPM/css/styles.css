@@ -1850,6 +1850,104 @@ h1, h2, h3, h4, h5, h6 {
   } 
 }
 
+/*--------------------------------------------------------------
+# Waiting Room Section
+--------------------------------------------------------------*/
+#waitingRoom {
+  padding: 20px 0;
+  /* background-image: url('../../../img/iPM/img/math.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+  
+  /* position: relative; */
+}
+#waitingRoom .card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+  max-height: 480px;
+  color: #0E185F;
+}
+#waitingRoom .card:hover {
+  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+#waitingRoom .card hr {
+  margin: 1px 0;
+}
+#waitingRoom .card #img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#waitingRoom .card #img-container>img {
+  max-width: 220px;
+  height: auto;
+	object-fit: contain;
+}
+
+#waitingRoom .card .card-title {
+  /* margin: 5px 0; */
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: black;
+}
+#waitingRoom .card .card-subtitle { /*h6*/
+  margin: 10px 0;
+  font-size: 30px;
+  /* letter-spacing: 1px; */
+  color: #1A1A40;
+}
+
+#waitingRoom .card .card-title>span { /*h6*/
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  color: #302b63;  
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#waitingRoom .card ul li {
+  margin-bottom: 20px;
+}
+#waitingRoom .card .text-muted {
+  opacity: 0.7;
+}
+
+#waitingRoom .card .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #5346CF;
+  border: 0;
+  color: #fff;
+}
+#waitingRoom .card .btn:hover {
+  background-color: #8479E1;
+}
+
+#waitingRoom .card #img-question {
+  max-height: 250px;
+  width:auto;
+}
+
+@media screen and (max-width: 994px) {
+  #waitingRoom .card #img-container>img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+  } 
+}
+
+
+
 /*
 #LOGIN
 */
