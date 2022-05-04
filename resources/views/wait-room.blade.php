@@ -145,7 +145,7 @@
                 <h5 class="card-title text-center">Nombre de la Sala: <span>{{$Room->room}}</span></h5>
                 <hr>
                 <div id="img-container">
-                  <img src="{{ asset('img/iPM/img/kidwaiting.png') }}" alt="KidWaiting">
+                  <img src="{{ asset('img/iPM/img/kidwaitingvs.png') }}" alt="KidWaiting">
                 </div>
                 
                 <h6 class="card-subtitle text-center">Esperando Adversario...</h6>
@@ -202,6 +202,7 @@
         window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
       });
   </script>
+
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
   <!-- Vendor JS Files -->
