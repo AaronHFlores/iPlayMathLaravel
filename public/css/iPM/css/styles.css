@@ -1153,6 +1153,97 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* 
+    Modal Join Room Skip Window
+*/
+
+#join-room-modal .modal-content{
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(100, 102, 112, 0.61);
+  padding: 0px;
+
+}
+
+#join-room-modal .modal-header {
+  /* color: #019267; */
+  background: #5642d5;
+  text-align: center;
+
+}
+
+#join-room-modal .modal-title {
+  /* color: #019267; */
+  text-align: center;
+  color: #fff;
+
+}
+
+#join-room-modal #btn-skip-modal {
+  /* width: 50%; */
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  /* margin-left: 15px; */
+  border: 0;
+  color: #fff;
+  background-color: #5642d5;
+  border: 2px solid #5642d5;
+
+}
+#join-room-modal #btn-skip-modal:hover {
+  color: #5642d5;
+  background-color: #FFF;
+  border: 2px solid #5642d5;
+
+}
+
+#join-room-modal #btn6 {
+  /* width: 50%; */
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 40px;
+  transition: all 0.3s;
+  /* margin-left: 15px; */
+  border: 0;
+  background: #fff;
+  color: #fff;
+  background-color: #FF3547;
+  border: 2px solid #FF3547;
+}
+#join-room-modal #btn6:hover {
+  color: #FF3547;
+  background-color: #fff;
+  border: 2px solid #FF3547;
+}
+
+#join-room-modal i{
+  font-size: 80px;
+  /* margin-bottom: 10px; */
+  padding: 0px;
+  color: #5642d5b7;
+  text-align: center;
+  transition: all 0.3s;
+  /* border: 1px solid black; */
+
+
+}
+#join-room-modal  span{
+  font-size: 25px;
+  color: #040919;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#join-room-modal  input{
+  font-size: 18px;
+  color: #040919;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
@@ -1463,6 +1554,7 @@ h1, h2, h3, h4, h5, h6 {
   /* font-style: italic; */
   font-size: 25px;
 }
+
 
 /*--------------------------------------------------------------
 # Gallery Section

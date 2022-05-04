@@ -51,11 +51,11 @@
       </div>
 
       <div class="container-btn">    
-        <a href="#" class="playMjCreate scrollto">
+        <a href="/wait" class="playMjCreate scrollto">
           <i class="fa fa-gamepad"></i>
           Crear Partida
         </a>
-        <a href="#" class="playMjJoin scrollto">
+        <a  class="playMjJoin scrollto" href="" data-bs-toggle="modal" data-bs-target="#join-room-modal">
           <i class="fa fa-gamepad"></i>
           Unirse a Partida
         </a>
@@ -115,11 +115,6 @@
 
   <main id="main">
 
-     <!-- ======= Grade Section ======= -->
-
-    
-    <!-- ======= Supporters Section ======= -->
-
     <section id="ocuppiedRoom">
       <div class="container" >
         <div class="section-header">
@@ -142,6 +137,30 @@
       </div>
 
     </section><!-- End Speakers Section -->
+    
+    <div id="join-room-modal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content ">
+          <div class="modal-header " >
+            <h4 class="modal-title ">Uniéndose a Partida 🎮 </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body " >
+              <div class="row">
+                <i class="fa fa-gamepad"></i>
+                <span for="room" >Ingrese el nombre de la sala:</span>
+                <div class="col">
+                  <input type="text" id="room" name="room" class="form-control">
+                </div>
+
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button"  id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close" onclick="search()" >Aceptar</button>
+            <button type="button"  id="btn6" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+          </div>
+      </div>
+    </div>
 
   </main>
 
@@ -168,6 +187,14 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script>
+    function search(){
+      let room = document.getElementById('room');
+      var url = "/search/" + room.value ;
+      window.location.href = url;
+
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
   <!-- Vendor JS Files -->

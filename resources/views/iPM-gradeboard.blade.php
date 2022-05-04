@@ -55,10 +55,9 @@
           <i class="fa fa-gamepad"></i>
           Crear Partida
         </a>
-        <a  class="playMjJoin scrollto" onclick="joinRoom()">
+        <a  class="playMjJoin scrollto" href="" data-bs-toggle="modal" data-bs-target="#join-room-modal">
           <i class="fa fa-gamepad"></i>
           Unirse a Partida
-          
         </a>
       </div>
 
@@ -271,86 +270,27 @@
       
     </section>
     
-    <!-- ======= Supporters Section ======= -->
-    <!-- <section id="supporters" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-        </div>
-
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math1.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="row" align="center">
-              <div class="col">
-                  <h3><a href="#"> 1 Grado</a></h3>
-                </div>
-              </div>
-
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math3.png') }}" class="img-fluid" alt="">
-              <h3><a href="#"> 1 Grado</a></h3>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ asset('img/iPM/img/speakers/math1.png') }}" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/4.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/5.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-6">
-          <div class="supporter-logo">
-            <img src="assets/img/supporters/6.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </section> -->
-    <!-- End Sponsors Section -->
-    <!-- Modal Order Form -->
-    <div id="test-correct-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
-      <div class="modal-dialog modal-dialog-centered " role="document">
+    <div id="join-room-modal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content ">
-          <div class="modal-header">
-            <h4 class="modal-title">Ingrese el cuarto 😃</h4>
-            <!-- <button type="button" id="btn5close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="modal-header " >
+            <h4 class="modal-title ">Uniéndose a Partida 🎮 </h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body " >
               <div class="row">
-                <i class="fa fa-circle-check"></i>
-              </div>
-              <div class="text-center mt-3">                
+                <i class="fa fa-gamepad"></i>
+                <span for="room" >Ingrese el nombre de la sala:</span>
+                <div class="col">
                   <input type="text" id="room" name="room" class="form-control">
-                  <button type="submit" id="btn5" data-bs-dismiss="modal" onclick="search()" aria-label="Close">Aceptar</button>
-                
+                </div>
+
               </div>
           </div>
-        </div>
+          <div class="modal-footer">
+            <button type="button"  id="btn-skip-modal" data-bs-dismiss="modal" aria-label="Close" onclick="search()" >Aceptar</button>
+            <button type="button"  id="btn6" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+          </div>
       </div>
     </div>
     <!-- /.modal -->
@@ -380,10 +320,6 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <script>
-    function joinRoom(){
-        
-        $('#test-correct-modal').modal("show");
-    }
     function search(){
       let room = document.getElementById('room');
       var url = "/search/" + room.value ;
