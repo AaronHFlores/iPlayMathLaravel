@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <a>Winning {{$Room->user1}}</a>
+    <a>Winning 
+        <?php
+        use App\Models\User;
+            if($Room->score1 > $Room->score2){
+                $userwin = User::where('id', $Room->user1)->first();
+                echo $userwin->name;
+            }
+            else if($Room->score1 < $Room->score2){
+                $userwin = User::where('id', $Room->user2)->first();
+                echo $userwin->name;
+            }
+            else {
+                echo "empate";
+            }
+        ?>
+
+    </a>
 </body>
 </html>
