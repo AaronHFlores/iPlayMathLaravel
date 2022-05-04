@@ -12,7 +12,9 @@ use App\Http\Livewire\Grades\SecondGradeElementary;
 use App\Http\Livewire\Grades\ThirdGradeElementary;
 use App\Http\Livewire\UserController;
 use App\Http\Livewire\RoomController;
-
+use App\Models\Room;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -38,6 +40,31 @@ Route::get('/', function () {
 
 
 Route::get('/play', function () {
+    $user = Auth::user();
+    if($user->room != null){
+        $room = Room::where('id', $user->room)->first();
+        if($room != null){
+            if(($user->id == $room->user1 or $user->id == $room->user2) && ($room->finish == 0 or $room->finish == 2 or $room->finish == 3)){                        
+                $room->finish = 1;
+                $room->save();
+                $user->room = null;
+                $user->save();
+            }
+            else if(($user->id == $room->user1 or $user->id == $room->user2) && $room->finish == 1){                        
+                $room->user1 = NULL;
+                $room->user2 = NULL;
+                $room->score1 = NULL;
+                $room->score2 = NULL;
+                $room->finish = NULL;
+                $room->save();
+            }
+        } 
+        else{
+            $user->room = null;
+            $user->save();
+        }
+    }
+    
     return view('iPM-gradeboard');
 })->middleware(['auth','userdiagnosed'])->name('play');
 
@@ -92,5 +119,6 @@ Route::get('/ocupped', function(){
 });
 
 Route::get('/game', [RoomController::class, 'startGame']);
+Route::get('/podium', [RoomController::class, 'endGame'])->name('podium');
 Route::get('/setup', [RoomController::class, 'setupTask'])->name('setup');
 Route::get('/UpdateScoreMultiplayer/{trys}/{minutes}/{seconds}/{success}', [RoomController::class, 'UpdateScoreMult'])->middleware('auth');

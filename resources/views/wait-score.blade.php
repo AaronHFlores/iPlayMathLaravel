@@ -7,14 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <a >{{$Room->room}}</a>
-  <a href="/game">Empezar juego</a>
+    <a >{{$Room->user1}}</a>
+    <a>Esperando jugador </a>
     <script src="{{ mix('js/app.js') }}"></script>
     <script>
           Echo.channel('{{$Room->room}}')
-            .listen('.New-Game',(data)=>{
-              window.location.href = "/game";
+            .listen('.User-End',(data)=>{
+              window.location.href = "/podium";
             });
+      </script>
+      <script>
+        Echo.channel('{{$Room->room}}')
+          .listen('.Finish-Game',(data)=>{
+            window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
+          });
       </script>
 </body>
 </html>
