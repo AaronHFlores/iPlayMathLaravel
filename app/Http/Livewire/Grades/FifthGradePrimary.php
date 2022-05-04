@@ -3,6 +3,7 @@ namespace App\Http\Livewire\Grades;
 
 use Livewire\Component;
 use App\Models\Exercise5;
+use App\Models\Room;
 
 class FifthGradePrimary extends Component
 {
@@ -10,6 +11,7 @@ class FifthGradePrimary extends Component
     {
         $randomNumber = random_int(1, 21);
         $exercise = Exercise5::where('id', $randomNumber)->first();
-        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => 0]);
+        $room = Room::where('id', 99)->first();
+        return view('iPM-play-test',['primarySixth' => $exercise, 'diagnostic' => 0, 'multiplayer' => 0, 'Room' => $room]);
     }
 }
