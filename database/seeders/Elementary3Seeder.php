@@ -26,7 +26,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => '¿Cual es el valor de X en la siguiente ecuación? 3x-8=-5x-2',
+            'question' => '¿Cual es el valor de X en la siguiente ecuación? 3x - 8 = -5x - 2',
             'type' => '2',
             'firstAnswer' => '3/4',
             'secondAnswer' => '5',
@@ -48,7 +48,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Axel tiene 15 6/8 kg de café. Y quiere llenar bolsas de 3/4 kg. ¿Cuántas bolsas completas de café podrá llenar?',
+            'question' => 'Axel tiene 15 kg y 6/8 de café. Y quiere llenar bolsas de 3/4 de kg. ¿Cuántas bolsas completas de café podrá llenar?',
             'type' => '2',
             'firstAnswer' => '20',
             'secondAnswer' => '14',
@@ -59,7 +59,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'La siguiente gráfica muestra a los 350 alumnos de una escuela secundaria, por grado. Un reporte indica que 10% de los alumnos de tercer grado y 25% de los de segundo grado se han enfermado de influenza.¿Cuántos alumnos de segundo grado y cuántos de tercero están enfermos?',
+            'question' => 'La siguiente gráfica muestra a los 350 alumnos de una escuela secundaria, por grado. Un reporte indica que 10% de los alumnos de tercer grado y 25% de los de segundo grado se han enfermado de influenza. ¿Cuántos alumnos de segundo grado y cuántos de tercero están enfermos?',
             'type' => '2',
             'firstAnswer' => '8 de 2º y 2 de 3º',
             'secondAnswer' => '25 de 2º y 10 de 3º',
@@ -92,7 +92,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Se lanza al mismo tiempo un dado y una moneda.¿Cuál es la probabilidad de obtener un 5 y sol?',
+            'question' => 'Se lanza al mismo tiempo un dado y una moneda. ¿Cuál es la probabilidad de obtener un 5 y un sol?',
             'type' => '2',
             'firstAnswer' => '2/12',
             'secondAnswer' => '4/6',
@@ -103,7 +103,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Se tiene la siguiente expresió algebraica: (x+3)(?) = x²+8x+15. ¿Cuál es la expresion faltante para que se cumpla el resultado?',
+            'question' => 'Se tiene la siguiente expresión algebraica: (x+3)(?) = x²+8x+15. ¿Cuál es la expresion faltante para que se cumpla el resultado?',
             'type' => '2',
             'firstAnswer' => 'x+3',
             'secondAnswer' => 'x-3',
@@ -125,7 +125,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Observa la siguiente sucesión de figuras que representan cuerpos geométricos formados por cubos.Si en el primero se ven sólo 3 caras del cubo y en el segundo cuerpo se ven sólo 7, ¿cuál de las siguientes expresiones algebraicas permite calcular el número de caras cuadradas visibles en el cuerpo geométrico formado por cubos ubicado en la enésima posición?',
+            'question' => 'Observa la siguiente sucesión de figuras que representan cuerpos geométricos formados por cubos.Si en el primero se ven sólo 3 caras del cubo y en el segundo cuerpo se ven sólo 7. ¿Cuál de las siguientes expresiones algebraicas permite calcular el número de caras cuadradas visibles en el cuerpo geométrico formado por cubos ubicado en la enésima posición?',
             'type' => '2',
             'firstAnswer' => '6(n)²',
             'secondAnswer' => 'n²+6',
@@ -136,7 +136,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Identifica cuál de las siguientes gráficas corresponde a la función y =x² -x-2',
+            'question' => 'Identifica cuál de las siguientes gráficas corresponde a la función y = x² - x - 2',
             'type' => '5',
             'firstAnswer' => 'img/Elementary3/g1.PNG',
             'secondAnswer' => 'img/Elementary3/g2.PNG',
@@ -169,7 +169,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Alondra pagó $92 por 5 cuadernos y 3 plumas. Dani compró 2 cuadernos y 6 plumas y pagó $56, ¿cuánto cuesta cada uno de los útiles escolares?',
+            'question' => 'Alondra pagó $92 por 5 cuadernos y 3 plumas. Dani compró 2 cuadernos y 6 plumas y pagó $56. ¿Cuánto cuesta cada uno de los útiles escolares?',
             'type' => '2',
             'firstAnswer' => '$11 por un cuaderno y $5 por una pluma',
             'secondAnswer' => '$16 por un cuaderno y $4 por una pluma',
@@ -180,7 +180,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'El precio del kg de croquetas es de $39.5. Sofi compró 3 1/2 kg, ¿cuánto pagó por la croquetas de su perrito?',
+            'question' => 'El precio del kg de croquetas es de $39.5. Sofi compró 3 kg y 1/2. ¿Cuánto pagó por la croquetas de su perrito?',
             'type' => '2',
             'firstAnswer' => '135.25',
             'secondAnswer' => '$118.50',
@@ -191,14 +191,14 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => '¿Cuál es la razón trigonométrica que nos da el valor de la función trigonométrica con la que se puede calcular la medida del ángulo B?',
+            'question' => '¿Cuál es la razón trigonométrica que nos da el valor de la función con la que se puede calcular la medida del ángulo B?',
             'type' => '2',
             'firstAnswer' => 'Sen B = 20/10',
             'secondAnswer' => 'Cos B = x/10',
             'thirdAnswer' => 'Cos B = 20/x',
             'quarterAnswer' => 'Sen B = 10/20',
             'correctAnswer' => '4',
-            'image' => ''
+            'image' => 'img/Elementary3/anguloTriangulo.PNG'
         ]);
 
         DB::table('elementaryThird')->insert([
@@ -235,7 +235,7 @@ class Elementary3Seeder extends Seeder
         ]);
 
         DB::table('elementaryThird')->insert([
-            'question' => 'Suma las expresiones 2x²+3x+4 y 4x²-2x+3',
+            'question' => 'Suma las expresiones 2x² + 3x + 4 y 4x² - 2x + 3',
             'type' => '2',
             'firstAnswer' => '9x²-2x+7',
             'secondAnswer' => '6x²+x+7',

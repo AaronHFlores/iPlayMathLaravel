@@ -28,13 +28,13 @@
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
-                    <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="rounded-full h-20 w-20 object-cover">
+                    <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="rounded-full h-20 w-20 object-cover">
                 </div>
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
-                    <span class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
-                          x-bind:style="'background-image: url(\'' + photoPreview + '\');'">
+                    <span class="block rounded-full w-20 h-20"
+                          x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
 
@@ -42,11 +42,7 @@
                     {{ __('Select A New Photo') }}
                 </x-jet-secondary-button>
 
-                @if ($this->user->profile_photo_path)
-                    <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
-                        {{ __('Remove Photo') }}
-                    </x-jet-secondary-button>
-                @endif
+
 
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
@@ -68,9 +64,9 @@
     </x-slot>
 
     <x-slot name="actions">
-        <x-jet-action-message class="mr-3" on="saved">
+        <x-jet-button class="mr-3" on="saved">
             {{ __('Saved.') }}
-        </x-jet-action-message>
+        </x-jet--button>
 
         <x-jet-button wire:loading.attr="disabled" wire:target="photo">
             {{ __('Save') }}

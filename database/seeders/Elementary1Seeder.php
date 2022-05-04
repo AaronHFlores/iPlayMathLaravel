@@ -48,7 +48,7 @@ class Elementary1Seeder extends Seeder
         ]);
         //Media y Mediana
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana obtuvo las siguientes calificaciones, ¿calcule la mediana de las calificaciones?',
+            'question' => 'Mariana obtuvo las siguientes calificaciones. ¿Cuál es la mediana de las calificaciones?',
             'type' => '2',
             'firstAnswer' => '8',
             'secondAnswer' =>'5',
@@ -58,7 +58,7 @@ class Elementary1Seeder extends Seeder
             'image' => 'img/Elementary1/tabla.png'
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana obtuvo las siguientes calificaciones, ¿calcule la media de calificaciones?',
+            'question' => 'Mariana obtuvo las siguientes calificaciones. ¿Cual es la media de las calificaciones?',
             'type' => '2',
             'firstAnswer' => '9',
             'secondAnswer' =>'8.2',
@@ -69,7 +69,7 @@ class Elementary1Seeder extends Seeder
         ]);
         //Probabilidad
         DB::table('elementaryFirst')->insert([
-            'question' => '¿Si se lanza una moneda 2 veces cual es el porcentaje que salga 2 veces sol?',
+            'question' => '¿Si se lanza una moneda 2 veces cuál es el porcentaje de que salga 2 veces sol?',
             'type' => '2',
             'firstAnswer' => '75%',
             'secondAnswer' =>'100%',
@@ -79,7 +79,7 @@ class Elementary1Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => '¿Si se lanza una moneda 2 veces cual es el porcentaje que salga sol y águila?',
+            'question' => '¿Si se lanza una moneda 2 veces cuál es el porcentaje de que salga sol y águila?',
             'type' => '2',
             'firstAnswer' => '75%',
             'secondAnswer' =>'100%',
@@ -192,7 +192,7 @@ class Elementary1Seeder extends Seeder
         ]);
         //Division con decimales agua de limon
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.25 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limon? ',
+            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.25 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limón? ',
             'type' => '2',
             'firstAnswer' => '35',
             'secondAnswer' =>'50',
@@ -202,7 +202,7 @@ class Elementary1Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.5 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limon? ',
+            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.5 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limón? ',
             'type' => '2',
             'firstAnswer' => '32',
             'secondAnswer' =>'20',
@@ -212,7 +212,7 @@ class Elementary1Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.8 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limon? ',
+            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 0.8 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limón? ',
             'type' => '2',
             'firstAnswer' => '8',
             'secondAnswer' =>'6',
@@ -222,7 +222,7 @@ class Elementary1Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 1 litro. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limon? ',
+            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 1 litro. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limón? ',
             'type' => '2',
             'firstAnswer' => '10',
             'secondAnswer' =>'5',
@@ -232,7 +232,7 @@ class Elementary1Seeder extends Seeder
             'image' => ''
         ]);
         DB::table('elementaryFirst')->insert([
-            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 1.5 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limon? ',
+            'question' => 'Mariana vende aguas frescas y las despacha en vasos de 1.5 litros. ¿Cuántos vasos completos puede vender si cuenta con 10 litros de agua de limón? ',
             'type' => '2',
             'firstAnswer' => '4',
             'secondAnswer' =>'5',

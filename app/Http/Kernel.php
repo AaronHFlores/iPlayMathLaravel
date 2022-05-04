@@ -56,6 +56,7 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'adminauth' => \App\Http\Middleware\AdminAuthenticate::class,
         'userdiagnosed' => \App\Http\Middleware\UserDiagnosed::class,
+        'user.not.diagnosed' => \App\Http\Middleware\UserNotDiagnosed::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
@@ -65,5 +66,15 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'score.first.grade.p' => \App\Http\Middleware\ScoreFirstGradeP::class,
+        'score.second.grade.p' => \App\Http\Middleware\ScoreSecondGradeP::class,
+        'score.third.grade.p' => \App\Http\Middleware\ScoreThirdGradeP::class,
+        'score.fourth.grade.p' => \App\Http\Middleware\ScoreFourthGradeP::class,
+        'score.fifth.grade.p' => \App\Http\Middleware\ScoreFifthGradeP::class,
+        'score.sixth.grade.p' => \App\Http\Middleware\ScoreSixthGradeP::class,
+        'score.first.grade.e' => \App\Http\Middleware\ScoreFirstGradeE::class,
+        'score.second.grade.e' => \App\Http\Middleware\ScoreSecondGradeE::class,
+        'score.third.grade.e' => \App\Http\Middleware\ScoreThirdGradeE::class,
+
     ];
 }

@@ -15,7 +15,7 @@ class Primary5Seeder extends Seeder
     public function run()
     {
         DB::table('primaryFifth')->insert([
-            'question' => 'De una cinta de adhesiva de 2 1/3 m, gaste 3/6 ¿Qué cantidad de cinta me quedó?',
+            'question' => 'De una cinta de adhesiva de 2 metros y 1/3 , gasté 3/6 ¿Qué cantidad de cinta me quedó?',
             'type' => '2',
             'firstAnswer' => '1/6',
             'secondAnswer' => '4/5',
@@ -26,7 +26,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'En el grupo de quinto grado, los alumnos practican tres deportes: 1/3 de grupo juego beisbol, 2/6 juegan basquetbol y el resto futbol. ¿Qué parte del grupo practica futbol?',
+            'question' => 'En el grupo de quinto grado, los alumnos practican tres deportes: 1/3 del grupo juega beisbol, 2/6 juegan basquetbol y el resto fútbol. ¿Qué parte del grupo practica fútbol?',
             'type' => '2',
             'firstAnswer' => '5/10',
             'secondAnswer' => '1/3',
@@ -59,7 +59,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'El profesor José Luis tiene libres los miércoles; los demás días llega a la escuela una hora antes para preparar sus materiales de Biología . ¿Cuánto tiempo permanece diariamente en la escuela?',
+            'question' => 'El profesor José Luis tiene libres los miércoles; los demás días llega a la escuela una hora antes para preparar sus materiales de Biología. ¿Cuánto tiempo permanece diariamente en la escuela?',
             'type' => '2',
             'firstAnswer' => '4:50',
             'secondAnswer' => '3:50',
@@ -70,7 +70,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'El profesor Santos toma 2 descansos de 15min todos los días. La tabla únicamente refleja su horario de trabajo. ¿A que hora sale cada día?',
+            'question' => 'El profesor Santos toma 2 descansos de 15 min todos los días. La tabla únicamente refleja su horario de trabajo. ¿A que hora sale cada día?',
             'type' => '2',
             'firstAnswer' => '12:30',
             'secondAnswer' => '14:30',
@@ -81,7 +81,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Raúl, Manuel, Andrés y Mario quieren comprar un balo con valor de $150 ¿Cuánto le tocara poner a cada uno si se dividen en partes iguales?',
+            'question' => 'Raúl, Manuel, Andrés y Mario quieren comprar un balón con valor de $150 pesos ¿Cuánto le tocará poner a cada uno si se dividen en partes iguales?',
             'type' => '2',
             'firstAnswer' => '38.2',
             'secondAnswer' => '37.5',
@@ -125,7 +125,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Tienes las siguiente fracciones: 7/9, 17/12 y 5/18. Si las ordenas de menor a mayor ¿cómo quedarian?',
+            'question' => 'Tienes las siguientes fracciones: 7/9, 17/12 y 5/18. Si las ordenas de menor a mayor. ¿Cómo quedarían?',
             'type' => '2',
             'firstAnswer' => '5/18,  7/9,  17/12',
             'secondAnswer' => '7/9,  17/12, 5/18',
@@ -136,7 +136,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Si tuvieras que elegir el triángulo equilátero ¿Cuál escogerías?',
+            'question' => 'Si tuvieras que elegir el triángulo equilátero. ¿Cuál escogerías?',
             'type' => '2',
             'firstAnswer' => '1',
             'secondAnswer' => '2',
@@ -169,7 +169,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Si por 4 lápices se pagaron $12, ¿Cuánto habría de pagar por 6 lápices?',
+            'question' => 'Si por 4 lápices se pagaron $12. ¿Cuánto habría de pagar por 6 lápices?',
             'type' => '2',
             'firstAnswer' => '65',
             'secondAnswer' => '6',
@@ -180,7 +180,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Ángel compró 36 botellas con 3/4 de litro de agua cada una para darlas después de un partido de futbol. ¿Cuántos litros de agua compró en total?',
+            'question' => 'Ángel compró 36 botellas con 3/4 de litro de agua cada una, para darlas después de un partido de fútbol. ¿Cuántos litros de agua compró en total?',
             'type' => '2',
             'firstAnswer' => '108/144 litros',
             'secondAnswer' => '108/4 litros',
@@ -224,7 +224,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => 'Un coche de carreras tardó 3 minutos con 16 segundos en dar una vuelta. Si necesitan presentar este tiempo en segundos, ¿cuántos segundos tardó en recorrer el circuito?',
+            'question' => 'Un coche de carreras tardó 3 minutos con 16 segundos en dar una vuelta. Si necesitan presentar ese tiempo en segundos, ¿cuántos segundos tardó en recorrer el circuito?',
             'type' => '2',
             'firstAnswer' => '186 segundos',
             'secondAnswer' => '180 segundos',
@@ -235,7 +235,7 @@ class Primary5Seeder extends Seeder
         ]);
 
         DB::table('primaryFifth')->insert([
-            'question' => '¿Cuántas aristas tiene el prisma que se forma con esta figura?',
+            'question' => '¿Cuántas aristas tiene el prisma de la siguiente figura?',
             'type' => '2',
             'firstAnswer' => '6',
             'secondAnswer' => '18',

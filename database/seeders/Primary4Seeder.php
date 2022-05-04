@@ -15,7 +15,7 @@ class Primary4Seeder extends Seeder
     public function run()
     {
         DB::table('primaryFourth')->insert([
-            'question' => 'Un estadio de futbol cuenta con 8 secciones de 600 asientos cada una, 4 de 500 asientos, y 2 de 135 asientos. ¿Cuál es la capacidad total del estadio?',
+            'question' => 'Un estadio de fútbol cuenta con 8 secciones de 600 asientos cada una, 4 de 500 asientos, y 2 de 135 asientos. ¿Cuál es la capacidad total del estadio?',
             'type' => '2',
             'firstAnswer' => '7035',
             'secondAnswer' => '7370',
@@ -37,7 +37,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'Luis compro una torta especial y un jugo, y Alexis compro dos tortas de huevo y un licuado. ¿Quién de los dos pago más?',
+            'question' => 'Luis compró una torta especial y un jugo. Alexis compró dos tortas de huevo y un licuado. ¿Quién de los dos pagó más?',
             'type' => '3',
             'firstAnswer' => 'Luis',
             'secondAnswer' => 'Alexis',
@@ -81,7 +81,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'El papá de Mariana ahorro para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Para comprar cual coche de los de la imagen le falta menos dinero?',
+            'question' => 'El papá de Mariana ahorró para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Qué coche podría comprar sin que le falte mucho dinero?',
             'type' => '2',
             'firstAnswer' => 'A',
             'secondAnswer' => 'B',
@@ -92,7 +92,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => 'El papa de Mariana ahorro para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. ¿Si quisiera comprar el coche más caro de los de la imagen cuánto dinero le faltaría?',
+            'question' => 'El papá de Mariana ahorró para comprar un coche. Actualmente tiene treinta mil cuatrocientos cincuenta y seis pesos. Si quisiera comprar el coche más caro de los de la imagen. ¿ Cuánto dinero le faltaría?',
             'type' => '2',
             'firstAnswer' => '10549',
             'secondAnswer' => '18851',
@@ -202,7 +202,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => '¿Cuál imagen corresponde a la siguiente sucesión numérica: 6,0,8,1,10,2,12,3?',
+            'question' => '¿Cuál imagen corresponde a la siguiente sucesión numérica: 6, 0, 8, 1, 10, 2, 12, 3?',
             'type' => '5',
             'firstAnswer' => 'img/primary4/sucesion1.png',
             'secondAnswer' => 'img/primary4/sucesion2.png',
@@ -246,7 +246,7 @@ class Primary4Seeder extends Seeder
         ]);
 
         DB::table('primaryFourth')->insert([
-            'question' => '¿Según las calificaciones quien tuvo un mejor rendimiento?',
+            'question' => '¿Según las calificaciones quién tuvo un mejor rendimiento?',
             'type' => '3',
             'firstAnswer' => 'Juan',
             'secondAnswer' => 'María',
