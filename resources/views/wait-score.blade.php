@@ -191,18 +191,18 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="{{ mix('js/app.js') }}"></script>
-  <script>
-    Echo.channel('{{$Room->room}}')
-      .listen('.New-Game',(data)=>{
-        window.location.href = "/game";
-      });
-  </script>
-  <script>
-    Echo.channel('{{$Room->room}}')
-      .listen('.Finish-Game',(data)=>{
-        window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
-      });
-  </script>
+    <script>
+          Echo.channel('{{$Room->room}}')
+            .listen('.User-End',(data)=>{
+              window.location.href = "/podium";
+            });
+      </script>
+      <script>
+        Echo.channel('{{$Room->room}}')
+          .listen('.Finish-Game',(data)=>{
+            window.location.href = "/UpdateScoreMultiplayer/1/0/1/1";
+          });
+      </script>
   
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
