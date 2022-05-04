@@ -118,7 +118,7 @@ Route::get('/ocupped', function(){
     return view('ocupped');
 });
 
-Route::get('/game', [RoomController::class, 'startGame']);
+Route::get('/game', [RoomController::class, 'startGame'])->name('game');
 Route::get('/podium', [RoomController::class, 'endGame'])->name('podium');
 Route::get('/setup', [RoomController::class, 'setupTask'])->name('setup');
 Route::get('/error', function(){

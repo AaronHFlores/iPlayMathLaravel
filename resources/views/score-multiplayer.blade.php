@@ -129,11 +129,11 @@
         ?>
           
         <?php
-            if($Room->score1 > $Room->score2){
+            if($Room->score1 >= $Room->score2){
                 $userwin = User::where('id', $Room->user1)->first();
                 $userLooser = User::where('id', $Room->user2)->first();
 
-                $winner =  $userwin->name;
+                $winner =  $userwin->name;  
                 $looser =  $userLooser->name;
             }  
             else if($Room->score1 < $Room->score2){
