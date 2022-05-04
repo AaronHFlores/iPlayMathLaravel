@@ -24,5 +24,45 @@ class UserSeeder extends Seeder
             'score' => 1800,
             'diagnosed' => 1
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Test 1',
+            'email' => 'test1@test.com',
+            'age' => '20',
+            'password' => Hash::make('password'),
+            'role' => 'adm',
+            'score' => 1800,
+            'diagnosed' => 1
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Test 2',
+            'email' => 'test2@test.com',
+            'age' => '20',
+            'password' => Hash::make('password'),
+            'role' => 'adm',
+            'score' => 0,
+            'diagnosed' => 0
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Test 3',
+            'email' => 'test3@test.com',
+            'age' => '20',
+            'password' => Hash::make('password'),
+            'role' => 'adm',
+            'score' => 0,
+            'diagnosed' => 0
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Test 4',
+            'email' => 'test4@test.com',
+            'age' => '20',
+            'password' => Hash::make('password'),
+            'role' => 'adm',
+            'score' => 0,
+            'diagnosed' => 0
+        ]);
     }
 }
