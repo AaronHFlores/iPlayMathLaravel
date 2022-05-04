@@ -37,6 +37,6 @@ class Rooms implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel(''.$this->room->name);
+        return new Channel($this->room->room);
     }
 }

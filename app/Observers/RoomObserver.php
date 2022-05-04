@@ -19,5 +19,6 @@ class RoomObserver
         else if($room->finish == null && $room->user1 == null && $room->user2 == null && $room->score1 == null && $room->score2 == null){
             event(new RoomFinish($room));
         }
+        
     }
 }

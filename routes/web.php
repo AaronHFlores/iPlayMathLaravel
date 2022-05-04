@@ -11,6 +11,7 @@ use App\Http\Livewire\Grades\FirstGradeElementary;
 use App\Http\Livewire\Grades\SecondGradeElementary;
 use App\Http\Livewire\Grades\ThirdGradeElementary;
 use App\Http\Livewire\UserController;
+use App\Http\Livewire\RoomController;
 
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -41,7 +42,7 @@ Route::get('/play', function () {
 })->middleware(['auth','userdiagnosed'])->name('play');
 
 //Exercise
-Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p','userdiagnosed']);
+Route::get('/FirstGradePrimary', [FirstGradePrimary::class, 'render'])->middleware(['auth','userdiagnosed']);
 Route::get('/SecondGradePrimary', [SecondGradePrimary::class, 'render'])->middleware(['auth','score.second.grade.p','userdiagnosed']);
 Route::get('/ThirdGradePrimary', [ThirdGradePrimary::class, 'render'])->middleware(['auth','score.third.grade.p','userdiagnosed']);
 Route::get('/FourthGradePrimary', [FourthGradePrimary::class, 'render'])->middleware(['auth','score.fourth.grade.p','userdiagnosed']);
@@ -84,9 +85,11 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-Route::get('/wait', function(){
-    return view('wait-room');
-});
+Route::get('/wait', [RoomController::class, 'NewRoom']);
+Route::get('/search/{room}', [RoomController::class, 'searchRoom'])->name('search.room');
 Route::get('/ocupped', function(){
     return view('ocupped');
 });
+
+Route::get('/game', [RoomController::class, 'startGame']);
+Route::get('/setup', [RoomController::class, 'setupTask'])->name('setup');

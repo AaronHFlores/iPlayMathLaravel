@@ -51,13 +51,14 @@
       </div>
 
       <div class="container-btn">    
-        <a href="#" class="playMjCreate scrollto">
+        <a href="/wait" class="playMjCreate scrollto">
           <i class="fa fa-gamepad"></i>
           Crear Partida
         </a>
-        <a href="#" class="playMjJoin scrollto">
+        <a  class="playMjJoin scrollto" onclick="joinRoom()">
           <i class="fa fa-gamepad"></i>
           Unirse a Partida
+          
         </a>
       </div>
 
@@ -331,7 +332,28 @@
 
     </section> -->
     <!-- End Sponsors Section -->
-
+    <!-- Modal Order Form -->
+    <div id="test-correct-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h4 class="modal-title">Ingrese el cuarto 😃</h4>
+            <!-- <button type="button" id="btn5close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                <i class="fa fa-circle-check"></i>
+              </div>
+              <div class="text-center mt-3">                
+                  <input type="text" id="room" name="room" class="form-control">
+                  <button type="submit" id="btn5" data-bs-dismiss="modal" onclick="search()" aria-label="Close">Aceptar</button>
+                
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal -->
 
   </main>
 
@@ -357,7 +379,18 @@
   <!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script>
+    function joinRoom(){
+        
+        $('#test-correct-modal').modal("show");
+    }
+    function search(){
+      let room = document.getElementById('room');
+      var url = "/search/" + room.value ;
+      window.location.href = url;
 
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js "></script>
   <!-- Vendor JS Files -->
