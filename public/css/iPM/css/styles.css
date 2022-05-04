@@ -1296,6 +1296,19 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 
+#ocuppiedRoom .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #5346CF;
+  border: 0;
+  color: #fff;
+}
+#ocuppiedRoom .btn:hover {
+  background-color: #8479E1;
+}
+
 #speakers-details {
   padding: 60px 0;
 }

@@ -131,7 +131,11 @@
                 <p>Pulsa el Boton para continuar</p>
               </div>
             </div>
-            <button><a href="{{$url}}" >Continuar</a></button>
+            <!-- <button><a href="{{$url}}" >Continuar</a></button> -->
+            <div class="text-center">
+              <a href="{{$url}}" type="button" class="btn">Continuar</a>
+              <!-- <button  data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="standard-access">Continuar</button> -->
+            </div>
           </div>
           
         </div>
